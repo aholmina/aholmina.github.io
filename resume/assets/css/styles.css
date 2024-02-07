@@ -1,0 +1,86 @@
+
+body, html {
+    margin: 0px;
+    height: 100%;
+}
+
+nav {
+    position: fixed;
+    height: 75px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: #FFFFFF;
+}
+
+ #div-page-name {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+} 
+
+#div-page-menu {
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+#hero-section {
+    background-color: rgb(105, 143, 143);
+    background-image: url("../css/bgimg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    height: 40%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#div-user-info {
+    height: 400px;
+    width: 600px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: #FFFFFF;
+    font-size: 24px;
+}
+
+#div-user-info img {
+    width: 100px;
+    height: 100px;
+
+    border-radius: 50%;
+}
+
+#div-user-info p {
+    line-height: 5px;
+}
+
+#section-display-center {
+    height: 50%;
+    background-color: aqua;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    align-items: center;
+}
+
+#div-child {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    background-color: rgb(217, 18, 18);
+    margin: 0px auto;
+    top: 25%;
+    position: relative;
+}
