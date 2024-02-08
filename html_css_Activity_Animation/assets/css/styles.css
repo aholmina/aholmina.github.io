@@ -1,0 +1,43 @@
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    
+    .pulse-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .pulse {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        border-top: 10px solid white;
+        border-right: 10px solid white ;
+        border-bottom: 10px solid white;
+        border-left: 10px solid white;
+
+        background-color: whitesmoke; /* Change the color as needed */
+        animation: pulse 2s infinite alternate ease-in-out;
+        box-shadow: 0 0 30px 10px rgba(192, 225, 247, 0.8); /* Adjust shadow properties */
+    }
+
+    @keyframes pulse {
+        0% {
+            transform: scale(1.2);
+            box-shadow: 0 0 30px 10px rgba(186, 2, 23, 0.8);
+        }
+        75% {
+            transform: scale 1.2;
+            box-shadow: 0 0 50px 10px rgb(225, 254, 9);
+        }
+        100% {
+            transform: scale(1.2);
+            box-shadow: 0 0 50px 20px  rgba(1, 71, 38, 0.881);
+        }
+    }
