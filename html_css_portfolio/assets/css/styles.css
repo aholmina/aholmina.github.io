@@ -1,0 +1,111 @@
+.hero {
+    background-color: white;
+    background-image: url('../css/images/transbg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+
+    padding-top: 200px;
+    padding-bottom: 200px;
+
+}
+.container {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+nav {
+    position: fixed;
+    top: 0;
+    left:50px;
+    width: 20%;
+    height: 65px;
+    padding: 10px 0;
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.content {
+    margin-top: 60px;
+    height: calc(100vh-60px);
+    overflow-y: auto;
+    padding: 20px;
+}
+ul {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    width: 1024px;
+    display: flex;
+    justify-content: space-evenly;
+}
+ul a{
+    text-decoration: none;
+    color: #f7f7f7;
+    justify-content: left;
+
+}
+ul a:hover{
+    text-decoration: underline;
+}
+.centered-heading {
+    text-align: center;
+    margin: auto;
+}
+li {
+    color: blueviolet;
+    text-emphasis-color: pink;
+    width: 100px;
+    justify-content: flex-end;
+
+}
+em {
+    font-style: italic;
+    color: rgb(18, 18, 130);
+
+
+}  
+.flashing-text {
+    animation: flash 2s infinite;
+
+}
+@keyframes flash {
+    0% {
+     opacity: 1;  
+}
+   50% {
+    opacity: 0.5;
+   }
+   100% {
+    opacity: 1;
+   }
+}
+p {
+    font-size: 50px;
+    color:black;
+    line-height: 1.5;
+}
+p1 {
+    top: 0;
+    font-size: 50px;
+    color: rgb(13, 13, 21);
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin: 0px;
+}
+img {
+    width: 300px; 
+    height: 300px; 
+    margin: 50px;
+    border-radius: 10px;
+}
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}

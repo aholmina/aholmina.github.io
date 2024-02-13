@@ -41,6 +41,9 @@ nav {
     justify-content: center;
     align-items: center;
 }
+em {
+    font-style: italic;
+}
 
 #div-user-info {
     height: 400px;
