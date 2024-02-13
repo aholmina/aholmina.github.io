@@ -1,3 +1,98 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body, html {
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+    box-sizing: border-box;
+    scroll-behavior:smooth;
+    font-family: sans-serif;
+    font-size: 24px;
+    position: relative;
+}
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #8d0a70;
+}
+.navbar-brand img {
+    width: 100px;
+    height: 100px;
+ 
+}
+.navbar-brand {
+     padding: 150px;
+     max-width: 0px;
+}
+.navbar {
+    position: fixed;
+    width: 100%;
+    font-size: xx-large;
+    top: 0px;
+    height: 160px;
+    background-color: #500a8d;
+    display: flex;
+    align-items: center;
+    scroll-behavior: smooth;
+    text-align: center;
+}
+.nav-menu {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 60px;
+}
+.home, .about, .booknow {
+    height: 720px;
+    margin-top: 70px;
+    border: 1px solid black;
+}
+
+.home, .booknow {
+    margin-top: 0;
+}
+ nav ul {
+    float: left;
+    margin-right: 20px;
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    width: 1024px;
+    display: flex;
+    justify-content: space-evenly;
+ }
+
+ nav ul li a {
+    font-size: 17px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #f7f7f7;
+    display: inline-block;
+    line-height: 80px;
+    margin: 0px;
+}
+ 
+nav ul li a:hover{
+    text-decoration: underline;
+
+}
+a.active, a:hover {
+    background: #f7f7f7;
+    transition: 5s;
+}
+
+main {
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 1024px;
+    height: 100%;
+}
+
+
 .hero {
     background-color: white;
     background-image: url('../css/images/transbg.jpg');
@@ -9,65 +104,60 @@
     padding-bottom: 200px;
 
 }
+.logo-container {
+    text-align: center;
+}
+.logo-container img {
+    width: 100px;
+    height: auto;
+}
 .container {
-    max-width: 960px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    width: 1280px;
+    margin: auto; 
 }
-nav {
-    position: fixed;
-    top: 0;
-    left:50px;
-    width: 20%;
-    height: 65px;
-    padding: 10px 0;
-    z-index: 2000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
+@media(max-width:1280px) {
+    .container {
+        width: 100%;
+    }
 }
+
+
 .content {
     margin-top: 60px;
     height: calc(100vh-60px);
     overflow-y: auto;
     padding: 20px;
+    scroll-behavior: smooth;
 }
-ul {
-    padding: 0px;
-    margin: 0px;
-    list-style: none;
-    width: 1024px;
-    display: flex;
-    justify-content: space-evenly;
+section {
+    height: 100%;
+    padding: 100px 50px;
 }
-ul a{
-    text-decoration: none;
-    color: #f7f7f7;
-    justify-content: left;
+ #about-section {
+    background-color: #5bc0de;
+    background-position: center;
+    color: var(--fontColors);
+}
 
-}
-ul a:hover{
-    text-decoration: underline;
-}
 .centered-heading {
     text-align: center;
     margin: auto;
 }
-li {
-    color: blueviolet;
-    text-emphasis-color: pink;
-    width: 100px;
-    justify-content: flex-end;
+
+.styled-text {
+    font-size: 48px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.styled-text span {
+    color:rgb(184, 16, 108);
+    text-shadow: 2px 2px 2px hwb(265 2% 69%);
 
 }
 em {
     font-style: italic;
     color: rgb(18, 18, 130);
-
-
 }  
 .flashing-text {
     animation: flash 2s infinite;
@@ -99,13 +189,42 @@ p1 {
     margin: 0px;
 }
 img {
-    width: 300px; 
-    height: 300px; 
+    width: 800px; 
+    height: 800px; 
     margin: 50px;
     border-radius: 10px;
+    align-self: horizontally;
 }
 .image-container {
-    display: flex;
+    
     justify-content: center;
-    align-items: center;  
+    
+}
+main {
+    margin: 0px auto;
+    width: 1024px;
+    height: 100%;
+}
+footer {
+    height: 25%;
+    background-color: #292b2c;
+}
+
+#home-section {
+    background-color: var(--bgColors);
+    color: var(--fontColors);
+}
+
+#about-section {
+    background-color: #5bc0de;
+    color: 
+}
+
+#contact-section {
+    background-color: #292b2c;
+    color: var(--fontColors);
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }

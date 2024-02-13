@@ -1,0 +1,81 @@
+body, html {
+    margin: 0px;
+    padding: 0px;
+
+    height: 100%;
+
+    font-size: 24px;
+}
+
+main {
+    background-color: aqua;
+    height: 100%;
+    width: 1024px;
+    margin: 0px auto;
+}
+
+.table-section {
+    background-color: chocolate;
+    height: 300px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.table-section table th, .table-section table td {
+    border: 1px solid #000000;
+    padding: 5px;
+}
+
+.table-section table tbody tr:nth-child(odd) {
+    background-color: #987a7a;
+}
+
+.table-section table tbody tr:nth-child(even) {
+    background-color: #be2727;
+}
+
+.table-section table tbody tr:last-child td:first-child:hover {
+    opacity: 0.6;
+    cursor: pointer;
+    color: #FFFFFF;
+}
+
+
+.div-section {
+    background-color:burlywood;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-container {
+    background-color: white;
+    height: 100%;
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 100%;
+
+    /* grid-template-rows: auto auto auto auto auto 500px; */
+}
+
+.grid-container div {
+    background-color: chartreuse;
+    border: 1px dotted #000000;
+    /* height: 100px; */
+}
+
+.div-6th {
+    background-color: crimson !important;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
