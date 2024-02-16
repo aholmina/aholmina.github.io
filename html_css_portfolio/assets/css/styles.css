@@ -31,11 +31,11 @@ header {
 }
 .navbar {
     position: fixed;
-    width: 100%;
-    font-size: :small;
+    width: 120%;
+    font-size: small;
     top: 0px;
     height: 100px;
-    background-color: #500a8d;
+    background-color: #d4679a;
     display: flex;
     align-items: center;
     scroll-behavior: smooth;
@@ -45,7 +45,7 @@ header {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    gap: 60px;
+    gap: 70px;
 }
 .home, .about, .contactus {
     height: 720px;
@@ -85,10 +85,39 @@ a.active, a:hover {
     background: #f7f7f7;
     transition: 5s;
 }
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border-radius: 5px 0 0 5px;
+    border: 1px solid #ccc;
+    border-right: none;
+    outline: none;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: 1px solid #007bff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    outline: none;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+    border-color: #b3007dd8;
+}
+
 
 main {
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
     width: 1024px;
     height: 100%;
 }
@@ -100,8 +129,7 @@ main {
     background-size: cover;
     color: rgb(243, 9, 157);
 
-    padding-top: 50px;
-    padding-bottom: 50px;
+   
   
 
 }
@@ -139,6 +167,7 @@ section {
     margin: auto;
 }
 
+
 .styled-text {
     font-size: 35px;
     font-family: Arial, Helvetica, sans-serif;
@@ -161,7 +190,7 @@ em {
     0% {
      opacity: 1;  
 }
-   50% {
+   75% {
     opacity: 0.5;
    }
    100% {
@@ -169,6 +198,7 @@ em {
    }
 }
 p {
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     color:black;
     line-height: 1.5;
@@ -176,7 +206,8 @@ p {
 p1 {
     top: 0;
     font-size: 20px;
-    color: rgb(13, 13, 21);
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgba(13, 13, 21, 0.96);
     display: flex;
     align-content: center;
     justify-content: center;
@@ -235,7 +266,7 @@ main {
   }
   .form-group input,
   .form-group textarea {
-    width: 100%;
+    width: 50%;
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -244,7 +275,7 @@ main {
     height: 100px;
   }
   .form-group button {
-    width: 100%;
+    width: 50%;
     padding: 10px;
     background-color: #007bff;
     color: #fff;
@@ -257,13 +288,14 @@ main {
   }
   
   footer {
-    background-color: #a2004c;
+    background-color: #fc73b3;
     color: #2a5cff;
-    padding: 30px;
     text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 100%;
 
+ 
   }
   .contact-options {
     margin-top: 10px;
@@ -286,7 +318,36 @@ main {
  h3 {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 30px;
-    
  }
+ .login-container {
+  
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  button, .create-account {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .create-account {
+    background-color: #4e68d1;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  button:hover, .create-account:hover {
+    filter: brightness(90%);
+  }
+ 
 
 
+
+ 
