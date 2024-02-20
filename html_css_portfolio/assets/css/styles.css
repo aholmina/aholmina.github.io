@@ -38,11 +38,14 @@ header {
   font-size: small;
   top: 0px;
   height: 100px;
-  background-color: #1018f1;
+  background-color: #c64f8e;
   display: flex;
   align-items: center;
   scroll-behavior: smooth;
   text-align: center;
+}
+.space-after-navbar {
+  margin-top: 20px;
 }
 .nav-menu {
   display: flex;
@@ -187,7 +190,7 @@ section {
 }
 em {
   font-style: italic;
-  color: rgba(249, 251, 252, 0.964);
+  color: rgba(68, 109, 189, 0.964);
 }  
 .flashing-text {
   animation: flash 2s infinite;
@@ -305,6 +308,8 @@ footer {
   text-align: center;
   padding-top: 30px;
   padding-bottom: 30px;
+  padding left:0px;
+  padding-right: 0px;
   width: 100%;
 
 
@@ -330,6 +335,11 @@ h1 {
 h3 {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: 30px;
+}
+h4 {
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+font-size: 10px;
+
 }
 .login-container {
 
@@ -391,6 +401,24 @@ button:hover, .create-account:hover {
   background-image: url('../css/images/instagram.jpg'); 
   color:#b30077
 }
+.book-now {
 
+  position: relative;
+  display: flex;
+  justify-content: end;
+  padding-top: 20px;
+  
+}
+.book-button {
+  background-color: #f59cdc;
+  color: rgb(127, 8, 129);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  
+}
 
-
+.space-after-title {
+  margin-bottom: 20px;
+}
