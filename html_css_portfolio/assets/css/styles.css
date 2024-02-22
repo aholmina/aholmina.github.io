@@ -58,10 +58,12 @@ header {
   margin-top: 70px;
   border: 1px solid black;
   margin-left: 70px;
+  margin-bottom: 100px;
 }
 
 .home, .contactus {
   margin-top: 0;
+  
 }
 nav ul {
   float: left;
@@ -253,7 +255,7 @@ main {
 #about-section {
   margin-top: 4px;
   background-color: #5bc0de;
-  color: var(--fontColors;)
+  color: var(--fontColors#b30077)
 }
 
 #contact-section {
@@ -308,7 +310,7 @@ footer {
   text-align: center;
   padding-top: 30px;
   padding-bottom: 30px;
-  padding left:0px;
+  padding-left: 0px;
   padding-right: 0px;
   width: 100%;
 
@@ -328,18 +330,17 @@ footer {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 h1 {
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
-  font-size: 10px;
-  
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 30px;
 }
+
 h3 {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: 30px;
 }
 h4 {
-font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
-font-size: 10px;
-
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 30px;
 }
 .login-container {
 
