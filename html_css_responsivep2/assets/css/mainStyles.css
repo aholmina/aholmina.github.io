@@ -119,19 +119,22 @@ nav{
   font-size: 20px;
 }
 .contact-form {
-  max-width: 600px;
+  max-width: 400px;
   margin-top: -20px;
 }
 .image-container {
   position: fixed;
   top: 0;
   right: 0;
-  width: 200px; 
+  width: 400px; 
   z-index: 1000; 
   text-align: center;
 }
 
 .image-container img {
-  max-width: 100%;
+  max-width: 50%;
   height: auto;
+
 }
+
+
