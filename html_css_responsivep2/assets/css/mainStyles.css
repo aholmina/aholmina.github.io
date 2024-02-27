@@ -136,5 +136,57 @@ nav{
   height: auto;
 
 }
+.image-with-text {
+  display: flex;
+  align-items: center;
+}
+
+.image-with-text img {
+  max-width: 100%;
+  margin-right: 20px; 
+}
 
 
+.modal-content {
+  background-color: #f36ac1;
+}
+
+.modal-header, .modal-body {
+  border-bottom: none;
+}
+
+.modal-footer {
+  border-top: none;
+}
+
+
+th, td {
+  border: 1px solid #dee2e6;
+  padding: 10px;
+}
+
+th {
+  background-color: #f8f9fa;
+}
+
+.highlight-text {
+  color: #a227b5; 
+  font-weight: bold;
+}
+
+.large-text {
+  font-size: 14px;
+}
+
+.booking-form {
+  max-width: 500px;
+  margin: 0 auto;
+
+}
+
+.booking-modal .modal-dialog {
+  max-width: 300px;
+}
+.booking-modal .modal-content {
+  padding: 20px;
+}
