@@ -65,7 +65,7 @@ nav{
   color:#0a0a0aee
 }
 .homepage-bg {
-  background-image: url("../css/images/port15.jpg");
+  background-image: url("../images/port15.jpg");
   background-size: cover;
   background-position: center;
   height: 100vh; /* Ensure full height */
