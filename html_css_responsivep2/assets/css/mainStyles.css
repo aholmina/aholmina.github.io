@@ -123,19 +123,13 @@ nav{
   margin-top: -20px;
 }
 .image-container {
-  position: fixed;
+  display: flex;
   top: 0;
   right: 0;
   width: 400px; 
-  z-index: 1000; 
   text-align: center;
 }
 
-.image-container img {
-  max-width: 50%;
-  height: auto;
-
-}
 .image-with-text {
   display: flex;
   align-items: center;
@@ -144,6 +138,7 @@ nav{
 .image-with-text img {
   max-width: 100%;
   margin-right: 20px; 
+  display: flex;
 }
 
 
@@ -189,4 +184,10 @@ th {
 }
 .booking-modal .modal-content {
   padding: 20px;
+}
+
+
+.faq-window {
+  max-width: 600px; /* Adjust the maximum width as needed */
+  margin: 100px auto; /* Center the window vertically and horizontally */
 }
