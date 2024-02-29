@@ -86,6 +86,7 @@ nav{
   z-index: 1; 
 }
 
+
  .footer1{
   
   background-color: #f882d1;
@@ -337,11 +338,11 @@ th {
   font-size: 16px;
 }
 /* Red for Medical */
-.square.medical {
+.square-medical {
   background-color: #dc3545;
 }
 /* Blue for Legal */
-.square.legal {
+.square-legal {
   background-color: #007bff;
 }
 
