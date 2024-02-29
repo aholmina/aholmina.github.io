@@ -7,6 +7,7 @@
   <title>TRANSchanger</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/css/mainStyles.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 </head>
 <body>
   <header>
@@ -26,19 +27,19 @@
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item px-2">
-                          <a class="nav-link " aria-current="page" href="home.html">HOME</a>
+                        <a class="nav-link " aria-current="page" href="home.html">HOME</a>
                         </li>
                         <li class="nav-item px-2">
-                         <a class="nav-link " aria-current="page" href="about.html">ABOUT</a> 
+                        <a class="nav-link " aria-current="page" href="about.html">ABOUT</a> 
                         </li>
                         <li class="nav-item px-2">
-                         <a class="nav-link " aria-current="page" href="services.html">SERVICES</a>
+                        <a class="nav-link " aria-current="page" href="services.html">SERVICES</a>
                         </li>
                         <li class="nav-item px-2">
-                         <a class="nav-link " aria-current="page" href="contactus.html">CONTACT</a>
+                        <a class="nav-link " aria-current="page" href="contactus.html">CONTACT</a>
                         </li>
-                        </ul>
-                        <form class="d-flex" role="search">
+                    </ul>
+                      <form class="d-flex" role="search">
                       <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                       <button class="btn btn-outline-success" type="submit">Search</button>
                     </form>
@@ -46,70 +47,169 @@
             </div>
           </nav>
     </header>
- 
-    <div class="homepage-bg">
-      <div class="container">
+  <div class="homepage-bg">
+    <div class="container">
+      <div class="container mt-5">
         <div class="row">
-          <div class="col-md-6 content">
-              <div class="container">
-                  <table class="table">
-                    <tbody>
-                      <tr>
-                        <td>
-                          <div class="row">
-                            <div class="col-md-4">
-                              <img src="assets/images/port8.jpg" alt="Image 1" class="w-100">
-                            </div>
-                            <div class="col-md-8">
-                              <p1>APPEARANCE CONSULTING</p1>
-                              <p>Unlock your full potential to help you reveal your inner beauty and find your unique style. 
-                                We will work together to explore different elements of your appearance, from hairstyles to makeup, and create a comprehensive plan that suits
-                                your personality, lifestyle, and preferences.</p>
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div class="row">
-                            <div class="col-md-4">
-                              <img src="assets/images/port27.jpg" alt="Image 2" class="w-100">
-                            </div>
-                            <div class="col-md-8">
-                              <p1>WARDROBE ANALYSIS & SELECTION</p1>
-                              <p>We will help you revamp your wardrobe with clothes that fit your style and complement your body type. We will carefully examine your body shape and 
-                                suggest areas for enhancing your wardrobe.</p>
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div class="row">
-                            <div class="col-md-4">
-                              <img src="assets/images/port28.jpg" alt="Image 2" class="w-100">
-                            </div>
-                            <div class="col-md-8">
-                              <p1>TRANSGENDER HORMONE THERAPY</p1>
-                              <p>Transgender hormone therapy is a hormone replacement therapy (HRT) is a form of hormone therapy
-                                in which sex hormones and other hormonal medications are administered to transgender womenfor the purpose of more closely aligning their secondary sexual characteristics with their gender identity.
-                                </p>
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+          <div class="col-lg-4">
+            <div class="product-card">
+              <img src="assets/images/port22.jpg" class="product-img" alt="Product 1">
+              <h5 class="product-title">APPEARANCE CONSULTING</h5>
+              <p class="product-description">We will work together to explore different elements of your appearance, from hairstyles to makeup, and create a comprehensive plan that suits
+                your personality, lifestyle, and preferences.</p>
+                <p class="payment-options"><i class="bi bi-credit-card-fill payment-icon"></i> Credit Card</p>
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+                <i class="fab fa-cc-amex"></i>
+                <i class="fab fa-cc-discover"></i>
+                <i class="fab fa-cc-paypal"></i>
+              <p class="product-price">$74.99</p>
+              <button class="btn btn-primary">Add to Cart</button>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookingModal">
+                  Book Now
+              </button>
+                 </div>
+                  <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+                   <div class="modal-dialog">
+                     <div class="modal-content">
+                      <div class="modal-header">
+                       <h5 class="modal-title" id="bookingModalLabel">Booking Form</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                        <form>
+                        <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                        </div>
+                        <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                        </div>
+                        <div class="mb-3">
+                        <label for="date" class="form-label">Date</label>
+                        <input type="date" class="form-control" id="date">
+                        </div>
+                        <div class="mb-3">
+                        <label for="service" class="form-label">Service Details</label>
+                        <textarea class="form-control" id="service" placeholder="Enter service details"></textarea>
+                        </div>
+                       <button type="submit" class="btn btn-primary">Submit</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              <hr>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="product-card">
+              <img src="assets/images/port8.jpg" class="product-img" alt="Product 2">
+              <h5 class="product-title">TRANSGENDER HRT</h5>
+              <p class="product-description">THRTis a form of hormone therapy in which sex hormones and other hormonal medications are administered to transgender women.
+                This form of hormone therapy is given based on the goal of treatment feminization.</p>
+                <p class="payment-options"><i class="bi bi-credit-card-fill payment-icon"></i> Credit Card</p>
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+                <i class="fab fa-cc-amex"></i>
+                <i class="fab fa-cc-discover"></i>
+                <i class="fab fa-cc-paypal"></i>
+              <p class="product-price">$74.99</p>
+              <button class="btn btn-primary">Add to Cart</button>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookingModal">
+                Book Now
+              </button>
+               </div>
+                <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+                 <div class="modal-dialog">
+                   <div class="modal-content">
+                    <div class="modal-header">
+                     <h5 class="modal-title" id="bookingModalLabel">Booking Form</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                      <form>
+                      <div class="mb-3">
+                      <label for="name" class="form-label">Name</label>
+                      <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                      </div>
+                      <div class="mb-3">
+                      <label for="email" class="form-label">Email</label>
+                      <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                      </div>
+                      <div class="mb-3">
+                      <label for="date" class="form-label">Date</label>
+                      <input type="date" class="form-control" id="date">
+                      </div>
+                      <div class="mb-3">
+                      <label for="service" class="form-label">Service Details</label>
+                      <textarea class="form-control" id="service" placeholder="Enter service details"></textarea>
+                      </div>
+                     <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                  </div>
                 </div>
               </div>
+              <hr>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="product-card">
+               <img src="assets/images/port27.jpg" class="product-img" alt="Product 3">
+               <h5 class="product-title">WARDROBE ANALYSIS</h5>
+                <p class="product-description">We will help you revamp your wardrobe with clothes that fit your style and complement your body type and examine your body shape and 
+                suggest areas for enhancing your wardrobe.</p>
+                <p class="payment-options"><i class="bi bi-credit-card-fill payment-icon"></i> Credit Card</p>
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+                <i class="fab fa-cc-amex"></i>
+                <i class="fab fa-cc-discover"></i>
+                <i class="fab fa-cc-paypal"></i>
+                <p class="product-price">$74.99</p>
+                <button class="btn btn-primary">Add to Cart</button>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookingModal">
+                Book Now
+              </button>
+              </div>
+                <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+                 <div class="modal-dialog">
+                   <div class="modal-content">
+                    <div class="modal-header">
+                     <h5 class="modal-title" id="bookingModalLabel">Booking Form</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                      <form>
+                      <div class="mb-3">
+                      <label for="name" class="form-label">Name</label>
+                      <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                      </div>
+                      <div class="mb-3">
+                      <label for="email" class="form-label">Email</label>
+                      <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                      </div>
+                      <div class="mb-3">
+                      <label for="date" class="form-label">Date</label>
+                      <input type="date" class="form-control" id="date">
+                      </div>
+                      <div class="mb-3">
+                      <label for="service" class="form-label">Service Details</label>
+                      <textarea class="form-control" id="service" placeholder="Enter service details"></textarea>
+                      </div>
+                     <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <hr>
             </div>
           </div>
         </div>
       </div>
+        </div>
+      </div>
     </div>
-
-
-
+  </div>
  </body>
  </html>
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

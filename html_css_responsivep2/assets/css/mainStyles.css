@@ -191,3 +191,76 @@ th {
   max-width: 600px; /* Adjust the maximum width as needed */
   margin: 100px auto; /* Center the window vertically and horizontally */
 }
+
+.carousel-container {
+  margin-top: 50px; /* Adjust as needed */
+  margin-bottom: 50px; /* Adjust as needed */
+}
+
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding-top: 5%;
+}
+.carousel-inner {
+  width: 100%;
+  display: flex;
+ 
+}
+.carousel-item {
+  text-align: center;
+ 
+}
+.carousel-item h5 {
+  color: #e283b8e9;
+}
+
+.carousel-item h3 {
+  color: #280ad3e9;
+}
+
+
+.carousel-item h6 {
+  color: #07000ce9;
+}
+
+.carousel-item p1 {
+  color: hwb(272 4% 5% / 0.984);
+}
+.carousel-item p {
+  color: #f9f9fdf0;
+}
+
+.card {
+  border: none;
+}
+.carousel-inner {
+  display: flex;
+  flex-direction: row;
+}
+.carousel-item {
+  flex: 0 0 auto;
+  width: 50%; /* Adjust as needed */
+}
+.carousel-item img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.product-card {
+  border: 1px solid #dee2e6;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.product-img {
+  width: 100%;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+.product-title {
+  font-weight: bold;
+  color:#ea44c0;
+}
