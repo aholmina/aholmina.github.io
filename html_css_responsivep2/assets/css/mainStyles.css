@@ -195,22 +195,29 @@ th {
 .carousel-container {
   margin-top: 50px; /* Adjust as needed */
   margin-bottom: 50px; /* Adjust as needed */
+  display: flex;
+  justify-content: center;
+ align-items: center;
+ height: 300px;
 }
 
 .carousel {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  height: 200%;
+  width: 200%;
   padding-top: 5%;
 }
 .carousel-inner {
   width: 100%;
   display: flex;
+  
  
 }
 .carousel-item {
   text-align: center;
+ display: flex;
  
 }
 .carousel-item h5 {
