@@ -69,20 +69,34 @@
     </header>
  
 
-   
+    <div class="homepage-bg">
+      <div class="container">
     
     <div class="container mt-5">
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title">Let's Talk and Get Started.<div class="container text-center mt-5"></h5>
+          <h5 class="card-title"><div class="container mt-5">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Let's Talk and Get Started
+            </button>
+          </div>
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                 We are passionate about helping trans women achieve their dreams and unleash their full potential, and we are committed to creating a safe and supportive community for all.
+              </div>
+            </div>
+          </div>
+          <div class="container text-center mt-5"></h5>
           <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
 
-                <img src="assets/images/port12.jpg" class="d-block" alt="Slide 1">
+                <img src="assets/images/port34.jpg" class="d-block" alt="Slide 1">
               </div>
               <div class="carousel-item">
-                <img src="assets/images/port34.jpg" class="d-block" alt="Slide 2">
+                <img src="assets/images/port12.jpg" class="d-block" alt="Slide 2">
               </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -97,44 +111,67 @@
         </div>
       </div>
     </div>
-
-<footer class="footer1">
-  <div class="container mt-5">
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-      Open Mission and Vision
-    </button>
   </div>
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Mission and Vision</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <div class="container">
+      <div class="circle-container">
+        <div class="circle">
+          <h2>Mission</h2>
+          <p1>We believe that every transgender woman deserves to feel beautiful, confident, and empowered. 
+            We want to support you on your journey of self-discovery and  expression.Whether you need a wardrobe makeover, a personal stylist, a makeup tutorial, or a hair consultation, we have you covered. 
+          </p1>
         </div>
-        <div class="modal-body">
-          <table class="table">
-            <tbody>
-              <tr>
-                <th scope="row">Mission</th>
-                <td>At TRANSchanger we believe that every transgender woman deserves to feel beautiful, confident, and empowered. We understand the challenges and struggles that come with transitioning, and we want to support you on your journey of self-discovery and expression. That's why we offer a range of products and services that are designed to help you embrace your identity and style with ease and comfort. Whether you need a wardrobe makeover, a personal stylist, a makeup tutorial, or a hair consultation, we have you covered. 
-
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">Vision</th>
-                <td>We are friendly, respectful, and knowledgeable, and we will work with you to create a look that matches your personality and goals. We also have a supportive community of transgender women who share their stories, tips, and advice on our online platform. You can connect with them, learn from them, and celebrate your achievements with them. TRANSchanger is more than just a company. It's a movement. We are here to help you transform your life and unleash your inner beauty. 
-                 .</td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="circle">
+          <h2>Vision</h2>
+          <p2>We are friendly, respectful, and knowledgeable.We also have a supportive community of transgender women who share their stories, tips, and advice on our online platform. TRANSchanger is more than just a company. It's a movement. We are here to help you transform your life and unleash your inner beauty. 
+            </p2>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <div class="circle">
+          <h2>Values</h2>
+          <p3>
+          Transitioning is a complex process that requires a lot of time, and the specific steps involved in transition will vary from person to person. We value Integrity, Excellence, Collaboration, Diversity, Respect.</p3>
         </div>
       </div>
     </div>
-  </div>
+
+    <button class="back-to-top-btn" onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></button>
+
+  <script>
+    // Function to scroll back to top smoothly
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+
+    // Show/hide back to top button based on scroll position
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.querySelector('.back-to-top-btn').style.display = "block";
+      } else {
+        document.querySelector('.back-to-top-btn').style.display = "none";
+      }
+    }
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+
+
+  
+
+
+
+
+<footer class="footer1">
+  <div class="container mt-5">
+   <div class="container text-center mt-5">
+ <h6>"TRANSchanger is about helping transwomen to empower theirselves and be in their full potential."</h6>
 </footer>     
+
+
 </body>
 </html>
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
