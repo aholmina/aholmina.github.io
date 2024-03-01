@@ -326,3 +326,25 @@ th {
   color: #ffffff;
   text-decoration: none;
 }
+
+.card-feedback {
+ 
+  background-color: transparent;
+  border: none;
+}
+.card-feedback .card-body {
+  background-color: rgba(255, 255, 255, 0.5); 
+}
+.card-feedback input[type="text"],
+.card-feedback input[type="email"],
+.card-feedback textarea {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.card-feedback input[type="text"]:focus,
+.card-feedback input[type="email"]:focus,
+.card-feedback textarea:focus {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.feedback-icon {
+  margin-right: 5px;
+}

@@ -38,18 +38,63 @@
               <a class="nav-link " aria-current="page" href="contactus.html">CONTACT</a>
               </li>
           </ul>
-
-          <ul class="social-icons">
-            <li><a href="https://www.facebook.com/HotChixQueen"><i class="fab fa-facebook-f"></i></a></li>
-            <li><a href="https://www.youtube.com/channel/UCQmYCdoK8GWyBVw4t_cbNXQ"><i class="fab fa-youtube"></i></a></li>
-            <li><a href="https://www.instagram.com/as.falcone/"><i class="fab fa-instagram"></i></a></li>
-          </ul>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#feedbackModal">
+            Feedback
+          </button>
+          <div class="modal fade" id="feedbackModal" tabindex="-1" aria-labelledby="feedbackModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="feedbackModalLabel"></h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="mb-3">
+                      <div class="container">
+                        <div class="row justify-content-center">
+                          <div class="col-md-8">
+                            <div class="card">
+                              <div class="card-header">
+                                Feedback
+                              </div>
+                              <div class="card-body">
+                                <form id="feedbackForm">
+                                  <div class="mb-3">
+                                    <label for="name" class="form-label">Name</label>
+                                    <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                                  </div>
+                                  <div class="mb-3">
+                                    <label for="email" class="form-label">Email address</label>
+                                    <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                                  </div>
+                                  <div class="mb-3">
+                                    <label for="message" class="form-label">Message</label>
+                                    <textarea class="form-control" id="message" rows="3" placeholder="Enter your message"></textarea>
+                                  </div>
+                                  <button type="submit" class="btn btn-primary" id="submitButton">Submit</button>
+                                </form>
+                              </div>
+                            </div>
+        
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+              <div class="card card-feedback">
+                <div class="card-body">
+                  <h5 class="card-title">We value your feedback</h5>
+                    <p class="card-text">Feel free to share your thoughts with us. Your feedback helps us improve our services.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>        
       </div>
     </div>
   </nav>
-
  </header>
-
  <div class="card text-bg-dark">
   <img src="assets/images/port21.jpg" class="card-img" alt="...">
   <div class="card-img-overlay">
@@ -59,8 +104,12 @@
 <footer class="footer">
   <div class="container">
     <div class="row">
-      <div class="col-md-4">
-        <h5>Feedback</h5>
+      <div class="col-md-4">    
+        <ul class="social-icons">
+          <li><a href="https://www.facebook.com/HotChixQueen"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a href="https://www.youtube.com/channel/UCQmYCdoK8GWyBVw4t_cbNXQ"><i class="fab fa-youtube"></i></a></li>
+          <li><a href="https://www.instagram.com/as.falcone/"><i class="fab fa-instagram"></i></a></li>
+        </ul>
           <p>&copy; 2024 TRANSchanger. All rights reserved.</p>  
       </div>
       <div class="col-md-4">
@@ -77,43 +126,10 @@
           <span>|</span>
           <a href="contactus.html">Call us at +12096619494</a>
       </div>
-      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="assets/images/port13.jpg" class="d-block w-25" alt="Slide 6">
-          </div>
-        </div>
-         <div class="carousel-item">
-            <img src="assets/images/port29.jpg" class="d-block w-25" alt="Slide 2">
-          </div>
-          <div class="carousel-item">
-            <img src="assets/images/port30.jpg" class="d-block w-25" alt="Slide 4">
-          </div>
-
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-    
-      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
-   
-
-
-
-
     </div>
   </div>
 </footer>
-    
  </body>
-
  </html>
- 
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   
