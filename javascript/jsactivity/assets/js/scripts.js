@@ -1,9 +1,8 @@
-//Change Triggers/ Events
-let subjectEnglish = document.getElementById("suject-english"); //html code 
+let subjectEnglish = document.getElementById("suject-english"); 
 let subjectMath = document.getElementById("suject-math");
-let subjectData = document.getElementById("suject-data"); //html code 
+let subjectData = document.getElementById("suject-data"); 
 let subjectComprog = document.getElementById("suject-comprog");
-let subjectWebprog = document.getElementById("suject-webprog"); //html code 
+let subjectWebprog = document.getElementById("suject-webprog"); 
 
 subjectEnglish.addEventListener('keyup', function() {
     let total = parseFloat(subjectEnglish.value) + parseFloat(subjectMath.value) + parseFloat(subjectData.value) + parseFloat(subjectComprog.value) + parseFloat(subjectWebprog.value);
