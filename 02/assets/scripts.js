@@ -45,8 +45,3 @@ subjectWebprog.addEventListener('keyup', function() {
     let ave = total / 5;
     document.getElementById("average").value = ave;
 });
-
-
-
-
-
