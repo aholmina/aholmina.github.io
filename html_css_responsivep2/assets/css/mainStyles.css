@@ -65,21 +65,16 @@ nav{
   color:#0a0a0aee
 }
 .homepage-bg {
-  background-image: url("../images/port15.jpg");
+  background-image: url("../images/secondbg.jpeg");
   background-size: cover;
   background-position: center;
-  height: 100vh; /* Ensure full height */
+  background-repeat: no-repeat;
+  min-height: 100vh; 
   position: relative;
+  
 }
 
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-}
+
 
 .content {
   position: relative;
@@ -87,12 +82,7 @@ nav{
 }
 
 
- .footer1{
-  
-  background-color: #f882d1;
-  color: #eff1f6;
-  text-align: center;
-} 
+
 .styled-text {
   font-size: 35px;
   font-family: Arial, Helvetica, sans-serif;
@@ -125,8 +115,7 @@ nav{
 }
 .image-container {
   display: flex;
-  top: 0;
-  right: 0;
+ 
   width: 400px; 
   text-align: center;
 }
@@ -193,73 +182,27 @@ th {
   margin: 100px auto; /* Center the window vertically and horizontally */
 }
 
-.carousel-container {
-  margin-top: 50px; /* Adjust as needed */
-  margin-bottom: 50px; /* Adjust as needed */
-  display: flex;
-  justify-content: center;
- align-items: center;
- height: 300px;
-}
 
-.carousel {
+
+.centered-carousel {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 200%;
-  width: 200%;
-  padding-top: 5%;
-  border-radius: 20%;
-}
-.carousel-inner {
-  width: 100%;
-  display: flex;
-  
+
  
 }
-.carousel-item {
+
+
+
+.carousel-caption {
   text-align: center;
- display: flex;
- 
-}
-.carousel-item h5 {
-  color: #e283b8e9;
-}
-
-.carousel-item h3 {
-  color: #280ad3e9;
 }
 
 
-.carousel-item h6 {
-  color: #07000ce9;
-}
 
-.carousel-item p1 {
-  color: hwb(272 4% 5% / 0.984);
-}
-.carousel-item p {
-  color: #f9f9fdf0;
-}
-
-.card {
-  border: none;
-}
-.carousel-inner {
-  display: flex;
-  flex-direction: row;
-}
-.carousel-item {
-  flex: 0 0 auto;
-  width: 50%; /* Adjust as needed */
-}
-.carousel-item img {
-  width: 100%;
-  border-radius: 10px;
-}
 
 .product-card {
-  border: 1px solid #dee2e6;
+  border: 1px solid #fd18b0;
   border-radius: 10px;
   padding: 20px;
   margin-bottom: 20px;
@@ -344,4 +287,42 @@ th {
 .back-to-top-btn i {
   font-size: 24px;
   line-height: 50px;
+}
+
+
+
+
+
+.centered-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+.title-box {
+  background-color: #f8f9fa;
+ 
+  border-radius: 10px;
+}
+
+.footer {
+  background-color: #343a40;
+  color: #ffffff;
+  padding: 30px 0;
+}
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+.footer ul li {
+  display: inline;
+  margin-right: 20px;
+}
+.footer ul li:last-child {
+  margin-right: 0;
+}
+.footer ul li a {
+  color: #ffffff;
+  text-decoration: none;
 }
