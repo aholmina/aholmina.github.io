@@ -348,3 +348,18 @@ th {
 .feedback-icon {
   margin-right: 5px;
 }
+
+.custom-modal {
+  max-width: 800px; /* Adjust maximum width as needed */
+}
+.custom-modal .modal-dialog {
+  width: 100%;
+  height: auto;
+  margin: 20px auto;
+}
+.custom-modal .modal-content {
+  border-radius: 20px; /* Adjust border radius as needed */
+}
+.custom-modal .modal-body {
+  padding: 20px;
+}
