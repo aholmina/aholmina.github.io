@@ -133,11 +133,12 @@ nav{
 
 
 .modal-content {
-  background-color: #f36ac1;
+  background-color: #131113ce;
 }
 
 .modal-header, .modal-body {
   border-bottom: none;
+  background-color: #b21686ea;
 }
 
 .modal-footer {
@@ -363,4 +364,22 @@ th {
 }
 .custom-modal .modal-body {
   padding: 20px;
+}
+
+.circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.pink {
+  background-color: pink;
+}
+
+.sky-blue {
+  background-color: skyblue;
+}
+
+.black {
+  background-color: black;
 }
