@@ -95,12 +95,84 @@
     </div>
   </nav>
  </header>
- <div class="card text-bg-dark">
-  <img src="assets/images/port21.jpg" class="card-img" alt="...">
-  <div class="card-img-overlay">
-    <h2 class="card-title">How can we help you?</h2>
+
+
+ 
+<div class="homepage-bg">
+    
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 mt-4">
+        <div class="card custom-card body opacity-25 mb-2">
+          <div class="card-body">
+            <h5 class="card-title">FAQ</h5>
+            <p class="card-text"></p>
+            <a href="about.html" class="btn btn-primary">View</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mt-4">
+        <div class="card custom-card body opacity-25 mb-2">
+          <div class="card-body ">
+            <h5 class="card-title">Privacy Policy</h5>
+            <p class="card-text"></p>
+            <a href="privacy.html" class="btn btn-primary">View</a>
+
+              
+            
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mt-4">
+        <div class="card custom-card body opacity-25 mt-0 mb-0">
+          <div class="card-body">
+            <h5 class="card-title">Create an Account</h5>
+            <p class="card-text"></p>
+            <a href="createaccount.html" class="btn btn-primary">Create Account</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+     
+
+     
+     
+    
+    <div class="container custom-containerbody opacity-50 mt-3">
+
+      <h3><p class="mb-0"><span style="color: rgba(161, 11, 86, 0.886);">Let's get started and get in touch today!</span></p></h3>
+     
+      <form>
+        <div class="mb-3">
+          <label for="name" class="form-label">Your Name</label>
+          <input type="text" class="form-control" id="name" required>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Your Email</label>
+          <input type="email" class="form-control" id="email" required>
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Message</label>
+          <textarea class="form-control" id="message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary mb-2">Submit</button>
+      </form>
+    </div>
+    
+
+
+
+
+
   </div>
 </div>   
+
+
+
+
+
 <footer class="footer">
   <div class="container">
     <div class="row">
@@ -119,16 +191,12 @@
           <i class="fab fa-cc-mastercard"></i>
           <i class="fab fa-cc-amex"></i>
           <i class="fab fa-cc-discover"></i>
-          <i class="fab fa-cc-paypal"></i>           
+          <i class="fab fa-cc-paypal"></i>     
+        
+          
       </div>
       <div class="col-md-4">
         <p class="mb-0"><span style="color: rgb(230, 66, 143);">CONTACT US</span></p><h5>
-
-
-
-
-
-
 
           
           <a href="contactus.html">emailus@transchanger.com</a>
@@ -138,43 +206,42 @@
       <div class="col-md-4">
         <h5></h5>
       
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookingModal">
-          Book Now
-      </button>
-         </div>
-          <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
-           <div class="modal-dialog">
-             <div class="modal-content">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#privacyPolicyModal">
+          Request Privacy Policy
+        </button>
+        
+    
+        <div class="modal fade" id="privacyPolicyModal" tabindex="-1" aria-labelledby="privacyPolicyModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content body opacity-100">
               <div class="modal-header">
-               <h5 class="modal-title" id="bookingModalLabel">Booking Form</h5>
+                <h5 class="modal-title" id="privacyPolicyModalLabel">Request Privacy Policy</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
+              </div>
+              <div class="modal-body">
                 <form>
-                <div class="mb-3">
-                <label for="name" class="form-label">Name</label>
-                <input type="text" class="form-control" id="name" placeholder="Enter your name">
-                </div>
-                <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" placeholder="Enter your email">
-                </div>
-                <div class="mb-3">
-                <label for="date" class="form-label">Date</label>
-                <input type="date" class="form-control" id="date">
-                </div>
-                <div class="mb-3">
-                <label for="service" class="form-label">Service Details</label>
-                <textarea class="form-control" id="service" placeholder="Enter service details"></textarea>
-                </div>
-               <button type="submit" class="btn btn-primary">Submit</button>
-              </form>
+                  <div class="mb-3">
+                    <label for="name" class="form-label">Your Name</label>
+                    <input type="text" class="form-control" id="name" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="email" class="form-label">Your Email</label>
+                    <input type="email" class="form-control" id="email" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea class="form-control" id="message" rows="5" required></textarea>
+                  </div>
+                  <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="agree" required>
+                    <label class="form-check-label" for="agree">I agree to the <a href="#">terms and conditions</a>.</label>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+              </div>
             </div>
           </div>
         </div>
-      <hr>
-    </div>
-  </div>
 
       </div>
     </div>
