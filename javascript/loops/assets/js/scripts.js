@@ -1,6 +1,6 @@
-let Execute = document.getElementById("btnMultiply");
+let Multiply = document.getElementById("btnMultiply");
 
-Execute.addEventListener('click', function() {
+Multiply.addEventListener('click', function() {
     let RowLimit = document.getElementById("RowLimit").value;
     let ColLimit = document.getElementById("ColLimit").value;
     let Quotients = "";
@@ -8,14 +8,14 @@ Execute.addEventListener('click', function() {
 
 
     for(var row = 1; row <= RowLimit; row++){
-        Quotients = "";
+        Products = "";
         
         for(var col = 1; col <= ColLimit; col++){
-            Quotients += "<td style='width: 50px;'>"+(row * col)+"</td>";
+            Products += "<td style='width: 50px;'>"+(row * col)+"</td>";
             
             
     }
-    tableTD += "<tr class='border-bottom : 1px solid #fff;'>" +Quotients+ "</tr>";
+    tableTD += "<tr class='border-bottom : 1px solid #fff;'>" +Products+ "</tr>";
 
     document.getElementById("div-wrapper").innerHTML = tableTD;
     }
