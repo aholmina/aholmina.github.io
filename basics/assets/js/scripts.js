@@ -1,0 +1,1 @@
+alert("Hello, Message coming in external script");
