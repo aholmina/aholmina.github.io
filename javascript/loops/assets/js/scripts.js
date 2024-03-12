@@ -3,7 +3,7 @@ let Multiply = document.getElementById("btnMultiply");
 Multiply.addEventListener('click', function() {
     let RowLimit = document.getElementById("RowLimit").value;
     let ColLimit = document.getElementById("ColLimit").value;
-    let Quotients = "";
+    let Products = "";
     let tableTD= "";
 
 
@@ -11,11 +11,11 @@ Multiply.addEventListener('click', function() {
         Products = "";
         
         for(var col = 1; col <= ColLimit; col++){
-            Products += "<td style='width: 50px;'>"+(row * col)+"</td>";
+            Products += "<td style='width: 30px;'>"+(row * col)+"</td>";
             
             
     }
-    tableTD += "<tr class='border-bottom : 1px solid #fff;'>" +Products+ "</tr>";
+    tableTD += `<tr class='border-bottom : 1px solid #fff;'>${Products}</tr>`;
 
     document.getElementById("div-wrapper").innerHTML = tableTD;
     }
