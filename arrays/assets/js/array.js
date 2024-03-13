@@ -30,3 +30,43 @@ function DrawList() {
 }
 
 
+function sumThirdRow(table) {
+    
+    if (!table || !table.rows) {
+      return null;
+    }
+  
+  
+    const thirdRow = table.rows[2];
+  
+  
+    if (!thirdRow) {
+      return null;
+    }
+  
+    
+    let sum = 0;
+  
+
+    for (let i = 0; i < thirdRow.cells.length; i++) {
+      const cellValue = parseFloat(thirdRow.cells[i].textContent);
+  
+      
+      if (!isNaN(cellValue)) {
+        sum += cellValue;
+      }
+    }
+  
+    return sum;
+  }
+  
+
+  const myTable = document.getElementById("table-stripped"); 
+  const thirdRowSum = sumThirdRow(myTable);
+  
+  if (thirdRowSum !== null) {
+    console.log("Sum of third row:", thirdRowSum);
+  } else {
+    console.error("Error: Invalid table or missing third row");
+  }
+  
