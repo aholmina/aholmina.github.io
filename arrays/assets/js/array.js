@@ -17,6 +17,7 @@ document.getElementById("btn-add").addEventListener('click', function() {
 function remove(index) {
     Employee.splice(index, 1);
     DrawList();
+    
 }
 function DrawList() {
     let List = "";
@@ -26,47 +27,29 @@ function DrawList() {
         List += "<tr><td>" + Employee[x][0] + " </td> " + "<td>" + Employee[x][1] + "</td>" + "<td>" + Employee[x][2] + "</td>" + "<td><button class='btn btn-danger' onclick='remove("+x+")'>Remove</button></td></tr>";
 
         document.getElementById("table-list").innerHTML = List;
+
+}
+
    
+function edit(index) {
+    let EmployeeName = prompt("Please enter new Full Name", Employee[index][1]);
+    let WorkingHours = prompt("Please enter new Working Hours", Employee[index][2]);
+
+    if(EmployeeName != null && WorkingHours != null) {
+        Employee[index][1] = EmployeeName;
+        Employee[index][2] = WorkingHours;
+    }
+    DrawList();
+}
+
+function DrawList() {
+    let List = "";
+    let sum = 0;
+
+    for(let x = 0; x < Employee.length; x++)
+        List += "<tr><td>" + Employee[x][0] + " </td> " + "<td>" + Employee[x][1] + "</td>" + "<td>" + Employee[x][2] + "</td>" + "<td><button class='btn btn-danger' onclick='remove("+x+")'>Remove</button></td>" + "<td><button class='btn btn-primary' onclick='edit("+x+")'>Edit</button></td></tr>";
+
+    document.getElementById("table-list").innerHTML = List;
 }
 
 
-function sumThirdRow(table) {
-    
-    if (!table || !table.rows) {
-      return null;
-    }
-  
-  
-    const thirdRow = table.rows[2];
-  
-  
-    if (!thirdRow) {
-      return null;
-    }
-  
-    
-    let sum = 0;
-  
-
-    for (let i = 0; i < thirdRow.cells.length; i++) {
-      const cellValue = parseFloat(thirdRow.cells[i].textContent);
-  
-      
-      if (!isNaN(cellValue)) {
-        sum += cellValue;
-      }
-    }
-  
-    return sum;
-  }
-  
-
-  const myTable = document.getElementById("table-stripped"); 
-  const thirdRowSum = sumThirdRow(myTable);
-  
-  if (thirdRowSum !== null) {
-    console.log("Sum of third row:", thirdRowSum);
-  } else {
-    console.error("Error: Invalid table or missing third row");
-  }
-  
