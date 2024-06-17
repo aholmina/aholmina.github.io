@@ -1,0 +1,660 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0;
+    scroll-behavior: smooth;
+}
+
+
+
+/* Header styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #333; 
+    color: #fff; 
+}
+
+.logo a {
+    color: #fff; 
+    text-decoration: none; 
+    font-size: 1.2rem; 
+    font-weight: bold; 
+}
+
+.navbar-toggler {
+    background-color: transparent; 
+    border: none; 
+    cursor: pointer;
+}
+
+.navbar {
+    display: flex;
+}
+
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 15px; 
+}
+
+.nav-links li a {
+    color: #fff; 
+    text-decoration: none; 
+    font-size: 1rem; 
+    font-weight: lighter;
+}
+
+.nav-links li a:hover {
+    color: #ddd; 
+}
+
+
+/* Main sections */
+main {
+    padding: 20px;
+}
+
+/* About section */
+
+.about-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.profile-picture img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; 
+    object-fit: fill;
+}
+
+.about-content {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.contact-btn {
+    margin-top: 10px;
+    background-color: #c20000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.contact-btn:hover {
+    background-color: #c20000;
+    border-radius: 20px;
+}
+
+
+/* Styling for the About Me section */
+.about-me-section  {
+    padding: 50px 20px;
+    background-color: #ffffff; 
+    opacity: 50px;
+    padding: 20px;
+    color: grey; 
+    margin-bottom: 20px;
+   text-align: center;
+
+}
+
+.about-me-section .about-me-content {
+    margin-bottom: 30px;
+    
+   
+}
+
+.about-me-section .skill {
+    background-color: #f0f0f0; 
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    text-align: left;
+}
+
+.about-me-section .skill h5 {
+    margin-bottom: 10px;
+}
+
+.about-me-section .skill p {
+    margin-bottom: 0;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.skills-section {
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; 
+
+  
+}
+
+.skill {
+    background-color: grey; 
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    text-align: left;
+    flex: 1; 
+    max-width: 300px; 
+}
+
+.skill h5 {
+    margin-bottom: 10px;
+    font-size: small;
+    font-weight: lighter;
+}
+
+.skill p {
+    margin-bottom: 0;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.work-experience-section {
+   
+    padding: 20px;
+    color: grey; 
+    margin-bottom: 20px;
+    background-color: #f5f5f5;
+}
+
+.work-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: grey; 
+    
+}
+
+.work-title-btn {
+    background-color:#c20000; 
+    color: #fff; 
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px; 
+}
+.work-title-btn:hover {
+    background-color: #0056b3; 
+}
+
+
+.work-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+   
+}
+
+.work-card {
+    background-color: #ffffff; 
+    padding: 20px;
+    margin: 10px;
+    width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-bottom: 5px solid #c20000;
+}
+
+.work-card h5 {
+    margin-bottom: 0.5rem;
+}
+
+.work-card p {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.work-card hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-color: red; 
+}
+
+.company-name {
+    font-weight: bold;
+    color: #333;
+}
+
+
+.company-name {
+    font-weight: bold;
+    color: #333;
+}
+
+.company-name {
+    font-weight: bold;
+    color: #333;
+}
+
+
+.portfolio-section {
+    padding: 40px 0;
+    background-color: white;
+   
+}
+
+.portfolio-title {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 25px;
+    color: grey; 
+    
+}
+
+.portfolio-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+   
+  
+}
+
+.portfolio-item {
+    flex: 0 0 calc(33.33% - 20px);
+    margin: 10px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    border-bottom: 5px solid #c20000;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px);
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+   
+}
+
+
+/* Footer styles */
+
+
+
+
+.footer {
+    background-color: #333; 
+    color: #fff; 
+    padding: 30px 0; 
+    text-align: center; 
+}
+
+
+.subscribe {
+    margin-bottom: 20px; 
+}
+
+.subscribe h4 {
+    margin-bottom: 10px; 
+}
+
+.subscribe-email {
+    padding: 8px;
+    border: 1px solid #ccc; 
+    margin-right: 10px; 
+}
+
+.subscribe-btn {
+    padding: 8px 20px;
+    background-color:#c20000;
+    color: #fff; 
+    border: none;
+    cursor: pointer;
+}
+
+.subscribe-btn:hover {
+    background-color: #c20000;
+}
+
+.socials {
+    margin-top: 20px; 
+}
+
+.socials i {
+    font-size: 1.5rem;
+    color: #c20000;
+    margin-right: 10px; 
+    cursor: pointer; 
+}
+
+.socials i:hover {
+    opacity: 0.7; 
+}
+
+/* Modal Styles */
+.modal {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1000; 
+    overflow: auto; 
+}
+
+/* Show modal when target matches */
+.modal:target {
+    display: block;
+}
+
+/* Modal Content */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    overflow: auto;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Contact Form Styling */
+#contact-form {
+    margin-top: 20px;
+}
+
+#contact-form label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical; /* Allow textarea resizing vertically */
+}
+
+#contact-form textarea {
+    min-height: 100px;
+}
+
+#contact-form button {
+    padding: 10px 20px;
+    background-color: #c20000;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#contact-form button:hover {
+    background-color: #960000;
+}
+
+/* Simulate close animation */
+#contact-form:target .modal-content {
+    transform: translateY(-100%);
+}
+
+/* Scroll to Menu after submit */
+#contact-form:target ~ #menu {
+    animation: scrollUp 1s forwards;
+}
+
+@keyframes scrollUp {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+
+/* Contact Form Styling */
+#contact-form {
+    margin-top: 20px;
+}
+
+#contact-form label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical; /* Allow textarea resizing vertically */
+}
+
+#contact-form textarea {
+    min-height: 100px;
+}
+
+#contact-form button {
+    padding: 10px 20px;
+    background-color: #c20000;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#contact-form button:hover {
+    background-color: #960000;
+}
+
+
+/* Form Styling (you can customize further) */
+form {
+    margin-top: 15px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+form button {
+    background-color:#c20000;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #c20000;
+}
+
+.heading-title {
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+
+
+
+.skills-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 5px;
+
+}
+
+.skill {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    border-bottom: 5px solid #c20000;
+}
+    
+
+
+
+.skill:hover {
+    transform: translateY(-5px);
+}
+
+.skill h5 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.skill p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #666;
+}
+
+
+
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .nav-links li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .navbar-toggler {
+        order: -1;
+        margin-bottom: 10px;
+    }
+
+    .navbar {
+        display: none;
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .navbar.active {
+        display: block;
+    }
+
+    .about-section {
+        text-align: center;
+    }
+
+    .about-me-section .about-me-content h4 {
+        font-size: 1.5rem;
+    }
+
+    .skills-section .skill {
+        width: 90%;
+    }
+
+    .work-experience-section .work-card {
+        width: 90%;
+    }
+
+    .portfolio-gallery .portfolio-item {
+        width: 90%;
+        margin: 0 auto 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .skills-section {
+        grid-template-columns: repeat(2, 1fr); /* Two columns for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-section {
+        grid-template-columns: 1fr; /* Single column layout for smaller screens */
+    }
+}
