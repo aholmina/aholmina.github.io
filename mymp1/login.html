@@ -23,7 +23,7 @@
                 </div>
             </div>
             <div class="container-fluid d-flex justify-content-center p-2">
-              <a href="index.html"><img class="logo" src="images/social.jpg" alt=""></a>
+                <a href="index.html"><img class="logo" src="images/social.jpg" alt=""></a>
             </div>
          </header>
          <nav class="navbar navbar-expand-lg">
@@ -36,7 +36,7 @@
             <div class="navigation">
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 navrightborder">
-                    <li class="nav-item nav-link"><a class="nav-link" aria-current="page" href="home.html">HOME</a></li>
+                    <li class="nav-item nav-link"><a class="nav-link" aria-current="page" href="index.html">HOME</a></li>
                     <li class="nav-item nav-link"><a class="nav-link" aria-current="page" href="hrtservices.html">HRT&Services</a></li>
                     <li class="nav-item nav-link"><a class="nav-link" aria-current="page" href="aboutus.html">ABOUT US</a></li>
                     <li class="nav-item nav-link"><a class="nav-link active" aria-current="page" href="contactus.html">CONTACT US</a></li>
@@ -55,34 +55,38 @@
     <main>
 
         <section>
-            <div class="d-flex justify-content-center flex-column align-items-center mt-4">
-                <h4>Contact Us</h4>
-            </div>
-            <div class="container-sm d-flex flex-column flex-lg-row justify-content-around gap-class align-self-stretc p-3">
-                <div class="col-lg-7">
-                    <div style="max-width:100%;list-style:none; transition: none;overflow:hidden;width:750px;height:500px;">
-                    <div id="my-map-canvas" style="height:100%; width:100%;max-width:100%;">
-                    <iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=Olongapo+City,+Zambales,+Philippines&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe></div>
-                </div>
-                </div>
+            <div class="container-sm d-flex flex-column flex-lg-row justify-content-between gap-class align-self-stretc p-3">
                 <div class="col-lg-5">
+                    <h4>Log In</h4>
                     <form>
                         <div class="mb-3">
-                          <label for="recipient-name" class="col-form-label">Your Email:</label>
-                          <input type="text" class="form-control" id="recipient-name">
+                          <label for="recipient-name" class="col-form-label">Username or Email:</label>
+                          <input type="text" class="form-control w-75" id="recipient-name" placeholder="Username or Email">
                         </div>
                         <div class="mb-3">
-                          <label for="message-text" class="col-form-label">Message:</label>
-                          <textarea class="form-control contact-text-area" id="message-text"></textarea>
-                          <button type="button" class="btn btn-warning mt-4">Send message</button>
+                            <label for="recipient-name" class="col-form-label">Password</label>
+                            <input type="password" class="form-control w-75" id="recipient-name" placeholder="Password">
+                          <button type="button" class="btn btn-warning mt-4">Login</button>
                         </div>
                       </form>
+                      <div class="d-flex flex-column flex-lg-row align-self-stretc">
+                        <div class="col-lg-6">
+                            <div>Don't have and account?</div>
+                            <div><a href="signup.html" class="login-links">SIGN UP &rarr;</a></div>
+                        </div>
+                        <div class="col-lg-6">
+                            <a href=""  class="login-links">Password Help</a>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-lg-7">
+                    <img src="images/port20.png" class="w-100 container-image" alt="...">
                 </div>
             </div>
             
             
         </section>
-        <footer class="footdesign container-fluid">
+        <footer class="footdesign container-fluid footer-login">
             <div class="container-sm d-flex  flex-column flex-lg-row justify-content-end gap-class align-self-stretc p-3">
               <div class="col-lg-4">
                 <h4>CONNECT WITH US</h4>
@@ -96,20 +100,21 @@
                     <h4>SHOP</h4>
                       <ul class="ulfooter">
                           <li class="nav-item nav-link"><a class="nav-link active" aria-current="page" href="hrtservices.html">HRT</a></li>
-                          <li class="nav-item nav-link"><a class="nav-link active" aria-current="page" href="hrtservices.html">SERVICES</a></li>      
+                          <li class="nav-item nav-link"><a class="nav-link active" aria-current="page" href="home.html">Services</a></li>      
                       </ul>
               </div>  
               <div class="col-lg-4">
                     <h4>CUSTOMER SERVICE</h4>
                       <ul class="ulfooter">
                         <li class="nav-item nav-link"><a class="nav-link active" aria-current="page" href="contactus.html">Contact Us</a></li>
-                        <li class="nav-item nav-link"><a class="nav-link active" aria-current="page" href="shipping.html">Shipping Info</a></li>   
+                        <li class="nav-item nav-link"><a class="nav-link active" aria-current="page" href="shipping.html">Shipping Info</a></li>      
                       </ul>
               </div>     
             </div>
       
       </footer>
     </main>
+
 
     <script src="script.js"></script>
 </body>
