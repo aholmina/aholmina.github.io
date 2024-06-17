@@ -1,4 +1,4 @@
-
+/* Universal styles */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -11,8 +11,6 @@ body, html {
     background-color: #f0f0f0;
     scroll-behavior: smooth;
 }
-
-
 
 /* Header styles */
 .header {
@@ -63,14 +61,12 @@ body, html {
     color: #ddd; 
 }
 
-
 /* Main sections */
 main {
     padding: 20px;
 }
 
 /* About section */
-
 .about-section {
     display: flex;
     flex-direction: column;
@@ -105,23 +101,16 @@ main {
     border-radius: 20px;
 }
 
-
-/* Styling for the About Me section */
 .about-me-section  {
     padding: 50px 20px;
     background-color: #ffffff; 
-    opacity: 50px;
-    padding: 20px;
     color: grey; 
     margin-bottom: 20px;
-   text-align: center;
-
+    text-align: center;
 }
 
 .about-me-section .about-me-content {
     margin-bottom: 30px;
-    
-   
 }
 
 .about-me-section .skill {
@@ -143,40 +132,38 @@ main {
 }
 
 .skills-section {
-   
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap; 
-
-  
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 5px;
 }
 
 .skill {
-    background-color: grey; 
+    background-color: #f5f5f5;
     padding: 20px;
-    margin: 10px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    text-align: left;
-    flex: 1; 
-    max-width: 300px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    border-bottom: 5px solid #c20000;
+}
+
+.skill:hover {
+    transform: translateY(-5px);
 }
 
 .skill h5 {
+    font-size: 1.2rem;
     margin-bottom: 10px;
-    font-size: small;
-    font-weight: lighter;
+    color: #333;
 }
 
 .skill p {
-    margin-bottom: 0;
-    font-size: 1rem;
-    line-height: 1.6;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #666;
 }
 
+/* Work Experience Section */
 .work-experience-section {
-   
     padding: 20px;
     color: grey; 
     margin-bottom: 20px;
@@ -187,7 +174,6 @@ main {
     text-align: center;
     margin-bottom: 20px;
     color: grey; 
-    
 }
 
 .work-title-btn {
@@ -201,16 +187,15 @@ main {
     font-weight: bold;
     margin-bottom: 5px; 
 }
+
 .work-title-btn:hover {
     background-color: #0056b3; 
 }
-
 
 .work-cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-   
 }
 
 .work-card {
@@ -244,22 +229,10 @@ main {
     color: #333;
 }
 
-
-.company-name {
-    font-weight: bold;
-    color: #333;
-}
-
-.company-name {
-    font-weight: bold;
-    color: #333;
-}
-
-
+/* Portfolio Section */
 .portfolio-section {
     padding: 40px 0;
     background-color: white;
-   
 }
 
 .portfolio-title {
@@ -267,15 +240,12 @@ main {
     margin-bottom: 20px;
     margin-top: 25px;
     color: grey; 
-    
 }
 
 .portfolio-gallery {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-   
-  
 }
 
 .portfolio-item {
@@ -296,22 +266,15 @@ main {
     width: 100%;
     height: auto;
     display: block;
-   
 }
 
-
 /* Footer styles */
-
-
-
-
 .footer {
     background-color: #333; 
     color: #fff; 
     padding: 30px 0; 
     text-align: center; 
 }
-
 
 .subscribe {
     margin-bottom: 20px; 
@@ -370,19 +333,6 @@ main {
 /* Show modal when target matches */
 .modal:target {
     display: block;
-}
-
-/* Modal Content */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed;
-    z-index: 1000; 
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); 
-    overflow: auto;
 }
 
 .modal-content {
@@ -449,150 +399,7 @@ main {
     background-color: #960000;
 }
 
-/* Simulate close animation */
-#contact-form:target .modal-content {
-    transform: translateY(-100%);
-}
-
-/* Scroll to Menu after submit */
-#contact-form:target ~ #menu {
-    animation: scrollUp 1s forwards;
-}
-
-@keyframes scrollUp {
-    0% {
-        transform: translateY(0);
-    }
-    100% {
-        transform: translateY(-100%);
-    }
-}
-
-
-/* Contact Form Styling */
-#contact-form {
-    margin-top: 20px;
-}
-
-#contact-form label {
-    display: block;
-    margin-bottom: 8px;
-}
-
-#contact-form input[type="text"],
-#contact-form input[type="email"],
-#contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    resize: vertical; /* Allow textarea resizing vertically */
-}
-
-#contact-form textarea {
-    min-height: 100px;
-}
-
-#contact-form button {
-    padding: 10px 20px;
-    background-color: #c20000;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-#contact-form button:hover {
-    background-color: #960000;
-}
-
-
-/* Form Styling (you can customize further) */
-form {
-    margin-top: 15px;
-}
-
-form label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-form input[type="text"],
-form input[type="email"],
-form textarea {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-form textarea {
-    resize: vertical;
-}
-
-form button {
-    background-color:#c20000;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-form button:hover {
-    background-color: #c20000;
-}
-
-.heading-title {
-    text-align: center;
-    margin-bottom: 20px;
-
-}
-
-
-
-.skills-section {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 5px;
-
-}
-
-.skill {
-    background-color: #f5f5f5;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    border-bottom: 5px solid #c20000;
-}
-    
-
-
-
-.skill:hover {
-    transform: translateY(-5px);
-}
-
-.skill h5 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-    color: #333;
-}
-
-.skill p {
-    font-size: 0.9rem;
-    line-height: 1.5;
-    color: #666;
-}
-
-
-
-
-/* Media query for mobile devices */
+/* Media Queries */
 @media (max-width: 768px) {
     .header {
         flex-direction: column;
@@ -644,12 +451,6 @@ form button:hover {
     .portfolio-gallery .portfolio-item {
         width: 90%;
         margin: 0 auto 20px;
-    }
-}
-
-@media (max-width: 768px) {
-    .skills-section {
-        grid-template-columns: repeat(2, 1fr); /* Two columns for smaller screens */
     }
 }
 
