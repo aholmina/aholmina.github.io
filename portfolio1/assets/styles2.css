@@ -459,3 +459,57 @@ main {
         grid-template-columns: 1fr; /* Single column layout for smaller screens */
     }
 }
+
+
+
+.portfolio-gallery {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.portfolio-item {
+    position: relative;
+    margin: 10px;
+    width: 200px; /* Adjust width as needed */
+    text-align: center; /* Center-align text and buttons */
+}
+
+.details-btn {
+    display: block;
+    margin: 10px auto;
+    
+    background-color: grey;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+
+.details-popup {
+    display: none;
+    position: fixed; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.details-popup:target {
+    display: block;
+}
+
+.details-popup .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+}

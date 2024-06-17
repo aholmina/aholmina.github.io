@@ -35,7 +35,7 @@
             </div>
             <div class="about-content">
                 <h3>Hello I'm Alexa Holmina</h3>
-                <p>a Web Developer & Network Analyst</p>
+                <p>a Web Developer & NOC Engineer</p>
                 <p>I am a Network Analyst and a Network Infrastructure Engineer from Zambales, Philippines. You can get in touch with me by clicking the "Contact me" button below.</p>
                 <button class="btn contact-btn" id="contact-btn">Contact Me</button>             
             </div>
@@ -96,7 +96,7 @@
             </div>
             <div class="work-cards">
                 <div class="work-card">
-                    <button class="work-title-btn">Network Analyst</button>
+                    <button class="work-title-btn">NOC Engineer</button>
                     <p><i>Full time/Remote</i></p>
                     <p>October 2021 - November 2023</p>
                     <p class="company-name">Parity Technology Solutions</p>
@@ -160,6 +160,8 @@
             </div>
         </section>
   
+       
+
         <section id="portfolio" class="portfolio-gallery">
             <div class="portfolio-title">
                 <h4>Portfolio</h4>
@@ -168,24 +170,70 @@
             <div class="portfolio-gallery">
                 <div class="portfolio-item">
                     <img src="images/Company1 (1).png" alt="Project">
+                    <a href="#details1" class="details-btn">More Details</a>
+                    <div id="details1" class="details-popup">
+                        <a href="#" class="close-btn">&times;</a>
+                        <h5>The Results Companies</h5>
+                        <h6>MARCH 2014-FEBRUARY-2015</h6>
+                    </div>
                 </div>
                 <div class="portfolio-item">
                     <img src="images/Company1 (2).png" alt="Project">
+                    <a href="#details2" class="details-btn">More Details</a>
+                    <div id="details2" class="details-popup">
+                        <a href="#" class="close-btn">&times;</a>
+                        <h5>Synnex-Concentrix</h5>
+                        <h6>OCTOBER 2010-MARCH-2014/h6>
+                    </div>
                 </div>
                 <div class="portfolio-item">
                     <img src="images/Company1 (3).png" alt="Project">
+                    <a href="#details3" class="details-btn">More Details</a>
+                    <div id="details3" class="details-popup">
+                        <a href="#" class="close-btn">&times;</a>
+                        <h5>AFNI</h5>
+                        <h6>MARCH-2015-OCTOBER-2015</h6>
+                    </div>
                 </div>
                 <div class="portfolio-item">
                     <img src="images/Company1 (4).png" alt="Project">
+                    <a href="#details4" class="details-btn">More Details</a>
+                    <div id="details4" class="details-popup">
+                        <a href="#" class="close-btn">&times;</a>
+                        <h5>Sutherland</h5>
+                        <h6>MAY-2019-OCTOBER-2019</h6>
+                    </div>
                 </div>
                 <div class="portfolio-item">
                     <img src="images/Company1 (5).png" alt="Project">
+                    <a href="#details5" class="details-btn">More Details</a>
+                    <div id="details5" class="details-popup">
+                        <a href="#" class="close-btn">&times;</a>
+                        <h5>ACQUIRE</h5>
+                        <h6>OCTOBER 2019- SEPTEMBER 2021</h6>
+                    </div>
                 </div>
                 <div class="portfolio-item">
                     <img src="images/Company1 (6).png" alt="Project">
+                    <a href="#details6" class="details-btn">More Details</a>
+                    <div id="details6" class="details-popup">
+                        <a href="#" class="close-btn">&times;</a>
+                        <h5>ACQUIRE</h5>
+                        <h6>OCTOBER 2019- SEPTEMBER 2021</h6>
+                    </div>
                 </div>
             </div>
         </section>
+    
+            <script src="script.js"></script>
+        </body>
+        </html>
+        
+
+
+
+
+
     </main>
 
     <footer class="footer">
@@ -209,57 +257,8 @@
     </body>
     </html>
     
-<script>
 
-    var modal = document.getElementById("contact-modal");
 
-    // Get the button that opens the modal
-    var btn = document.getElementById("contact-btn");
-    
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
-    
-    // When the user clicks the button, open the modal
-    btn.onclick = function() {
-        modal.style.display = "block";
-    }
-    
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
-        modal.style.display = "none";
-    }
-    
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
-    
-    // Handle form submission (you can customize this part to send emails)
-    var form = document.getElementById("contact-form");
-    
-    form.addEventListener("submit", function(event) {
-        event.preventDefault(); // Prevent the form from submitting
-    
-        // Get form values
-        var name = document.getElementById("name").value;
-        var email = document.getElementById("email").value;
-        var message = document.getElementById("message").value;
-    
-        // Example: Output values (you would typically send this data to a backend)
-        console.log("Name: " + name);
-        console.log("Email: " + email);
-        console.log("Message: " + message);
-    
-        // Optionally, close the modal after submission
-        modal.style.display = "none";
-    
-        // Reset form fields if needed
-        form.reset();
-    });
-    
 
-</script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
