@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/port43.jpg">
+    <title>Mark Ryan "Alexa" Holmina</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-7m2eVYYsNfF4vnD5eNEyd3gD7v7jc3D1y0XccrRg/TMAIRk43Gf7AVzO4N5Rp1Um" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/styles2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header class="header bg-light py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand" href="#">Mark Ryan "Alexa" Holmina</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about-me">About Me</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#work-experience">Work Experiences & Skills</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <section id="about-me" class="about-section container py-5">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="images/port43.jpg" alt="Profile Picture" class="img-fluid rounded-circle">
+                </div>
+                <div class="col-md-8">
+                    <h3>Hello I'm Alexa Holmina</h3>
+                    <p>A Web Developer & NOC Engineer</p>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contactModal">Contact Me</button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Modal -->
+        <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="contactModalLabel">Contact Alexa Holmina</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="contact-form">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Name:</label>
+                                <input type="text" id="name" name="name" class="form-control" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email:</label>
+                                <input type="email" id="email" name="email" class="form-control" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message:</label>
+                                <textarea id="message" name="message" class="form-control" rows="4" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section id="work-experience" class="work-experience-section container py-5">
+            <h4>Work & Experience</h4>
+            <h5>Work with Multiple Top Companies</h5>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">NOC Engineer</h5>
+                            <p class="card-text"><i>Full time/Remote</i></p>
+                            <p>October 2021 - November 2023</p>
+                            <p class="company-name">Parity Technology Solutions</p>
+                            <p>Parity Technology Solutions' consultants help enable successful business outcomes through close collaboration and unmatched expertise to help get your property ...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Network Engineer</h5>
+                            <p class="card-text"><i>Full time/on site</i></p>
+                            <p>November 2022 - May 2023</p>
+                            <p class="company-name">Ringcentral</p>
+                            <p>RingCentral, Inc. is an American provider of cloud-based communication and collaboration products and services...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Network Support Specialist</h5>
+                            <p class="card-text"><i>Full time/On-site</i></p>
+                            <p>October 2010 - March 2014</p>
+                            <p class="company-name">Cisco</p>
+                            <p>Cisco Systems, Inc. is an American multinational digital communications technology conglomerate corporation headquartered in San Jose, California...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="portfolio-gallery container py-5">
+            <h4>Portfolio</h4>
+            <h5>Employment</h5>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="images/Company1 (1).png" class="card-img-top" alt="Project">
+                        <div class="card-body">
+                            <h5 class="card-title">The Results Companies</h5>
+                            <p class="card-text">MARCH 2014 - FEBRUARY 2015</p>
+                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#detailsModal1">More Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="images/Company1 (2).png" class="card-img-top" alt="Project">
+                        <div class="card-body">
+                            <h5 class="card-title">Synnex-Concentrix</h5>
+                            <p class="card-text">OCTOBER 2010 - MARCH 2014</p>
+                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#detailsModal2">More Details</a>
+                        </div>
+                    </div>
+                </div>
+              
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="images/Company1 (2).png" class="card-img-top" alt="Project">
+                        <div class="card-body">
+                            <h5 class="card-title">Synnex-Concentrix</h5>
+                            <p class="card-text">OCTOBER 2010 - MARCH 2014</p>
+                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#detailsModal2">More Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="images/Company1 (2).png" class="card-img-top" alt="Project">
+                        <div class="card-body">
+                            <h5 class="card-title">Synnex-Concentrix</h5>
+                            <p class="card-text">OCTOBER 2010 - MARCH 2014</p>
+                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#detailsModal2">More Details</a>
+                        </div>
+                    </div>
+                </div>
+              
+
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="images/Company1 (2).png" class="card-img-top" alt="Project">
+                        <div class="card-body">
+                            <h5 class="card-title">Synnex-Concentrix</h5>
+                            <p class="card-text">OCTOBER 2010 - MARCH 2014</p>
+                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#detailsModal2">More Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="images/Company1 (2).png" class="card-img-top" alt="Project">
+                        <div class="card-body">
+                            <h5 class="card-title">Synnex-Concentrix</h5>
+                            <p class="card-text">OCTOBER 2010 - MARCH 2014</p>
+                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#detailsModal2">More Details</a>
+                        </div>
+                    </div>
+                </div>
+              
+
+                
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer bg-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Subscribe to my Newsletter</h4>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="subscribe-btn">
+                        <button class="btn btn-outline-secondary" type="button" id="subscribe-btn">Subscribe</button>
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex justify-content-end align-items-center">
+                    <div class="socials">
+                        <a href="https://www.facebook.com/your-facebook-profile" target="_facebook" class="me-2"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_linkedin" class="me-2"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/your-instagram-profile" target="_instagram" class="me-2"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/your-youtube-channel" target="_youtube" class="me-2"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p>Contact us: <a href="mailto:markholmina@gmail.com" class="email-link">markholmina@gmail.com</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRp0xU5/jb5T/d5o5jX4uJ6xMeSxFPZZO15gh0EZ+" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -41,30 +41,6 @@ body, html{
     padding: 20px;
 }
 
-
-
-.about-me-carousel {
-    margin-bottom: 20px;
-    cursor: pointer;
-    transition: transform 0.2s ease;
-    color: #2e2e2e;
-    background-color: #666;
-  
-
-}
-.about-me-carousel:hover {
-    transform: translateY(-5px);
-  
-
-    
-}
-
-
-
-
-
-
-
 .gap-class {
     gap: 15px
 }
@@ -159,44 +135,4 @@ body, html{
   .subscribe-email{
     vertical-align: middle;
   }
-
-
-  .skills-section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 30px;
-    
-}
-
-.skill {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    margin: 10px;
-    text-align: center;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    border-bottom: 5px solid #c20000;
-}
-
-.skill h3 {
-    color: #333;
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-.skill p {
-    color: #666;
-    font-size: 1rem;
-    line-height: 1.5;
-}
-
-
-
-
-
-
-
-
 

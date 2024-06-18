@@ -406,6 +406,20 @@ main {
     opacity: 0.7; 
 }
 
+
+
+/* Styling for the email link */
+.email-link {
+    color: #c20000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.email-link:hover {
+    text-decoration: underline;
+}
+
+
 /* Modal Styles */
 .modal {
     display: none; 
