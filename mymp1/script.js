@@ -99,6 +99,6 @@ document.getElementById('checkout-form').addEventListener('submit', function(eve
     }
 });
 
-// Initial render
-renderProducts();
-renderCart();
+
+
+

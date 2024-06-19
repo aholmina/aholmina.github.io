@@ -333,3 +333,8 @@ background-attachment: fixed;
   display: none; /* Initially hidden */
 }
 
+
+.modal-dialog {
+  max-width: 600px;
+}
+
