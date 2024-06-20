@@ -316,6 +316,7 @@ background-attachment: fixed;
   max-width: 300px; /* Adjust max-width as needed */
   margin: auto;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
 }
 
 .cart-items {
@@ -337,4 +338,22 @@ background-attachment: fixed;
 .modal-dialog {
   max-width: 600px;
 }
+
+.modal-header {
+  background-color: blueviolet
+  color: white;
+}
+.btn-primary {
+  background-color: palevioletred
+  border-color: #007bff;
+}
+.btn-primary:hover {
+  background-color: palevioletred
+  border-color: #0056b3;
+}
+.message {
+  display: none;
+  margin-top: 15px;
+}
+
 

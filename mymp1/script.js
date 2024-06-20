@@ -101,4 +101,17 @@ document.getElementById('checkout-form').addEventListener('submit', function(eve
 
 
 
+  document.getElementById('appointmentForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    document.getElementById('message').style.display = 'block';
+    document.getElementById('appointmentForm').reset();
+  });
+
+  document.getElementById('closeButton').addEventListener('click', function() {
+    var appointmentModal = bootstrap.Modal.getInstance(document.getElementById('appointmentModal'));
+    appointmentModal.hide();
+    document.getElementById('message').style.display = 'none';
+  });
+
+
 
