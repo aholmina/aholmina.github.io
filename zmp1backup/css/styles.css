@@ -214,42 +214,6 @@ html {
   }
 }
 
-@media screen and (min-width: 320px) and (max-width: 375px) {
-  /* Custom styles for this media query */
-  .top-bg {
-      padding: 5px 10px;
-  }
-
-  .top-links {
-      font-size: 0.8rem;
-  }
-
-  .logo {
-      max-width: 100px;
-  }
-
-  .sales-headline {
-      font-size: 1rem;
-  }
-
-  .card-title {
-      font-size: 0.9rem;
-  }
-
-  .card-text {
-      font-size: 0.8rem;
-  }
-
-  .btn-info {
-      font-size: 0.8rem;
-  }
-
-  .modal-content {
-      max-width: 300px;
-  }
-}
-
-
 .modal-th-1 {
   width: 5%;
 }
@@ -345,7 +309,6 @@ html {
 .background-image{
 background: url("/zmp1backup/images/port15.jpg") no-repeat center center;
 background-attachment: fixed;
-object-fit: fill;
 }
 
 
@@ -395,12 +358,8 @@ object-fit: fill;
 
 
 .hero-section {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  background: url('/zmp1backup/images/HRT7.jpg') no-repeat center center/cover;
+
+  background: url('/zmp1backup/images/services2.png') no-repeat center center/cover;
   color: white;
   object-fit: fill;
 }
@@ -420,8 +379,8 @@ object-fit: fill;
   font-size: 1.25rem;
 }
 
-.word-pink{
-  color: plum;
+.word-pink {
+  color: pink;
 }
 .word-violet {
   color:violet;
@@ -430,7 +389,6 @@ object-fit: fill;
 .word-black {
   color:black;
 }
-
 
 /* Media query for screen sizes 320px to 768px */
 @media (max-width: 768px) {
