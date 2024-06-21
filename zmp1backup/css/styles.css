@@ -214,6 +214,42 @@ html {
   }
 }
 
+@media screen and (min-width: 320px) and (max-width: 375px) {
+  /* Custom styles for this media query */
+  .top-bg {
+      padding: 5px 10px;
+  }
+
+  .top-links {
+      font-size: 0.8rem;
+  }
+
+  .logo {
+      max-width: 100px;
+  }
+
+  .sales-headline {
+      font-size: 1rem;
+  }
+
+  .card-title {
+      font-size: 0.9rem;
+  }
+
+  .card-text {
+      font-size: 0.8rem;
+  }
+
+  .btn-info {
+      font-size: 0.8rem;
+  }
+
+  .modal-content {
+      max-width: 300px;
+  }
+}
+
+
 .modal-th-1 {
   width: 5%;
 }
