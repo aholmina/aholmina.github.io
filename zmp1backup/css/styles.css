@@ -345,6 +345,7 @@ html {
 .background-image{
 background: url("/zmp1backup/images/port15.jpg") no-repeat center center;
 background-attachment: fixed;
+object-fit: fill;
 }
 
 
@@ -399,7 +400,7 @@ background-attachment: fixed;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: url('/zmp1backup/images/services3.png') no-repeat center center/cover;
+  background: url('/zmp1backup/images/HRT7.jpg') no-repeat center center/cover;
   color: white;
   object-fit: fill;
 }
@@ -419,11 +420,15 @@ background-attachment: fixed;
   font-size: 1.25rem;
 }
 
-.word-pink {
-  color: pink;
+.word-pink{
+  color: plum;
 }
 .word-violet {
   color:violet;
+}
+
+.word-black {
+  color:black;
 }
 
 
