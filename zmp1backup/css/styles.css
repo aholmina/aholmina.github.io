@@ -214,6 +214,52 @@ html {
   }
 }
 
+@media (max-width: 425px) {
+  .top-bg .top-links {
+      font-size: 0.9rem;
+  }
+  .logo {
+      width: 80px;
+      height: auto;
+  }
+  .hero-title {
+      font-size: 1.5rem;
+  }
+  .navbar-nav .nav-link {
+      font-size: 0.9rem;
+  }
+  .form-inline {
+      width: 100%;
+  }
+  .container-fluid {
+      padding: 0 10px;
+  }
+  .card .card-title {
+      font-size: 1.2rem;
+  }
+  .card .card-text {
+      font-size: 0.9rem;
+  }
+  .btn {
+      font-size: 0.8rem;
+  }
+  .modal-body label {
+      font-size: 0.9rem;
+  }
+  .modal-body input {
+      font-size: 0.9rem;
+  }
+  .footdesign h4 {
+      font-size: 1.2rem;
+  }
+  .footdesign .ulfooter .nav-link {
+      font-size: 0.9rem;
+  }
+}
+
+
+
+
 .modal-th-1 {
   width: 5%;
 }
