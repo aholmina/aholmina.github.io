@@ -358,12 +358,17 @@ background-attachment: fixed;
 
 
 .hero-section {
-
+  margin-top: 0%;
   background: url('/zmp1backup/images/HRT8.png') no-repeat center center/cover;
   color: white;
   object-fit: fill;
+  
+ 
 }
+.hero.container {
 
+  margin-top: 0%;
+}
 .hero-title {
   font-size: 4rem;
   font-weight: 700;
@@ -428,11 +433,11 @@ background-attachment: fixed;
 
 }
 .card-footer .btn {
-  background-color: transparent; /* Remove background color */
-  border: none; /* Remove border */
-  padding: 0; /* Remove padding */
-  color: inherit; /* Inherit text color */
-  font-size: inherit; /* Inherit font size */
+  background-color: transparent; 
+  border: none;
+  padding: 0;
+  color: inherit; 
+  font-size: inherit; 
 }
 
 
@@ -469,4 +474,75 @@ background-attachment: fixed;
 }
 .collection-container {
   max-width: 300px; /* Adjust to fit your design */
+}
+
+
+
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+
+
+.hero-title {
+  margin-top: 0;
+}
+
+.carousel-inner img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 420px) and (min-width: 320px) {
+  .carousel-inner img {
+      width: 100%;
+  }
+
+  .carousel-caption {
+      font-size: 1rem;
+  }
+}
+@media (max-width: 767px) {
+  .carousel-inner img {
+      width: 100%;
+      height: auto;
+  }
+
+  .carousel-caption {
+      font-size: 1rem;
+  }
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+
+
+
+.hero-title {
+  margin-top: 0;
+}
+
+.carousel-inner img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 767px) {
+  .carousel-inner img {
+      width: 100%;
+      height: auto;
+  }
+
+  .carousel-caption {
+      font-size: 1rem;
+  }
 }
