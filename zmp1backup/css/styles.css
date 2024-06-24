@@ -28,6 +28,7 @@ html {
 .navbardesign {
   border-top: 1px solid  #f640ed;
   border-bottom: 1px solid  #f640ed;
+  
 }
 
 .navrightborder {
@@ -317,46 +318,14 @@ html {
   border-radius: 5px 5px 0 0;
 }
 
-.searchInput .resultBox {
-  position: absolute;
-  border: 1px solid #d4d4d4;
-  border-bottom: none;
-  border-top: none;
-  z-index: 99;
-  background-color: #fff;
-  /*position the autocomplete items to be the same width as the container:*/
-  top: 100%;
-  left: 0;
-  right: 0;
-}
-
-.searchInput.active .resultBox {
-  padding: 10px 8px;
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.resultBox li {
-  list-style: none;
-  padding: 8px 12px;
-  display: none;
-  width: 100%;
-  cursor: default;
-  border-radius: 3px;
-}
-
-.searchInput.active .resultBox li {
-  display: block;
-}
-.resultBox li:hover {
-  background: #efefef;
-}
 
 .background-image{
-background: url("/zmp1backup/images/port15.jpg") no-repeat center center;
-background-attachment: fixed;
-}
 
+background: url('/zmp1backup/images/HRT8.png') no-repeat center center/cover;
+color: white;
+object-fit: fill;
+
+}
 
 .product-card {
   max-width: 300px; /* Adjust max-width as needed */
@@ -386,15 +355,15 @@ background-attachment: fixed;
 }
 
 .modal-header {
-  background-color: blueviolet
+  background-color: blueviolet;
   color: white;
 }
 .btn-primary {
-  background-color: palevioletred
-  border-color: #007bff;
+  background-color: palevioletred;
+  border-color: whitesmoke;
 }
 .btn-primary:hover {
-  background-color: palevioletred
+  background-color: palevioletred;
   border-color: #0056b3;
 }
 .message {
@@ -412,7 +381,6 @@ background-attachment: fixed;
  
 }
 .hero.container {
-
   margin-top: 0%;
 }
 .hero-title {
@@ -487,9 +455,6 @@ background-attachment: fixed;
 }
 
 
-
-
-
 .sales-headline {
   display: flex;
   justify-content: center;
@@ -523,17 +488,6 @@ background-attachment: fixed;
 }
 
 
-
-
-body, html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  overflow-x: hidden;
-}
-
-
-
 .hero-title {
   margin-top: 0;
 }
@@ -562,15 +516,6 @@ body, html {
       font-size: 1rem;
   }
 }
-
-body, html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  overflow-x: hidden;
-}
-
-
 
 
 .hero-title {
