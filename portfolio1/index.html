@@ -63,7 +63,7 @@
       </div>
     </div>
    </section>
-         <hr>
+   <hr>
    <section class="hero-section">
         <section class="container-fluid d-flex flex-column justify-content-center align-items-center shadowbox p-3">
             <div class="container-sm d-flex flex-column justify-content-center align-items-center p-3">
@@ -87,8 +87,8 @@
             </div>
         </section>
    </section>
-
 <hr>
+
         <section class="container-fluid p-3 shadowbox bggrey" id="work-experience">
           <div class="container-sm d-flex flex-column justify-content-center align-items-center p-3">
               <h4 class="text-center">Work & Experience</h4>
@@ -185,7 +185,7 @@
             </div>
         </div>
 </section>
- <hr>
+ 
      
 <section class="hero1-section">
       <section class="container-fluid p-3 shadowbox" id="Portfolio-title">
@@ -223,7 +223,6 @@
     </section>
 </section>
     
-
     <!-- Modal Templates -->
 
     <div class="modal fade" id="details1" tabindex="-1" aria-labelledby="details1Label" aria-hidden="true">
@@ -360,20 +359,61 @@
 </body>
 </html>
 
+
 <script>
-window.onscroll = function() {myFunction()};
+var exampleModal = document.getElementById('exampleModal');
 
-var navbar = document.getElementById("navbar");
-var sticky = navbar.offsetTop;
+exampleModal.addEventListener('show.bs.modal', function (event) {
+    // Button that triggered the modal
+    var button = event.relatedTarget;
+    // Extract info from data-bs-* attributes
+    var recipient = button.getAttribute('data-bs-whatever');
+    // Update the modal's content.
+    var modalTitle = exampleModal.querySelector('.modal-title');
+    var modalBodyInput = exampleModal.querySelector('.modal-body input');
 
-function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky");
-  } else {
-    navbar.classList.remove("sticky");
-  }
+    modalTitle.textContent = 'New message to ' + recipient;
+    modalBodyInput.value = recipient;
+});
+
+// Send message functionality
+var sendButton = document.getElementById('sendButton');
+sendButton.addEventListener('click', function() {
+    var message = document.getElementById('messageInput').value;
+
+    // Simulate sending the message (replace with actual send logic)
+    setTimeout(function() {
+        // Update modal content to show success message
+        var modalBody = exampleModal.querySelector('.modal-body');
+        modalBody.innerHTML = '<p class="text-success">Message sent successfully!</p>';
+
+        // Optionally, close the modal after a delay (e.g., 2 seconds)
+        setTimeout(function() {
+            var modal = bootstrap.Modal.getInstance(exampleModal);
+            modal.hide();
+            // Reset modal content back to original state for next use
+            modalBody.innerHTML = '<input type="text" id="messageInput" class="form-control" placeholder="Enter message...">';
+        }, 2000); // 2000 milliseconds = 2 seconds
+
+    }, 1000); // 1000 milliseconds = 1 second (simulate delay)
+});
+
+// Scroll to Top button functionality
+let mybutton = document.getElementById("myBtn");
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
 }
-<script
 
-
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+    </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
