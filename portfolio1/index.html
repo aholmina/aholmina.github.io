@@ -6,38 +6,13 @@
     <link rel="icon" type="image/x-icon" href="images/port43.jpg">
     <title>Mark Ryan "Alexa" Holmina</title>
     <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/fontawesome.min.css" integrity="sha512-UuQ/zJlbMVAw/UU8vVBhnI4op+/tFOpQZVT+FormmIEhRSCnJWyHiBbEVgM4Uztsht41f3FzVWgLuwzUqOObKw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/brands.min.css" integrity="sha512-DJLNx+VLY4aEiEQFjiawXaiceujj5GA7lIY8CHCIGQCBPfsEG0nGz1edb4Jvw1LR7q031zS5PpPqFuPA8ihlRA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
 <body>
-
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <form>
-          <div class="mb-3">
-            <label for="recipient-name" class="col-form-label">Recipient:</label>
-            <input type="text" class="form-control" id="recipient-name">
-          </div>
-          <div class="mb-3">
-            <label for="message-text" class="col-form-label">Message:</label>
-            <textarea class="form-control" id="message-text"></textarea>
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Send message</button>
-      </div>
-    </div>
-  </div>
-</div>
-
 
   <nav class="navbar navbar-expand-lg navbar-dark shadowbox bg-dark">
     <div class="container-fluid">
@@ -60,147 +35,168 @@
   </div>
 </nav>
 <main>
-        <section class="container-fluid d-flex flex-column justify-content-center align-items-center p-4 bggrey" id="about-us">
-          <div class="container-sm d-flex flex-column justify-content-center align-items-center">
-              <img class="profilepicture" src="/portfolio1/images/port43.jpg" alt="logo">
-          </div>
-          <div class="container-sm d-flex flex-column justify-content-center align-items-center p-2">
-              <div><h3 class="text-center">Hello I'm Alexa Holmina</h3></div> <div>A Web Developer & NOC Engineer</div>
-          </div>
-          <div class="container-sm d-flex flex-column justify-content-center align-items-center">
-              <p class="text-center">I am a NOC Engineer and a Network Infrastructure Engineer from Zambales, Philippines. You can get in touch with me by clicking contact me button below.</p>
-          </div>
-          <br></br>
-          <div class="container-sm d-flex flex-column justify-content-center align-items-center">
-              <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="markholmina@gmail.com">Contact me</button>
-          </div>
-        </section>
+
+
+    <section class="hero-section">
+        <div class="container text-center">
+            <div class="container-sm d-flex flex-column justify-content-center align-items-center">
+                <img class="profilepicture" src="/portfolio1/images/port43.jpg" alt="logo">
+            </div>
+
+                
+                <div class="container-sm d-flex flex-column justify-content-center align-items-center p-2">
+                    <div><h3 class="text-center">Hello I'm Alexa Holmina</h3></div> <div>A Web Developer & NOC Engineer</div>
+                </div>
+                <div class="container-sm d-flex flex-column justify-content-center align-items-center">
+                    <p class="text-center">I am a NOC Engineer and a Network Infrastructure Engineer from Zambales, Philippines. You can get in touch with me by clicking contact me button below.</p>
+                </div>
+                <div class="container-sm d-flex flex-column justify-content-center align-items-center">
+                    <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="markholmina@gmail.com">Contact me</button>
+                </div>
+    </div>
+    <div class="container-sm newsletter-border mt-1 mb-4">
+      <div class="container-sm d-flex flex-column align-items-center p-3">
+              <div><h4 class="text-center fst-italic">Subscribe</h4></div>
+              <div><p class="text-center">To my Newsletter</p></div>
+              <div class="form-newsletter"><input type="email" class="form-control w-100 subscribe-email" placeholder="Email"></div>
+              <div><button class="btn btn-secondary alert alert primary btn-sm mt-2" onclick="window.location.href='#';">Subscribe</button></div>
+      </div>
+    </div>
+   </section>
+         
+   <section class="hero-section">
         <section class="container-fluid d-flex flex-column justify-content-center align-items-center shadowbox p-3">
             <div class="container-sm d-flex flex-column justify-content-center align-items-center p-3">
-                    <h4 class="text-center">About me</h4>
+                    <h4 class="text-center">About Me</h4>
                     <h5 class="text-center">"Engineering is achieving function while avoiding failure." </h5>
                     <p>I am passionate in leveraging technology to drive business to success.</p>
             </div>
             <div class="container-sm d-flex flex-column flex-lg-row justify-content-around gap-class p-3">
                 <div class="col-lg-4 about-me-carousel">
-                    <h5 class="text-center">Worked with International Companies</h5>
-                    <p class="text-center">I have various of work experiences for the past 13 years. It can be seen in my Portfolio below.</p>
+                    <h5 class="text-center text-warning">Worked with International Companies</h5>
+                    <p class="text-center text-info fw-bold fst-italic">I have various of work experiences for the past 13 years. It can be seen in my Portfolio below.</p>
                 </div>
                 <div class="col-lg-4 about-me-carousel">
-                    <h5 class="text-center">10 Years Network Infrastructure Engineer</h5>
-                    <p class="text-center">During the years working as Network Analyst I developed  set of skills</p>
+                    <h5 class="text-center text-warning">10 Years Network Infrastructure Engineer</h5>
+                    <p class="text-center text-primary fw-bold fst-italic">During the years working as Network Analyst I developed  set of skills</p>
                 </div>
                 <div class="col-lg-4 about-me-carousel">
-                    <h5 class="text-center">Happy Clients</h5>
-                    <p class="text-center">With hard work and perseverance. I gained trust and build business relationship with my clients.</p>
+                    <h5 class="text-center text-warning">Happy Clients</h5>
+                    <p class="text-center text-success fw-bold fst-italic">With hard work and perseverance. I gained trust and build business relationship with my clients.</p>
                 </div>
             </div>
         </section>
+   </section>
+
+
         <section class="container-fluid p-3 shadowbox bggrey" id="work-experience">
           <div class="container-sm d-flex flex-column justify-content-center align-items-center p-3">
               <h4 class="text-center">Work & Experience</h4>
               <h5 class="text-center">Work with Multiple Top Companies</h5>
           </div>
             <div class="container-sm d-flex  flex-column flex-lg-row justify-content-around gap-class align-self-stretc p-3">
-              <div class="col-lg-4 about-me-carousel bg-white">
-                  <h5>Network Analyst</h4>
-                  <p><i>Full time/Remote</i></p>
-                  <p>October 2021- November 2023</p>
+              <div class="col-lg-4 bg-dark about-me-carousel">
+                  <h5 class="text-white">Network Analyst</h5>
+                  <p class="text-white"></class><i>Full time/Remote</i></p>
+                  <p class="text-white"></class>October 2021- November 2023</p>
                   <hr>
-                  <p class="text-c20">Parity Technology Solutions</p>
-                  <p>Parity Technology Solutions' consultants help enable successful business outcomes through close collaboration and unmatched expertise to help get your property ...</div>
-              <div class="col-lg-4 about-me-carousel bg-white">
-                  <h5>Network Engineer</h4>
-                  <p><i>Full time/on site</i></p>
-                  <p>November 2022- May 2023</p>
+                  <p class="text-c20">Parity</p>
+                  <p class="text-white">Parity Technology Solutions' consultants help enable successful business outcomes through close collaboration and unmatched expertise to help get your property</div>
+              <div class="col-lg-4 bg-dark about-me-carousel">
+                  <h5 class="text-white">Network Engineer</h5>
+                  <p class="text-white"><i>Full time/on site</i></p>
+                  <p class="text-white">November 2022- May 2023</p>
                   <hr>
                   <p class="text-c20">Ringcentral</p>
-                  <p>RingCentral, Inc. is an American provider of cloud-based communication and collaboration products and services. CEO Vlad Shmunis and CTO Vlad Vendrow founded the company in 1999. Investors included Doug Leone, Sequoia Capital, Khosla Ventures, Scale Venture Partners, and DAG Ventures.</p></div>
-              <div class="col-lg-4 about-me-carousel bg-white">
-                  <h5>Network Support Specialist</h4>
-                  <p><i>Full time/On-site</i></p>
-                  <p>October 2010- March 2014</p>
+                  <p class="text-white">RingCentral, Inc. is an American provider of cloud-based communication and collaboration products and services. CEO Vlad Shmunis and CTO Vlad Vendrow founded the company in 1999. Investors included Doug Leone, Sequoia Capital, Khosla Ventures, Scale Venture Partners, and DAG Ventures.</p></div>
+              <div class="col-lg-4 bg-dark about-me-carousel">
+                  <h5 class="text-white">Network Support Specialist</h4>
+                  <p class="text-white"><i>Full time/On-site</i></p>
+                  <p class="text-white">October 2010- March 2014</p>
                   <hr>
                   <p class="text-c20">Cisco</p>
-                  <p>Cisco Systems, Inc. is an American multinational digital communications technology conglomerate corporation headquartered in San Jose, California. Cisco develops, manufactures, and sells networking hardware, software, telecommunications equipment and other high-technology services and products. </p>
+                  <p class="text-white">Cisco Systems, Inc. is an American multinational digital communications technology conglomerate corporation headquartered in San Jose, California. Cisco develops, manufactures, and sells networking hardware, software, telecommunications equipment and other high-technology services and products. </p>
               </div>
           </div>
         </section>
-
+   </section>
+  
         <section class="container-fluid p-3 shadowbox bggrey" id="work-experience">
           <div class="container-sm d-flex flex-column justify-content-center align-items-center p-3">
               <h4 class="text-center">Skills and Expertise</h4>
              
           </div>
-          <div class="container">
+          <div class="container bggrey">
             <section class="row skills-section">
+          
                 <div class="col-md-6 col-lg-4">
-                    <div class="skill">
-                        <h3>Helpdesk Support</h3>
-                        <p>Providing technical support and assistance to end-users.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="skill">
-                        <h3>Microsoft Products</h3>
+                    <div class="skill  bg-dark">
+                        <h3 class="text-secondary">Microsoft Products <i class="fa-brands fa-windows"></i></h3>
                         <p>Proficient in Microsoft Office suite and other Microsoft products.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4">
-                    <div class="skill">
-                        <h3>Ticketing</h3>
+                    <div class="skill bg-dark">
+                        <h3 class="text-secondary">Ticketing  <i class="fa-brands fa-salesforce"></i></i></h3>
                         <p>Experience in managing support tickets and service requests.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4">
-                    <div class="skill">
-                        <h3>Network Configuration</h3>
-                        <p>Configuring and maintaining network infrastructure.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="skill">
-                        <h3>HTML5</h3>
+                    <div class="skill  bg-dark">
+                        <h3 class="text-secondary">HTML5 <i class="fa-brands fa-html5"></i></h3>
                         <p>Creating structured and semantic web pages using HTML5.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4">
-                    <div class="skill">
-                        <h3>CSS</h3>
+                    <div class="skill  bg-dark">
+                        <h3 class="text-secondary">CSS <i class="fa-brands fa-css3-alt"></i></h3>
                         <p>Styling web pages and applications with CSS.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4">
-                    <div class="skill">
-                        <h3>JavaScript</h3>
+                    <div class="skill  bg-dark">
+                        <h3 class="text-secondary">JavaScript <i class="fa-brands fa-js"></i></h3>
                         <p>Developing interactive and dynamic functionalities.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4">
-                    <div class="skill">
-                        <h3>Bootstrap</h3>
+                    <div class="skill  bg-dark">
+                        <h3 class="text-secondary">Bootstrap <i class="fa-brands fa-bootstrap"></i></h3>
                         <p>Utilizing Bootstrap framework for responsive design.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4">
-                  <div class="skill">
-                    <h3>Spanish Proficiency</h3>
+                  <div class="skill  bg-dark">
+                    <h3 class="text-secondary">Spanish Proficiency <i class="fa-solid fa-school-flag"></i></h3>
                     <p>Fluent in Spanish, both spoken and written.</p>
                   </div>
               </div>
-              </div>
-           
-            </section>
+              <div class="col-md-6 col-lg-4">
+                <div class="skill  bg-dark">
+                    <h3 class="text-secondary">Helpdesk Support <i class="fa-solid fa-chalkboard-user"></i></h3>
+                    <p>Providing technical support and assistance to end-users.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="skill  bg-dark">
+                    <h3 class="text-secondary">Network Configuration <i class="fa-solid fa-server"></i></h3>
+                    <p>Configuring and maintaining network infrastructure.</p>
+                </div>
+            </div>
+        </div>
+</section>
+ 
      
+<section class="hero1-section">
       <section class="container-fluid p-3 shadowbox" id="Portfolio-title">
         <div class="container-sm d-flex flex-column justify-content-center align-items-center p-3">
-            <h4 class="text-center">Portfolio</h4>
-            <h5 class="text-center">Employment</h5>
+            <h4 class="text-center">Portfolio/Employment</h4>
+            <div class="container-sm d-flex flex-column justify-content-center align-items-center">
+                <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="markholmina@gmail.com">Contact me</button>
+            </div>
         </div>
         <div class="row">
-            <div class="col-12 justify-content-between text-center">
-                <p>Contact me: <a href="mailto:markholmina@gmail.com" class="email-link">markholmina@gmail.com</a></p>
-            </div>
+           
             <div class="container-sm d-flex flex-column flex-lg-row justify-content-around gap-class align-self-stretch p-3">
                 <div class="col-lg-4 about-me-carousel" data-bs-toggle="modal" data-bs-target="#details1">
                     <img class="w-100" src="images/Company1 (1).png" alt="Project">
@@ -225,6 +221,7 @@
             </div>
         </div>
     </section>
+</section>
     
     <!-- Modal Templates -->
 
@@ -325,8 +322,6 @@
             </div>
         </div>
     </div>
-    
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-k1FL8k15Sp9U5v6FADj1kOMosz9/gEljjp3GJ/DEl0Phhd5l0Tkaa3y9t4DREJ1d" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRp0xU5/jb5T/d5o5jX4uJ6xMeSxFPZZO15gh0EZ+" crossorigin="anonymous"></script>
     
    
@@ -364,61 +359,20 @@
 </body>
 </html>
 
-
 <script>
-var exampleModal = document.getElementById('exampleModal');
+window.onscroll = function() {myFunction()};
 
-exampleModal.addEventListener('show.bs.modal', function (event) {
-    // Button that triggered the modal
-    var button = event.relatedTarget;
-    // Extract info from data-bs-* attributes
-    var recipient = button.getAttribute('data-bs-whatever');
-    // Update the modal's content.
-    var modalTitle = exampleModal.querySelector('.modal-title');
-    var modalBodyInput = exampleModal.querySelector('.modal-body input');
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
 
-    modalTitle.textContent = 'New message to ' + recipient;
-    modalBodyInput.value = recipient;
-});
-
-// Send message functionality
-var sendButton = document.getElementById('sendButton');
-sendButton.addEventListener('click', function() {
-    var message = document.getElementById('messageInput').value;
-
-    // Simulate sending the message (replace with actual send logic)
-    setTimeout(function() {
-        // Update modal content to show success message
-        var modalBody = exampleModal.querySelector('.modal-body');
-        modalBody.innerHTML = '<p class="text-success">Message sent successfully!</p>';
-
-        // Optionally, close the modal after a delay (e.g., 2 seconds)
-        setTimeout(function() {
-            var modal = bootstrap.Modal.getInstance(exampleModal);
-            modal.hide();
-            // Reset modal content back to original state for next use
-            modalBody.innerHTML = '<input type="text" id="messageInput" class="form-control" placeholder="Enter message...">';
-        }, 2000); // 2000 milliseconds = 2 seconds
-
-    }, 1000); // 1000 milliseconds = 1 second (simulate delay)
-});
-
-// Scroll to Top button functionality
-let mybutton = document.getElementById("myBtn");
-
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        mybutton.style.display = "block";
-    } else {
-        mybutton.style.display = "none";
-    }
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky");
+  } else {
+    navbar.classList.remove("sticky");
+  }
 }
+</script>
 
-function topFunction() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-}
-    </script>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

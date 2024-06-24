@@ -21,45 +21,54 @@ body, html {
     background-color: #333; 
     color: #fff; 
 }
+.navbar {
+    display: flex;
+    position: relative;
+    top: 0;
+    width: 100%;
+    z-index: 1030;
+    background-color: #333; /* Adjust the background color */
+  }
 
-.logo a {
+  .navbar .logo a {
     color: #fff; 
     text-decoration: none; 
     font-size: 1.2rem; 
     font-weight: bold; 
-}
+  }
 
-.navbar-toggler {
+  .navbar-toggler {
     background-color: transparent; 
     border: none; 
     cursor: pointer;
-}
+  }
 
-.navbar {
-    display: flex;
-}
-
-.nav-links {
+  .nav-links {
     list-style-type: none;
     margin: 0;
     padding: 0;
     display: flex;
-}
+  }
 
-.nav-links li {
+  .nav-links li {
     margin-left: 15px; 
-}
+  }
 
-.nav-links li a {
+  .nav-links li a {
     color: #fff; 
     text-decoration: none; 
     font-size: 1rem; 
     font-weight: lighter;
-}
+  }
 
-.nav-links li a:hover {
+  .nav-links li a:hover {
     color: #ddd; 
-}
+  }
+
+  .content {
+    margin-top: 70px; /* Adjust based on navbar height */
+  }
+
 
 /* Main sections */
 main {

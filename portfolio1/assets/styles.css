@@ -1,72 +1,59 @@
-body, html{
-    margin: auto;
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
     font-family: Arial, Helvetica, sans-serif;
-    scroll-behavior:smooth;
+    scroll-behavior: smooth;
 }
-.bggrey{
+
+.bggrey {
     background-color: #f1f1f1;
 }
 
-
-.profilepicture{
+.profilepicture {
     width: 150px;
     height: 150px;
-    border-radius: 50%; 
+    border-radius: 50%;
     object-fit: fill;
 }
 
-.btn-danger{
+.btn-danger {
     background-color: #c20000 !important;
     vertical-align: middle;
 }
 
-.btn-primary{
+.btn-primary {
     background-color: #c20000 !important;
     border: 1px solid #c20000 !important;
 }
 
-.btn-danger:hover{
+.btn-danger:hover {
     background-color: #ec3b3b !important;
 }
 
-.navcolor{
+.navcolor {
     background-color: #2e2e2e;
-    color: #fff;
+    color: grey;
 }
-
-.about-me-carousel{
-    border-radius: 15px;
-    border-bottom: 5px solid #c20000;
-    box-shadow: 0 0 3px #ccc;
-    padding: 20px;
-}
-
-
 
 .about-me-carousel {
+    border-radius: 15px;
+    border-bottom: 5px solid #c20000;
+    box-shadow: 0 0 3px whitesmoke;
+    padding: 20px;
     margin-bottom: 20px;
     cursor: pointer;
     transition: transform 0.2s ease;
     color: #2e2e2e;
-    background-color: #666;
-  
-
-}
-.about-me-carousel:hover {
-    transform: translateY(-5px);
-  
-
     
 }
 
-
-
-
-
-
+.about-me-carousel:hover {
+    transform: translateY(-5px);
+}
 
 .gap-class {
-    gap: 15px
+    gap: 15px;
 }
 
 .text-c20{
@@ -80,6 +67,7 @@ body, html{
 .portfoliowidth{
     width:30%;
 }
+
 
 
 #myBtn {
@@ -96,24 +84,21 @@ body, html{
     cursor: pointer;
     padding: 15px;
     border-radius: 4px;
-  }
-  
-  #myBtn:hover {
-    background-color: #ec2b2b;
-  }
+}
 
+#myBtn:hover {
+    background-color: pink;
+}
 
 @media only screen and (max-width: 1000px) {
     .logo {
-        width:100%;
+        width: 100%;
         display: flex;
         justify-content: space-between;
     }
-
-
 }
 
-.footdesign{
+.footdesign {
     background-color: #2e2e2e;
     color: #fff;
 }
@@ -125,43 +110,43 @@ body, html{
     text-align: center;
     text-decoration: none;
     border-radius: 50%;
-    color: #c20000;
+    color: pink;
     cursor: pointer;
-  }
-
-  .fa-brands-facebook, .fa-brands-twitter, .fa-brands-instagram, .fa-brands-youtube {
-    color: white;
-    
 }
- .socials:hover {
 
+.fa-brands-facebook,
+.fa-brands-twitter,
+.fa-brands-instagram,
+.fa-brands-youtube {
+    color: white;
+}
+
+.socials:hover {
     transform: scale(1.1);
- }
+}
 
-
-  .afooter{
+.afooter {
     display: block;
     color: #fff;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-weight: bolder;
-  }
+}
 
-  .ulfooter{
+.ulfooter {
     height: 100%;
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-  }
+}
 
-  .subscribe-email{
+.subscribe-email {
     vertical-align: middle;
-  }
+}
 
-
-  .skills-section {
+.skills-section {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -170,14 +155,15 @@ body, html{
 }
 
 .skill {
-    background-color: #fff;
+    background-color: gray
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 20px;
     margin: 10px;
     text-align: center;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-bottom: 5px solid #c20000;
+   
 }
 
 .skill h3 {
@@ -192,11 +178,107 @@ body, html{
     line-height: 1.5;
 }
 
+/* Hero Section */
+.hero-section {
+    background: url('/portfolio1/images/portfolio2.png') no-repeat center center/cover;
+    color: white;
+    padding: 50px 0;
+}
+.hero1-section {
+    background: url('/portfolio1/images/portfolio2.png') no-repeat center center/cover;
+    color: white;
+    padding: 50px ;
+}
 
 
 
 
+.profilepicture{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%; 
+    object-fit: fill;
+}
 
 
+/* Newsletter Section */
+.newsletter-border {
+   
+    padding: 20px;
+    background-color:#666(255, 255, 255, 0.8); /* Semi-transparent background color */
+    margin-top: 20px;
+}
 
+.form-newsletter {
+    width: 100%;
+    max-width: 300px;
+    margin: 10px 0;
+}
 
+.subscribe-email {
+    padding: 10px;
+    font-size: 16px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+.alert {
+    margin: 0;
+    padding: 5px 10px;
+}
+
+.alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+header {
+    background: #333;
+    color: white;
+    padding: 15px 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+
+  }
+  
+  nav ul li {
+    margin: 0 15px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  
+  
