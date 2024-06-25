@@ -14,21 +14,21 @@
   </head>
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-dark shadowbox bg-dark">
-    <div class="container-fluid">
+  <nav class="navbar navbar-expand-lg navbar-dark shadowbox bg-dark position-fixed">
+    <div class="container-fluid position-fixed mt-5 mb-4">
     <div class="logo">
-      <a class="navbar-brand" href="#">Mark Ryan "Alexa" Holmina</a>
+      <a class="navbar-brand text-secondary fw-bold fst-italic mt-2" href="#">Mark Ryan "Alexa" Holmina</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
     </div>
-    <div class="navigation">
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="container-sm navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item nav-link"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
-            <li class="nav-item nav-link"><a class="nav-link active" aria-current="page" href="#about-us">About me</a></li>
-            <li class="nav-item nav-link"><a class="nav-link active" aria-current="page" href="#work-experience">WorkExperiences/Skills</a></li>
-            <li class="nav-item nav-link"><a class="nav-link active" aria-current="page" href="#Portfolio-title">Portfolio</a></li>
+    <div class="navigation mt-2">
+      <div class="collapse navbar-collapse mt-2  " id="navbarSupportedContent">
+        <ul class="container-sm navbar-nav me-auto mb-2 mb-lg-0 ">
+            <li class="nav-item nav-link"><a class="nav-link active" aria-current="page" href="index.html"><p class="text-secondary  fw-bold">Home</p></a></li>
+            <li class="nav-item nav-link"><a class="nav-link active" aria-current="page" href="#about-me"><p class="text-secondary   fw-bold">About Me</p></a></li>
+            <li class="nav-item nav-link"><a class="nav-link active" aria-current="page" href="#work-experience"><p class="text-secondary  fw-bold">WorkExperiences/Skills</p></a></li>
+            <li class="nav-item nav-link"><a class="nav-link active" aria-current="page" href="#Portfolio-title"><p class="text-secondary  fw-bold">Portfolio</p></a></li>
         </ul>
       </div>
     </div>
@@ -64,29 +64,30 @@
     </div>
    </section>
    <hr>
-   <section class="hero-section">
-        <section class="container-fluid d-flex flex-column justify-content-center align-items-center shadowbox p-3">
-            <div class="container-sm d-flex flex-column justify-content-center align-items-center p-3">
-                    <h4 class="text-center">About Me</h4>
-                    <h5 class="text-center">"Engineering is achieving function while avoiding failure." </h5>
-                    <p>I am passionate in leveraging technology to drive business to success.</p>
+   <section class="hero-section" id="about-me">
+    <div class="container-fluid d-flex flex-column justify-content-center align-items-center shadowbox p-3">
+        <div class="container-sm d-flex flex-column justify-content-center align-items-center p-3">
+            <h4 class="text-center">About Me</h4>
+            <h5 class="text-center">"Engineering is achieving function while avoiding failure."</h5>
+            <p>I am passionate about leveraging technology to drive business success.</p>
+        </div>
+        <div class="container-sm d-flex flex-column flex-lg-row justify-content-around gap-class p-3">
+            <div class="col-lg-4 about-me-carousel">
+                <h5 class="text-center text-warning">Worked with International Companies</h5>
+                <p class="text-center text-info fw-bold fst-italic">I have various work experiences over the past 13 years. It can be seen in my Portfolio below.</p>
             </div>
-            <div class="container-sm d-flex flex-column flex-lg-row justify-content-around gap-class p-3">
-                <div class="col-lg-4 about-me-carousel">
-                    <h5 class="text-center text-warning">Worked with International Companies</h5>
-                    <p class="text-center text-info fw-bold fst-italic">I have various of work experiences for the past 13 years. It can be seen in my Portfolio below.</p>
-                </div>
-                <div class="col-lg-4 about-me-carousel">
-                    <h5 class="text-center text-warning">10 Years Network Infrastructure Engineer</h5>
-                    <p class="text-center text-primary fw-bold fst-italic">During the years working as Network Analyst I developed  set of skills</p>
-                </div>
-                <div class="col-lg-4 about-me-carousel">
-                    <h5 class="text-center text-warning">Happy Clients</h5>
-                    <p class="text-center text-success fw-bold fst-italic">With hard work and perseverance. I gained trust and build business relationship with my clients.</p>
-                </div>
+            <div class="col-lg-4 about-me-carousel">
+                <h5 class="text-center text-warning">10 Years Network Infrastructure Engineer</h5>
+                <p class="text-center text-primary fw-bold fst-italic">During the years working as Network Analyst, I developed a set of skills.</p>
             </div>
-        </section>
-   </section>
+            <div class="col-lg-4 about-me-carousel">
+                <h5 class="text-center text-warning">Happy Clients</h5>
+                <p class="text-center text-success fw-bold fst-italic">With hard work and perseverance, I gained trust and built business relationships with my clients.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
    <hr>
 
         <section class="container-fluid p-3 shadowbox bggrey" id="work-experience">
@@ -360,43 +361,6 @@
 
 
 <script>
-var exampleModal = document.getElementById('exampleModal');
-
-exampleModal.addEventListener('show.bs.modal', function (event) {
-    // Button that triggered the modal
-    var button = event.relatedTarget;
-    // Extract info from data-bs-* attributes
-    var recipient = button.getAttribute('data-bs-whatever');
-    // Update the modal's content.
-    var modalTitle = exampleModal.querySelector('.modal-title');
-    var modalBodyInput = exampleModal.querySelector('.modal-body input');
-
-    modalTitle.textContent = 'New message to ' + recipient;
-    modalBodyInput.value = recipient;
-});
-
-// Send message functionality
-var sendButton = document.getElementById('sendButton');
-sendButton.addEventListener('click', function() {
-    var message = document.getElementById('messageInput').value;
-
-    // Simulate sending the message (replace with actual send logic)
-    setTimeout(function() {
-        // Update modal content to show success message
-        var modalBody = exampleModal.querySelector('.modal-body');
-        modalBody.innerHTML = '<p class="text-success">Message sent successfully!</p>';
-
-        // Optionally, close the modal after a delay (e.g., 2 seconds)
-        setTimeout(function() {
-            var modal = bootstrap.Modal.getInstance(exampleModal);
-            modal.hide();
-            // Reset modal content back to original state for next use
-            modalBody.innerHTML = '<input type="text" id="messageInput" class="form-control" placeholder="Enter message...">';
-        }, 2000); // 2000 milliseconds = 2 seconds
-
-    }, 1000); // 1000 milliseconds = 1 second (simulate delay)
-});
-
 // Scroll to Top button functionality
 let mybutton = document.getElementById("myBtn");
 
@@ -414,5 +378,25 @@ function topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
+
+
+
+<script>
+  let lastScrollTop = 0;
+  $(window).on('scroll', function() {
+    let scrollTop = $(this).scrollTop();
+    if (scrollTop > lastScrollTop) {
+      $('.navbar').css('top', '-56px'); // Adjust based on navbar height
+    } else {
+      $('.navbar').css('top', '0');
+    }
+    lastScrollTop = scrollTop;
+  });
+</script>
+
+
+
+
+
     </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

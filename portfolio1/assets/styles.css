@@ -8,6 +8,7 @@ body, html {
 
 .bggrey {
     background-color: #f1f1f1;
+    
 }
 
 .profilepicture {
@@ -45,9 +46,10 @@ body, html {
     cursor: pointer;
     transition: transform 0.2s ease;
     color: #2e2e2e;
-    hover: scroll-behavior;
     
 }
+
+
 
 .about-me-carousel:hover {
     transform: translateY(-5px);
@@ -263,3 +265,12 @@ body, html {
     color: purple;
     text-decoration: none;
 }
+
+
+
+
+
+
+
+
+
