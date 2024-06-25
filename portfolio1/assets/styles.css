@@ -45,6 +45,7 @@ body, html {
     cursor: pointer;
     transition: transform 0.2s ease;
     color: #2e2e2e;
+    hover: scroll-behavior;
     
 }
 
@@ -249,4 +250,16 @@ body, html {
     color: #721c24;
     background-color: #f8d7da;
     border-color: #f5c6cb;
+}
+
+
+.contact-info p a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.contact-info p a:hover {
+    color: purple;
+    text-decoration: none;
 }
