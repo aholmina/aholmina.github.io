@@ -14,8 +14,8 @@
   </head>
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-dark shadowbox bg-dark position-fixed">
-    <div class="container-fluid position-fixed mt-5 mb-4">
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark shadowbox bg-dark">
+    <div class="container-fluid ">
     <div class="logo">
       <a class="navbar-brand text-secondary fw-bold fst-italic mt-2" href="#">Mark Ryan "Alexa" Holmina</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,10 +37,10 @@
 <main>
 
 
-    <section class="hero-section">
-        <div class="container text-center">
+    <section class="hero-section mt-5">
+        <div class="container text-center mt-2">
             <div class="container-sm d-flex flex-column justify-content-center align-items-center">
-                <img class="profilepicture" src="/portfolio1/images/port43.jpg" alt="logo">
+                <img class="profilepicture mt-2" src="/portfolio1/images/port43.jpg" alt="logo">
             </div>
 
                 
@@ -64,29 +64,54 @@
     </div>
    </section>
    <hr>
+
+
    <section class="hero-section" id="about-me">
-    <div class="container-fluid d-flex flex-column justify-content-center align-items-center shadowbox p-3">
-        <div class="container-sm d-flex flex-column justify-content-center align-items-center p-3">
-            <h4 class="text-center">About Me</h4>
-            <h5 class="text-center">"Engineering is achieving function while avoiding failure."</h5>
-            <p>I am passionate about leveraging technology to drive business success.</p>
+    <section class="about-me-section position-relative text-center text-white">
+        <div class="background-image"></div>
+        <div class="container py-5">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-md-4 mt-2">
+                    <img src="/portfolio1/images/port46.jpg" alt="Your Picture" class="img-fluid rounded-circle profile-picture">
+                </div>
+                <div class="col-md-8">
+
+              
+                        <div class="container-sm d-flex flex-column justify-content-center align-items-center p-3">
+                            <h3 class="text-center">About Me</h3>
+                            
+                        </div>
+                    <div class="container-sm d-flex flex-column justify-content-center align-items-center p-3">
+                        <h4 class="text-center mb-2">Let's Build a Success Together</h4>
+                        <p>I am passionate about leveraging technology to drive business success.</p>
+                    </div>
+                    
+                    <p class="lead text-white fst-italic"> I am an IT Support Specialist with over 10 years of experience in providing technical support and troubleshooting IT issues. My expertise includes network management, software support, and hardware repair. My previous job was  I was working at Parity technology, where I handle IT infrastructure, support end-users, and maintain both hardware and software systems.</p>
+                </div>
+
+                <div class="container-fluid d-flex flex-column justify-content-center align-items-center shadowbox p-3">
+                   
+                    <div class="container-sm d-flex flex-column flex-lg-row justify-content-around gap-class p-3">
+                        <div class="col-lg-4 about-me-carousel">
+                            <h5 class="text-center text-warning">Worked with International Companies</h5>
+                            <p class="text-center text-info fw-bold fst-italic">I have various work experiences over the past 13 years. It can be seen in my Portfolio below.</p>
+                        </div>
+                        <div class="col-lg-4 about-me-carousel">
+                            <h5 class="text-center text-warning">10 Years Network Infrastructure Engineer</h5>
+                            <p class="text-center text-primary fw-bold fst-italic">During the years working as Network Analyst, I developed a set of skills.</p>
+                        </div>
+                        <div class="col-lg-4 about-me-carousel">
+                            <h5 class="text-center text-warning">Happy Clients</h5>
+                            <p class="text-center text-success fw-bold fst-italic">With hard work and perseverance, I gained trust and built business relationships with my clients.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            </div>
         </div>
-        <div class="container-sm d-flex flex-column flex-lg-row justify-content-around gap-class p-3">
-            <div class="col-lg-4 about-me-carousel">
-                <h5 class="text-center text-warning">Worked with International Companies</h5>
-                <p class="text-center text-info fw-bold fst-italic">I have various work experiences over the past 13 years. It can be seen in my Portfolio below.</p>
-            </div>
-            <div class="col-lg-4 about-me-carousel">
-                <h5 class="text-center text-warning">10 Years Network Infrastructure Engineer</h5>
-                <p class="text-center text-primary fw-bold fst-italic">During the years working as Network Analyst, I developed a set of skills.</p>
-            </div>
-            <div class="col-lg-4 about-me-carousel">
-                <h5 class="text-center text-warning">Happy Clients</h5>
-                <p class="text-center text-success fw-bold fst-italic">With hard work and perseverance, I gained trust and built business relationships with my clients.</p>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
+    
+    
 
    <hr>
 
@@ -399,4 +424,6 @@ function topFunction() {
 
 
     </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
