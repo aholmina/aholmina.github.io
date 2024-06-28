@@ -1,4 +1,4 @@
-/* Universal styles */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -22,9 +22,9 @@ body, html {
     color: #fff; 
     position: fixed;
     width: 100%;
-    background-color: rgba(119, 104, 104, 0.904); /* Semi-transparent black background */
-    z-index: 1000; /* Ensure it's above other content */
-    transition: background-color 0.3s; /* Smooth transition for background color */
+    background-color: rgba(119, 104, 104, 0.904); 
+    z-index: 1000; 
+    transition: background-color 0.3s; 
     opacity: 70%;
    
     
@@ -158,7 +158,7 @@ main {
 
 /* Details Modal */
 .details-modal .modal-content {
-    max-width: 500px; /* Adjust width as needed */
+    max-width: 500px; 
 }
 
 .details-modal h4 {
@@ -493,7 +493,7 @@ main {
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    resize: vertical; /* Allow textarea resizing vertically */
+    resize: vertical; 
 }
 
 #contact-form textarea {
@@ -570,7 +570,7 @@ main {
 
 @media (max-width: 480px) {
     .skills-section {
-        grid-template-columns: 1fr; /* Single column layout for smaller screens */
+        grid-template-columns: 1fr; 
     }
 }
 
@@ -583,8 +583,8 @@ main {
 .portfolio-item {
     position: relative;
     margin: 10px;
-    width: 200px; /* Adjust width as needed */
-    text-align: center; /* Center-align text and buttons */
+    width: 200px; 
+    text-align: center; 
 }
 
 .details-btn {
