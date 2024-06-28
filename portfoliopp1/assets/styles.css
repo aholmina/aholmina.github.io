@@ -20,6 +20,20 @@ body, html {
     padding: 15px 30px;
     background-color: #333; 
     color: #fff; 
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    color: gray; 
+    position: fixed;
+    width: 100%;
+    background-color: rgba(119, 104, 104, 0.904); /* Semi-transparent black background */
+    z-index: 1000; /* Ensure it's above other content */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+    opacity: 70%;
+
+
 }
 
 .logo a {
