@@ -42,17 +42,63 @@
             <div class="container-sm d-flex flex-column justify-content-center align-items-center">
                 <img class="profilepicture mt-2" src="/portfolio1/images/port43.jpg" alt="logo">
             </div>
-
-                
-                <div class="container-sm d-flex flex-column justify-content-center align-items-center p-2">
-                    <div><h3 class="text-center">Hello I'm Alexa Holmina</h3></div> <div>A Web Developer & NOC Engineer</div>
+            <div class="container-sm d-flex flex-column justify-content-center align-items-center p-2">
+                <div><h3 class="text-center">Hello I'm Alexa Holmina</h3></div> <div>A Web Developer & NOC Engineer</div>
+            </div>
+            <div class="container-sm d-flex flex-column justify-content-center align-items-center">
+                <p class="text-center">I am a NOC Engineer and a Network Infrastructure Engineer from Zambales, Philippines. You can get in touch with me by clicking contact me button below.</p>
+            </div>
+            <div class="container-sm d-flex flex-column justify-content-center align-items-center mt-4">
+                <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#contactMeModal">Contact me</button>
+            </div>
+            
+            <!-- Contact Me Modal -->
+            <div class="modal fade" id="contactMeModal" tabindex="-1" aria-labelledby="contactMeModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <p class="modal-title text-success" id="contactMeModalLabel">Let's Make Business a Success</p>
+                            
+                        </div>
+                        <div class="modal-body bg-info-subtle">
+                            <form id="contactForm">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="contact-name" placeholder="Name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="email" class="form-control" id="contact-email" placeholder="Email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <textarea class="form-control" id="contact-message" rows="3" placeholder="Message" required></textarea>            
+                                </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="submitForm()">Send Message</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="container-sm d-flex flex-column justify-content-center align-items-center">
-                    <p class="text-center">I am a NOC Engineer and a Network Infrastructure Engineer from Zambales, Philippines. You can get in touch with me by clicking contact me button below.</p>
-                </div>
-                <div class="container-sm d-flex flex-column justify-content-center align-items-center">
-                    <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="markholmina@gmail.com">Contact me</button>
-                </div>
+            </div>
+            
+            
+            
+            <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+            <script>
+                function toggleSkillDetails(element) {
+                    const activeElement = document.querySelector('.skill.active');
+                    if (activeElement && activeElement !== element) {
+                        activeElement.classList.remove('active');
+                    }
+                    element.classList.toggle('active');
+                }
+            
+                function submitForm() {
+                    // Replace with your form submission logic
+                    alert('Message sent successfully!');
+                }
+            </script>
+            
+            
     </div>
     <div class="container-sm newsletter-border mt-1 mb-4">
       <div class="container-sm d-flex flex-column align-items-center p-3">
@@ -68,29 +114,23 @@
 
    <section class="hero-section" id="about-me">
     <section class="about-me-section position-relative text-center text-white">
-        <div class="background-image"></div>
         <div class="container py-5">
             <div class="row justify-content-center align-items-center">
                 <div class="col-md-4 mt-2">
                     <img src="/portfolio1/images/port46.jpg" alt="Your Picture" class="img-fluid rounded-circle profile-picture">
                 </div>
                 <div class="col-md-8">
-
-              
-                        <div class="container-sm d-flex flex-column justify-content-center align-items-center p-3">
-                            <h3 class="text-center">About Me</h3>
-                            
-                        </div>
+                    <div class="container-sm d-flex flex-column justify-content-center align-items-center p-3">
+                        <h1 class=" text-success fst-italic ">About Me</h1>
+                    </div>
                     <div class="container-sm d-flex flex-column justify-content-center align-items-center p-3">
                         <h4 class="text-center mb-2">Let's Build a Success Together</h4>
                         <p>I am passionate about leveraging technology to drive business success.</p>
                     </div>
-                    
-                    <p class="lead text-white fst-italic"> I am an IT Support Specialist with over 10 years of experience in providing technical support and troubleshooting IT issues. My expertise includes network management, software support, and hardware repair. My previous job was  I was working at Parity technology, where I handle IT infrastructure, support end-users, and maintain both hardware and software systems.</p>
-                </div>
+                    <p class="text-center text-white fst-italic"> I am an IT Support Specialist with over 10 years of experience in providing technical support and troubleshooting IT issues. My expertise includes network management, software support, and hardware repair. I handled IT infrastructure, support end-users, and maintain both hardware and software systems.</p>
+                 </div>
 
                 <div class="container-fluid d-flex flex-column justify-content-center align-items-center shadowbox p-3">
-                   
                     <div class="container-sm d-flex flex-column flex-lg-row justify-content-around gap-class p-3">
                         <div class="col-lg-4 about-me-carousel">
                             <h5 class="text-center text-warning">Worked with International Companies</h5>
@@ -110,52 +150,68 @@
             </div>
         </div>
     </section>
-    
-    
-
    <hr>
 
-        <section class="container-fluid p-3 shadowbox bggrey" id="work-experience">
-            <h4 class="text-center fst-italic">Work & Experience</h4>
-            <h5 class="text-center">Work with Multiple Top Companies</h5>
+   
+   <section class="container-fluid p-3 shadowbox home-background" id="work-experience">
+    <h4 class=" text-success text-center fst-italic">Work & Experience</h4>
+    <h5 class="text-center">Work with Multiple Top Companies</h5>
+    
+    <div id="workExperienceCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" style="background-image: url('/portfolio1/images/carousel-work3.png');">
+                <div class="carousel-caption">
+                    <h5 class="text-white">Network Analyst</h5>
+                    <p class="text-white"><i>Full time/Remote</i></p>
+                    <p class="text-white">October 2021- November 2023</p>
+                    <hr>
+                    <p class="text-c20 ms-2 rounded-2">Parity</p>
+                    <p class="text-white fst-italic">Parity Technology Solutions' consultants help enable successful business outcomes through close collaboration and unmatched expertise to help get your property</p>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('/portfolio1/images/carousel-work4.png');">
+                <div class="carousel-caption">
+                    <h5 class="text-white">Network Engineer</h5>
+                    <p class="text-white"><i>Full time/on site</i></p>
+                    <p class="text-white">November 2022- May 2023</p>
+                    <hr>
+                    <p class="text-c20 ms-2 rounded-2">Ringcentral</p>
+                    <p class="text-white fst-italic"> RingCentral, Inc. is an American provider of cloud-based communication and collaboration products and services. CEO Vlad Shmunis and CTO Vlad Vendrow founded the company in 1999.</p>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('/portfolio1/images/carousel-work5.png');">
+                <div class="carousel-caption">
+                    <h5 class="text-white ">Network Support Specialist</h5>
+                    <p class="text-white"><i>Full time/On-site</i></p>
+                    <p class="text-white">October 2010- March 2014</p>
+                    <hr>
+                    <p class="text-c20 ms-2 rounded-2">Cisco Systems</p>
+                    <p class="text-white fst-italic">Cisco develops, manufactures, and sells networking hardware, software,and other high-technology services and products.</p>
+                </div>
+            </div>
         </div>
-          <div class="container-sm d-flex flex-column justify-content-center align-items-center p-3">
-            <div class="container-sm d-flex  flex-column flex-lg-row justify-content-around gap-class align-self-stretc p-3">
-              <div class="col-lg-4 bg-dark about-me-carousel">
-                  <h5 class="text-white">Network Analyst</h5>
-                  <p class="text-white"></class><i>Full time/Remote</i></p>
-                  <p class="text-white"></class>October 2021- November 2023</p>
-                  <hr>
-                  <p class="text-c20">Parity</p>
-                  <p class="text-white">Parity Technology Solutions' consultants help enable successful business outcomes through close collaboration and unmatched expertise to help get your property</div>
-              <div class="col-lg-4 bg-dark about-me-carousel">
-                  <h5 class="text-white">Network Engineer</h5>
-                  <p class="text-white"><i>Full time/on site</i></p>
-                  <p class="text-white">November 2022- May 2023</p>
-                  <hr>
-                  <p class="text-c20">Ringcentral</p>
-                  <p class="text-white">RingCentral, Inc. is an American provider of cloud-based communication and collaboration products and services. CEO Vlad Shmunis and CTO Vlad Vendrow founded the company in 1999. Investors included Doug Leone, Sequoia Capital, Khosla Ventures, Scale Venture Partners, and DAG Ventures.</p></div>
-              <div class="col-lg-4 bg-dark about-me-carousel">
-                  <h5 class="text-white">Network Support Specialist</h4>
-                  <p class="text-white"><i>Full time/On-site</i></p>
-                  <p class="text-white">October 2010- March 2014</p>
-                  <hr>
-                  <p class="text-c20">Cisco</p>
-                  <p class="text-white">Cisco Systems, Inc. is an American multinational digital communications technology conglomerate corporation headquartered in San Jose, California. Cisco develops, manufactures, and sells networking hardware, software, telecommunications equipment and other high-technology services and products. </p>
-              </div>
-          </div>
-        </section>
-   </section>
-   <hr>
-        <section class="container-fluid p-3 shadowbox bggrey" id="work-experience">
+        <button class="carousel-control-prev" type="button" data-bs-target="#workExperienceCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#workExperienceCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</section>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+
+
+
+    <section class="container-fluid p-3 shadowbox bggrey" id="work-experience">
             <h4 class="text-center fst-italic">SKIllS</h4>
-             
-          </div>
           <div class="container bggrey">
             <section class="row skills-section">
           
                 <div class="col-md-6 col-lg-4">
-                    <div class="skill  bg-dark">
+                    <div class="skill  bg-dark border-bottom-5 border-black">
                         <h3 class="text-secondary">Microsoft Products <i class="fa-brands fa-windows"></i></h3>
                         <p>Proficient in Microsoft Office suite and other Microsoft products.</p>
                     </div>
@@ -167,58 +223,93 @@
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4">
-                    <div class="skill  bg-dark">
+                    <div class="skill  bg-dark border-bottom-5 border-primary">
                         <h3 class="text-secondary">HTML5 <i class="fa-brands fa-html5"></i></h3>
                         <p>Creating structured and semantic web pages using HTML5.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4">
-                    <div class="skill  bg-dark">
+                    <div class="skill  bg-dark border-bottom-5 border-success ">
                         <h3 class="text-secondary">CSS <i class="fa-brands fa-css3-alt"></i></h3>
                         <p>Styling web pages and applications with CSS.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4">
-                    <div class="skill  bg-dark">
+                    <div class="skill  bg-dark border-bottom-5 border-info">
                         <h3 class="text-secondary">JavaScript <i class="fa-brands fa-js"></i></h3>
                         <p>Developing interactive and dynamic functionalities.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4">
-                    <div class="skill  bg-dark">
+                    <div class="skill  bg-dark border-bottom-5 border-warning">
                         <h3 class="text-secondary">Bootstrap <i class="fa-brands fa-bootstrap"></i></h3>
                         <p>Utilizing Bootstrap framework for responsive design.</p>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4">
-                  <div class="skill  bg-dark">
-                    <h3 class="text-secondary">Spanish Proficiency <i class="fa-solid fa-school-flag"></i></h3>
-                    <p>C1 level & Fluent in Spanish, both spoken and written.</p>
-                  </div>
-              </div>
-              <div class="col-md-6 col-lg-4">
-                <div class="skill  bg-dark">
-                    <h3 class="text-secondary">Helpdesk Support <i class="fa-solid fa-chalkboard-user"></i></h3>
-                    <p>Providing technical support and assistance to end-users.</p>
+
+                <div class="text-center mt-4">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#additionalSkillsModal">
+                        More Skills
+                    </button>
                 </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="skill  bg-dark">
-                    <h3 class="text-secondary">Network Configuration <i class="fa-solid fa-server"></i></h3>
-                    <p>Configuring and maintaining network infrastructure.</p>
-                </div>
-            </div>
         </div>
 </section>
  
-     
+    
+
+<div class="modal fade" id="additionalSkillsModal" tabindex="-1" aria-labelledby="additionalSkillsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content bg-dark text-white">
+            <div class="modal-header">
+                <h5 class="modal-title" id="additionalSkillsModalLabel">More Skills</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="skill bg-dark opacity-50 border-bottom border-danger">
+                            <h3 class="text-success">Spanish Proficiency <i class="fa-solid fa-school-flag"></i></h3>
+                            <p>C1 level & Fluent in Spanish, both spoken and written.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="skill bg-dark opacity-50 border-bottom border-success">
+                            <h3 class="text-info">Helpdesk Support <i class="fa-solid fa-chalkboard-user"></i></h3>
+                            <p>Providing technical support and assistance to end-users.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 ">
+                        <div class="skill bg-dark opacity-50 border-bottom border-white">
+                            <h3 class="text-warning">Network Configuration </h3>
+                            <p>Configuring and maintaining network infrastructure.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script>
+    function toggleSkillDetails(element) {
+        const activeElement = document.querySelector('.skill.active');
+        if (activeElement && activeElement !== element) {
+            activeElement.classList.remove('active');
+        }
+        element.classList.toggle('active');
+    }
+</script>
+
 <section class="hero1-section">
       <section class="container-fluid p-3 shadowbox" id="Portfolio-title">
         <div class="container-sm d-flex flex-column justify-content-center align-items-center p-3">
             <h4 class="text-center">Portfolio/Employment</h4>
-            <div class="container-sm d-flex flex-column justify-content-center align-items-center">
-                <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="markholmina@gmail.com">Contact me</button>
-            </div>
         </div>
         <div class="row">
            
@@ -355,7 +446,7 @@
           <div class="col-md-6 mb-2">
             <div class="contact-info text-center">
                 <p class="text-success fs-4 fw-bold fst-italic">Let's get in touch & let's make something awesome together!</p>
-                <p><strong><i class="fa-solid fa-envelope"></i></strong> <a href="mailto:markholmina@gmail.com" class="contact-link">markholmina@gmail.com</a></p>
+                <p><strong><i class="fa-solid fa-envelope"></i></strong> <a href="mailto:markholmina@gmail.com" class="contact-link">mail@gmail.com</a></p>
                 <p><strong><i class="fa-solid fa-phone"></i></strong> <a href="tel:+1234567890" class="contact-link">+123 456 7890</a></p>
               </div>
           </div>
