@@ -388,6 +388,7 @@ body, html {
 
 
 .profile-card {
+    max-height: fit-content;
     max-width: 600px;
     margin: 20px auto;
     padding: 20px;
@@ -507,3 +508,101 @@ body, html {
     }
   }
   
+
+
+  #workExperienceCarousel .carousel-item {
+    height: 500px; /* Adjust height as needed */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: opacity 1s ease-in-out;
+    object-fit: contain;
+}
+
+#workExperienceCarousel .carousel-item:nth-child(1) {
+    background-image: url('/myp1_backup/images/carousel-work7.png');
+}
+
+#workExperienceCarousel .carousel-item:nth-child(2) {
+    background-image: url('/myp1_backup/images/carousel-work4.png');
+}
+
+#workExperienceCarousel .carousel-item:nth-child(3) {
+    background-image: url('/myp1_backup/images/carousel-work6.png');
+}
+
+#workExperienceCarousel .carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5); /* Dark background for better text visibility */
+    padding: 20px;
+    border-radius: 10px;
+    animation: fadeInUp 1.5s;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+   
+    100% {
+        opacity: 1.5;
+        transform: translateY(0);
+    }
+}
+
+
+.profile-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.letter {
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: x-large;
+    display: inline-block;
+    opacity: 0;
+    animation: typewriter 0.5s forwards;
+}
+
+@keyframes typewriter {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.letter:nth-child(1) { animation-delay: 0.5s; }
+.letter:nth-child(2) { animation-delay: 1s; }
+.letter:nth-child(3) { animation-delay: 1.5s; }
+.letter:nth-child(4) { animation-delay: 2s; }
+.letter:nth-child(5) { animation-delay: 2.5s; }
+.letter:nth-child(6) { animation-delay: 3s; }
+.letter:nth-child(7) { animation-delay: 3.5s; }
+.letter:nth-child(8) { animation-delay: 4s; }
+.letter:nth-child(9) { animation-delay: 4.5s; }
+.letter:nth-child(10) { animation-delay: 5s; }
+.letter:nth-child(11) { animation-delay: 5.5s; }
+.letter:nth-child(12) { animation-delay: 6s; }
+.letter:nth-child(13) { animation-delay: 6.5s; }
+
+/* Repeat animation in a cycle */
+.profile-title {
+    animation: cycle 14s infinite; /* 14s for one complete cycle */
+}
+
+@keyframes cycle {
+    0%, 90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

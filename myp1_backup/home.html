@@ -14,12 +14,12 @@
 <body>
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark shadowbox bg-dark">
         <div class="container-fluid justify-content-center align-items-center">
-            <a class="navbar-brand text-secondary fw-bold fst-italic mt-2" href="index.html">Mark Ryan "Alexa" Holmina</a>
+            <a class="navbar-brand text-secondary fw-bold fst-italic mt-2 text-warning ms-2" href="index.html">Mark Ryan "Alexa" Holmina</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse ms-5 align-items-center justify-content-center" id="navbarNav">
-                <ul class="navbar-nav me-auto d-flex justify-content-center gap-2">
+                <ul class="navbar-nav me-auto d-flex justify-content-center gap-2 fw-bold">
                     <li class="nav-item"><a class="nav-link active" aria-current="page" href="home.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="index.html#about-me">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="index.html#work-experience">Experiences/Skills</a></li>
@@ -37,12 +37,17 @@
         </div>
     </nav>
     <section class="hero-section mt-5">
-                  <div class="profile-card">
-                    <!-- Profile Picture with Modal Trigger Button -->
+
+
+     
+                  <div class="profile-card  border border-5 border-warning mt-5 ">
                     <button type="button" class="btn btn-link p-0" onclick="toggleProfileDetails()">
                       <img src="/portfolio1/images/port43.jpg" class="profile-picture img-fluid mt-2" alt="Profile Picture">
                     </button>
-                    <div class="profile-title">Alexa Holmina</div>
+                    <span class="letter">A</span><span class="letter">l</span><span class="letter">e</span><span class="letter">x</span><span class="letter">a</span>
+                    <span class="letter"> </span>
+                    <span class="letter">H</span><span class="letter">o</span><span class="letter">l</span><span class="letter">m</span><span class="letter">i</span><span class="letter">n</span><span class="letter">a</span>
+            
                     <div class="profile-details" id="profileDetails">
                         <div class="container-sm d-flex flex-column justify-content-center align-items-center p-2">
                             <div><h3 class="text-center"><div>A Web Developer & NOC Engineer</div>
@@ -50,7 +55,6 @@
                         <div class="container-sm d-flex flex-column justify-content-center align-items-center">
                             <p class="text-center">I am a NOC Engineer and a Network Infrastructure Engineer from Zambales, Philippines.</p>
                         </div>
-                     
                         <div class="row justify-content-center text-center">
                             <div class="col-md-6 mb-2">
                               <div class="action-buttons">
@@ -58,30 +62,17 @@
                                   <a href="/path/to/cv.pdf" download class="btn btn-secondary download-cv-btn">Download/CV</a>
                               </div>
                   
-                  <script>
-                    function toggleProfileDetails() {
-                      const details = document.getElementById('profileDetails');
-                      const buttons = document.getElementById('buttonContainer');
-                      
-                      // Toggle visibility
-                      details.classList.toggle('visible');
-                      buttons.classList.toggle('visible');
-                    }
-                  </script>
-                  
-
-    </div>
-    <div class="container-sm newsletter-border mt-1 mb-4">
-      <div class="container-sm d-flex flex-column align-items-center p-3">
-              <div><h4 class="text-center fst-italic">Subscribe</h4></div>
-              <div><p class="text-center">To my Newsletter</p></div>
-              <div class="form-newsletter"><input type="email" class="form-control w-100 subscribe-email" placeholder="Email"></div>
-              <div><button class="btn btn-secondary alert alert primary btn-sm mt-2" onclick="window.location.href='#';">Subscribe</button></div>
-      </div>
-    </div>
-   </section>
+                  </div>
+                  <div class="container-sm newsletter-border mt-1 mb-4">
+                    <div class="container-sm d-flex flex-column align-items-center p-3">
+                      <div><h4 class="text-center fst-italic">Subscribe</h4></div>
+                      <div><p class="text-center">To my Newsletter</p></div>
+                      <div class="form-newsletter"><input type="email" class="form-control w-100 subscribe-email" placeholder="Email"></div>
+                      <div><button class="btn btn-secondary alert alert primary btn-sm mt-2" onclick="window.location.href='#';">Subscribe</button></div>
+              </div>
+            </div>
+    </section>
     </main>
-
 
     <footer class="footdesign container-fluid bg-dark text-white py-4">
     
@@ -108,3 +99,14 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
+<script>
+  function toggleProfileDetails() {
+    const details = document.getElementById('profileDetails');
+    const buttons = document.getElementById('buttonContainer');
+    
+    // Toggle visibility
+    details.classList.toggle('visible');
+    buttons.classList.toggle('visible');
+  }
+</script>
