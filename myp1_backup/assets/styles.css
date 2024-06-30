@@ -398,7 +398,14 @@ body, html {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: box-shadow 0.3s ease;
+   
   }
+ 
+  .profile-card {
+    background: linear-gradient(pink, gray, pink);
+    /* Default direction is top to bottom */
+  }
+
   .profile-card:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   }
@@ -637,20 +644,33 @@ body, html {
     height: 300px;
   }
 
+
+
+
   .hover-card {
     position: relative;
     overflow: hidden;
+    perspective: 1000px; /* Perspective for 3D effect */
 }
 
 .hover-card img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    height:fit-content;
-    transition: opacity 0.3s ease-in-out;
+    display: block;
+    width: 100%; /* Ensures the image fills the container */
+    height: auto; /* Maintains aspect ratio */
+    opacity: 1;
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Transition for flip and fade-in */
+    transform-style: preserve-3d;
 }
 
 .hover-card:hover img {
-    opacity: 1;
+    transform: rotateY(180deg); /* Flips the image on hover */
+    opacity: 0; /* Hides the image initially */
+}
+
+.hover-card:hover img.show {
+    opacity: 1; /* Shows the image with fade-in effect */
+}
+
+.hover-card:not(:hover) img {
+    transform: rotateY(0); /* Ensures images not hovered return to normal */
 }
