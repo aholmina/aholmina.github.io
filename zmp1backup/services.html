@@ -1,0 +1,270 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TransChanger SHOP</title>
+    <link rel="icon" type="image/x-icon" href="images/social.jpg">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="css/styles.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+</head>
+<body>
+        <header>
+            <div class="container-fluid top-bg"><a href="#" class="top-links">
+                <div class="container-sm d-flex justify-content-end p-2">
+                <div class="small-center">
+                    <a href="login.html" class="top-links">Log in</a></a>&nbsp;or&nbsp;<a href="signup.html" class="top-links">Create an account</a>&nbsp;|&nbsp;<a href="" class='fas fa-shopping-cart mt-1 cart-style'></a>
+                </div>
+                </div>
+            </div>
+            <div class="container-fluid d-flex justify-content-center p-2">
+                <a href="index.html"><img class="logo" src="images/social.jpg" alt=""></a>
+                <h1 class="hero-title mt- "><span class="word-pink">Trans</span><span class="word-violet">Changer</span><span class="word-black"> Shop</span</h1>
+            </div>
+         </header>
+         <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid d-flex justify-content-center navbardesign">
+            <div class="navcontrol">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            
+            <div class="navigation">
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 navrightborder">
+                    <li class="nav-item nav-link"><a class="nav-link" aria-current="page" href="index.html">HOME</a></li>
+                    <li class="nav-item nav-link"><a class="nav-link active" aria-current="page" href="products.html">PRODUCTS</a></li>
+                    <li class="nav-item nav-link"><a class="nav-link active" aria-current="page" href="services.html">SERVICES</a></li>
+    
+                    <li class="nav-item nav-link"><a class="nav-link" aria-current="page" href="aboutus.html">ABOUT US</a></li>
+                    <li class="nav-item nav-link"><a class="nav-link" aria-current="page" href="contactus.html">CONTACT US</a></li>
+                </ul> 
+                    <input type="text" class="form-inline noborder p-2" placeholder="Search store">
+                    <div class="input-group-append navrightborder p-2">
+                    <button class="btn btn-secondary" type="button">
+                    <i class="fa fa-search"></i>
+                    </button>
+                    </div>
+              </div>
+            </div>
+            </div>
+          </div>
+        </nav>
+        <main>
+
+          <section>
+            <div class="container mt-3 text-center">
+              <div class="container mt-custom mt-2">
+                <div class="row">
+                    <div class="col">
+                      <div class="sales-headline text-danger fw-italic fst-italic">
+                        <span class="running-letters text-danger">Get</span>
+                        <span class="running-letters text-secondary">a FREE</span>
+                        <span class="running-letters text-info ms-3"> Consultation!</span>
+                    </div>
+                    </div>
+                </div>
+            </div>
+              <button type="button" class="btn btn-sm alert alert-danger fw-bold" data-bs-toggle="modal" data-bs-target="#appointmentModal">
+              Schedule An Appointment!
+              </button>
+              </div>
+              
+              <!-- Appointment Modal -->
+              <div class="modal fade" id="appointmentModal" tabindex="-1" aria-labelledby="appointmentModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="appointmentModalLabel">Set an Appointment</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="appointmentForm">
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Name</label>
+                                    <input type="text" class="form-control" id="name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="date" class="form-label">Date</label>
+                                    <input type="date" class="form-control" id="date" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Select Service(s)</label><br>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input service-checkbox" type="checkbox" id="serviceAppearance" value="Appearance Consulting">
+                                        <label class="form-check-label" for="serviceAppearance">Appearance Consulting</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input service-checkbox" type="checkbox" id="serviceHRT" value="HRT">
+                                        <label class="form-check-label" for="serviceHRT">HRT</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input service-checkbox" type="checkbox" id="serviceWardrobe" value="Wardrobe Analysis">
+                                        <label class="form-check-label" for="serviceWardrobe">Wardrobe Analysis</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input service-checkbox" type="checkbox" id="serviceMakeupStyles" value="Make-up & Styles">
+                                        <label class="form-check-label" for="serviceMakeupStyles">Make-up & Styles</label>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Schedule</button>
+                            </form>
+                            <div class="message alert alert-success d-none" id="message">
+                                <p>Schedule will be sent shortly.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    var appointmentModal = new bootstrap.Modal(document.getElementById('appointmentModal'));
+            
+                    document.getElementById('appointmentForm').addEventListener('submit', function (event) {
+                        event.preventDefault();
+                        submitAppointment();
+                    });
+            
+                    function submitAppointment() {
+                        var name = document.getElementById('name').value;
+                        var email = document.getElementById('email').value;
+                        var date = document.getElementById('date').value;
+            
+                        var services = [];
+                        document.querySelectorAll('.service-checkbox:checked').forEach(function (checkbox) {
+                            services.push(checkbox.value);
+                        });
+            
+                        // Validation (basic validation for demonstration)
+                        if (!name || !email || !date || services.length === 0) {
+                            alert('Please fill in all fields and select at least one service.');
+                            return;
+                        }
+            
+                        // Simulate submission (replace with actual backend API call)
+                        setTimeout(function () {
+                            displayConfirmationMessage();
+                        }, 1000);
+                    }
+            
+                    function displayConfirmationMessage() {
+                        var messageDiv = document.getElementById('message');
+                        messageDiv.classList.remove('d-none');
+                        messageDiv.innerHTML = '<p>Schedule has been successfully submitted.</p>';
+            
+                        // Clear form inputs
+                        document.getElementById('name').value = '';
+                        document.getElementById('email').value = '';
+                        document.getElementById('date').value = '';
+                        document.querySelectorAll('.service-checkbox:checked').forEach(function (checkbox) {
+                            checkbox.checked = false;
+                        });
+            
+                        // Optionally, you can send an email confirmation here
+                        sendEmailConfirmation();
+                    }
+            
+                    function sendEmailConfirmation() {
+                        // Example code to send email confirmation (not functional, just a placeholder)
+                        var email = document.getElementById('email').value;
+                        console.log('Email confirmation sent to: ' + email);
+                    }
+            
+                    // Show the appointment modal when needed
+                    document.getElementById('showAppointmentModalButton').addEventListener('click', function () {
+                        appointmentModal.show();
+                    });
+                });
+            </script>        
+            <section class="container mt-4">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+                    <div class="col">
+                        <div class="card h-100 d-flex flex-column">
+                            <img src="images/port8.jpg" class="card-img-top" alt="Product 1">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold text-secondary">Appearance Consulting</h5>
+                                <hr>
+                                <p class="card-text fst-italic">We will work together to explore different elements of your appearance.</p>
+                                <h1 class="card-text text-danger">₱500</h1>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="col">
+                        <div class="card h-100 d-flex flex-column">
+                            <img src="images/port29.jpg" class="card-img-top" alt="Product 2">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold text-secondary">Hormone Selection</h5>
+                                <hr>
+                                <p class="card-text fst-italic">This form of hormone therapy is given based on the goal of treatment feminization.</p>
+                                <h1 class="card-text text-danger">₱500</h1>
+                            </div>       
+                        </div>
+                    </div>
+            
+                    <div class="col">
+                        <div class="card h-100 d-flex flex-column">
+                            <img src="images/services10.png" class="card-img-top" alt="Product 3">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold text-secondary">Make-up & Styles</h5>
+                                <hr>
+                                <p class="card-text fst-italic">We will help you to get the correct make-up and hairstyling to be more feminine</p>
+                                <h1 class="card-text text-danger">₱500</h1>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card h-100 d-flex flex-column">
+                            <img src="images/services1.png" class="card-img-top" alt="Product 4">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold text-secondary">Wardrobe Analysis</h5>
+                                <hr>
+                                <p class="card-text fst-italic">Wardrobe with clothes that fit your style that will compliment your body type body shape</p>
+                                <h1 class="card-text text-danger">₱500</h1>
+                            </div>
+                        </div>
+            </section>
+        </main>
+        <footer class="footdesign container-fluid">
+            <div class="container-sm d-flex  flex-column flex-lg-row justify-content-end gap-class align-self-stretc p-3">
+              <div class="col-lg-4">
+                <h4>CONNECT WITH US</h4>
+                  <ul class="ulfooter">
+                      <li class="nav-item nav-link"><a class="nav-link active" aria-current="page" href="https://twitter.com/"><i class="fa-brands fa-twitter social-color"></i> Follow us on twitter </a></li>
+                      <li class="nav-item nav-link"><a class="nav-link active" aria-current="page" href="https://facebook.com/"><i class="fa-brands fa-facebook social-color"></i> Like us on Facebook</a></li>
+                      <li class="nav-item nav-link"><a class="nav-link active" aria-current="page" href="https://instagram.com/"><i class="fa-brands fa-instagram social-color"></i> Follow us on Instagram</a></li>
+                  </ul>
+              </div>
+              <div class="col-lg-4">
+                    <h4>SHOP</h4>
+                      <ul class="ulfooter">
+                          <li class="nav-item nav-link"><a class="nav-link active" aria-current="page" href="products.html">PRODUCTS</a></li>
+                          <li class="nav-item nav-link"><a class="nav-link active" aria-current="page" href="services.html">SERVICES</a></li>      
+                      </ul>
+              </div>  
+              <div class="col-lg-4">
+                    <h4>CUSTOMER SERVICE</h4>
+                      <ul class="ulfooter">
+                        <li class="nav-item nav-link"><a class="nav-link active" aria-current="page" href="contactus.html">Contact Us</a></li>
+                        <li class="nav-item nav-link"><a class="nav-link active" aria-current="page" href="shipping.html">Shipping Info</a></li>  
+                      </ul>
+              </div>     
+            </div>
+      </footer>
+    <script src="script.js"></script>
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>

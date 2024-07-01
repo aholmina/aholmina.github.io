@@ -4,11 +4,15 @@ body, html {
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
     scroll-behavior: smooth;
+<<<<<<< HEAD
     
+=======
+>>>>>>> 9d1d403945cee01fe6b780fc2dda1e3110b86a14
 }
 
 .bggrey {
     background-color: #f1f1f1;
+<<<<<<< HEAD
     
 }
 
@@ -22,6 +26,10 @@ body, html {
 #container-fluid {
     background: linear-gradient(pink, gray, pink);
 }
+=======
+}
+
+>>>>>>> 9d1d403945cee01fe6b780fc2dda1e3110b86a14
 .profilepicture {
     width: 300px;
     height: 300px;
@@ -108,7 +116,10 @@ body, html {
 }
 
 .footdesign {
+<<<<<<< HEAD
     background: linear-gradient(pink, gray, pink);
+=======
+>>>>>>> 9d1d403945cee01fe6b780fc2dda1e3110b86a14
     background-color: #2e2e2e;
     color: #fff;
 }
@@ -120,7 +131,11 @@ body, html {
     text-align: center;
     text-decoration: none;
     border-radius: 50%;
+<<<<<<< HEAD
     color: purple
+=======
+    color: pink;
+>>>>>>> 9d1d403945cee01fe6b780fc2dda1e3110b86a14
     cursor: pointer;
 }
 
@@ -128,7 +143,11 @@ body, html {
 .fa-brands-twitter,
 .fa-brands-instagram,
 .fa-brands-youtube {
+<<<<<<< HEAD
     color: pink;
+=======
+    color: white;
+>>>>>>> 9d1d403945cee01fe6b780fc2dda1e3110b86a14
 }
 
 .socials:hover {
@@ -144,6 +163,7 @@ body, html {
     font-weight: bolder;
 }
 
+<<<<<<< HEAD
 
 .text-pink {
     color: pink;
@@ -152,6 +172,8 @@ body, html {
     color: rgb(4, 132, 4);
 }
 
+=======
+>>>>>>> 9d1d403945cee01fe6b780fc2dda1e3110b86a14
 .ulfooter {
     height: 100%;
     list-style-type: none;
@@ -197,6 +219,7 @@ body, html {
 
 /* Hero Section */
 .hero-section {
+<<<<<<< HEAD
     background: url('/myp1_backup/images/homebg2.jpg') no-repeat center center/cover;
     color: white;
     padding: 50px 0;
@@ -218,6 +241,15 @@ body, html {
 
 .hero1-section {
     background: url('/myp1_backup/images/homebg3.jpg') no-repeat center center/cover;
+=======
+    background: url('/portfolio1/images/portfolio2.png') no-repeat center center/cover;
+    color: white;
+    padding: 50px 0;
+}
+
+.hero1-section {
+    background: url('/portfolio1/images/portfolio2.png') no-repeat center center/cover;
+>>>>>>> 9d1d403945cee01fe6b780fc2dda1e3110b86a14
     color: white;
     padding: 50px;
 }
@@ -324,7 +356,10 @@ body, html {
     background: rgba(0, 0, 0, 0.7);
     padding: 20px;
     box-sizing: border-box;
+<<<<<<< HEAD
     background: linear-gradient(pink, gray, pink);
+=======
+>>>>>>> 9d1d403945cee01fe6b780fc2dda1e3110b86a14
 }
 
 .skill.active .skill-details {
@@ -343,10 +378,16 @@ body, html {
     top: 0;
     left: 0;
     width: auto; /* Adjust width as needed */
+<<<<<<< HEAD
     background-color: whitesmoke;
     z-index: 1000;
     justify-content: right;
     background: linear-gradient(pink, gray, pink);
+=======
+    background-color: #2e2e2e;
+    z-index: 1000;
+    justify-content: right;
+>>>>>>> 9d1d403945cee01fe6b780fc2dda1e3110b86a14
 }
 
 .navbar ul {
@@ -354,29 +395,46 @@ body, html {
     margin: 0;
     padding: 0;
     display: flex;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9d1d403945cee01fe6b780fc2dda1e3110b86a14
 }
 
 .navbar ul li {
     margin: 0;
     padding: 0;
+<<<<<<< HEAD
     
+=======
+>>>>>>> 9d1d403945cee01fe6b780fc2dda1e3110b86a14
 }
 
 .navbar ul li a {
     display: block;
+<<<<<<< HEAD
     color: whitesmoke;
     padding: 14px 20px;
     text-decoration: none;
     transition: background-color 0.3s ease, color 0.3s ease;
     
+=======
+    color: grey;
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+>>>>>>> 9d1d403945cee01fe6b780fc2dda1e3110b86a14
 }
 
 .navbar ul li a:hover {
     background-color: #444;
+<<<<<<< HEAD
     color: whitesmoke
    
 
+=======
+    color: white;
+>>>>>>> 9d1d403945cee01fe6b780fc2dda1e3110b86a14
 }
 
 /* General button styles */
@@ -466,7 +524,12 @@ body, html {
   }
   .profile-details {
     margin-bottom: 15px;
+<<<<<<< HEAD
     display: none; 
+=======
+    display: none; /* Hidden by default */
+    opacity: 0;
+>>>>>>> 9d1d403945cee01fe6b780fc2dda1e3110b86a14
     transition: opacity 0.3s ease;
   }
   .profile-details.visible {
@@ -474,7 +537,11 @@ body, html {
     opacity: 1;
   }
   .button-container {
+<<<<<<< HEAD
     display: none; 
+=======
+    display: none; /* Hidden by default */
+>>>>>>> 9d1d403945cee01fe6b780fc2dda1e3110b86a14
     opacity: 0;
     transition: opacity 0.3s ease;
   }
@@ -494,6 +561,7 @@ body, html {
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+<<<<<<< HEAD
     background: url('/myp1_backup/images/homebg3.jpg') no-repeat center center/cover;
     opacity: 20px;
 }
@@ -504,6 +572,16 @@ body, html {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+=======
+}
+
+.contact-form {
+    background: url('/myp1_backup/images/portfolio2.png') no-repeat center center/cover;
+    padding: 30px;
+    border-radius: 10px;
+    opacity: 50px;
+   
+>>>>>>> 9d1d403945cee01fe6b780fc2dda1e3110b86a14
 }
 
 @media (min-width: 370px) and (max-width: 471px) {
@@ -644,7 +722,11 @@ body, html {
 .letter:nth-child(12) { animation-delay: 6s; }
 .letter:nth-child(13) { animation-delay: 6.5s; }
 
+<<<<<<< HEAD
 
+=======
+/* Repeat animation in a cycle */
+>>>>>>> 9d1d403945cee01fe6b780fc2dda1e3110b86a14
 .profile-title {
     animation: cycle 14s infinite; /* 14s for one complete cycle */
 }
@@ -666,8 +748,13 @@ body, html {
   
   .thumbnail {
     width: 100%;
+<<<<<<< HEAD
     height: 200px;
     object-fit: cover; /
+=======
+    height: 200px; /* Set a fixed height */
+    object-fit: cover; /* Ensures the image covers the entire area */
+>>>>>>> 9d1d403945cee01fe6b780fc2dda1e3110b86a14
     display: block;
     transition: transform 0.3s ease;
     cursor: pointer;
@@ -693,13 +780,22 @@ body, html {
   .hover-card {
     position: relative;
     overflow: hidden;
+<<<<<<< HEAD
     perspective: 1000px; 
+=======
+    perspective: 1000px; /* Perspective for 3D effect */
+>>>>>>> 9d1d403945cee01fe6b780fc2dda1e3110b86a14
 }
 
 .hover-card img {
     display: block;
+<<<<<<< HEAD
     width: 100%; 
     height: auto; 
+=======
+    width: 100%; /* Ensures the image fills the container */
+    height: auto; /* Maintains aspect ratio */
+>>>>>>> 9d1d403945cee01fe6b780fc2dda1e3110b86a14
     opacity: 1;
     transition: transform 0.5s ease, opacity 0.5s ease; /* Transition for flip and fade-in */
     transform-style: preserve-3d;
@@ -707,6 +803,7 @@ body, html {
 
 .hover-card:hover img {
     transform: rotateY(180deg); /* Flips the image on hover */
+<<<<<<< HEAD
     opacity: 0;
 }
 
@@ -757,3 +854,15 @@ body, html {
     }
 }
 
+=======
+    opacity: 0; /* Hides the image initially */
+}
+
+.hover-card:hover img.show {
+    opacity: 1; /* Shows the image with fade-in effect */
+}
+
+.hover-card:not(:hover) img {
+    transform: rotateY(0); /* Ensures images not hovered return to normal */
+}
+>>>>>>> 9d1d403945cee01fe6b780fc2dda1e3110b86a14
