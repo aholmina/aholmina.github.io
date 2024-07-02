@@ -116,7 +116,7 @@ html {
   text-align: center;
   text-decoration: none;
   border-radius: 50%;
-  color: purple;
+  color: blanchedalmond;
   cursor: pointer;
 }
 
@@ -191,7 +191,7 @@ html {
 
 /* Hero Section */
 .hero-section {
-  background: url("../images/homebg2.jpg") no-repeat center center/cover;
+  background: linear-gradient(gray, pink);
   color: white;
   padding: 50px 0;
   object-fit: fill;
@@ -214,8 +214,8 @@ html {
 }
 
 .profilepicture {
-  width: 400px;
-  height: 400px;
+  width: 500px;
+  height: 500px;
   border-radius: 50%;
   object-fit: fill;
 }
@@ -338,7 +338,7 @@ html {
   position: fixed;
   top: 0;
   left: 0;
-  width: auto; /* Adjust width as needed */
+  width: auto; 
   background-color: whitesmoke;
   z-index: 1000;
   justify-content: right;
@@ -370,7 +370,7 @@ html {
   color: whitesmoke;
 }
 
-/* General button styles */
+
 .btn {
   display: inline-block;
   padding: 10px 20px;
@@ -402,7 +402,7 @@ html {
   background-color: #5a6268;
 }
 
-/* Action buttons container */
+
 .action-buttons {
   display: flex;
   justify-content: center;
@@ -410,7 +410,7 @@ html {
 
   margin-top: 10px;
 }
-/* Individual button styles */
+
 .hire-me-btn {
   background-color: palevioletred;
 }
@@ -421,7 +421,7 @@ html {
 
 .profile-card {
   max-height: fit-content;
-  max-width: 600px;
+  max-width: 700px;
   margin: 20px auto;
   padding: 20px;
   border: 1px solid #ccc;
@@ -433,7 +433,7 @@ html {
 
 .profile-card {
   background: linear-gradient(pink, gray, pink);
-  /* Default direction is top to bottom */
+  
 }
 
 .profile-card:hover {
@@ -510,7 +510,7 @@ html {
 }
 
 @media screen and (max-width: 1024px) and (min-width: 942px) {
-  /* Your CSS styles for this range */
+ 
   .container-fluid {
     padding: 20px;
   }
@@ -541,7 +541,7 @@ html {
 }
 
 #workExperienceCarousel .carousel-item {
-  height: 500px; /* Adjust height as needed */
+  height: 500px; 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -567,7 +567,7 @@ html {
     0,
     0,
     0.5
-  ); /* Dark background for better text visibility */
+  ); 
   padding: 20px;
   border-radius: 10px;
   animation: fadeInUp 1.5s;
@@ -589,7 +589,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Full viewport height */
+  height: 100vh;
   overflow: hidden;
   white-space: nowrap;
 }
@@ -653,7 +653,7 @@ html {
 }
 
 .profile-title {
-  animation: cycle 14s infinite; /* 14s for one complete cycle */
+  animation: cycle 14s infinite; 
 }
 
 @keyframes cycle {
@@ -704,12 +704,12 @@ html {
   width: 100%;
   height: auto;
   opacity: 1;
-  transition: transform 0.5s ease, opacity 0.5s ease; /* Transition for flip and fade-in */
+  transition: transform 0.5s ease, opacity 0.5s ease;
   transform-style: preserve-3d;
 }
 
 .hover-card:hover img {
-  transform: rotateY(180deg); /* Flips the image on hover */
+  transform: rotateY(180deg);
   opacity: 0;
 }
 
@@ -763,3 +763,122 @@ html {
 #portfolio-title {
     background: linear-gradient(gray, pink, gray);
 }
+
+
+
+
+@keyframes slideIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes modalFadeIn {
+  from {
+      opacity: 0;
+      transform: scale(0.8);
+  }
+  to {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
+.about-me-carousel {
+  animation: slideIn 0.5s ease-in-out;
+}
+
+.modal-content {
+  animation: modalFadeIn 0.3s ease-in-out;
+}
+
+
+
+.review-card {
+  position: relative;
+  background-color: #252525; 
+  
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+  overflow: hidden; 
+  transition: transform 0.3s ease; 
+  height: 300px; 
+}
+
+.review-card:hover {
+  transform: translateY(-10px); 
+}
+
+.review-content {
+  position: relative;
+  z-index: 1;
+  height: 100%; 
+  background: linear-gradient(gray, pink, gray);
+}
+
+.review-details {
+  position: absolute;
+  margin-top: 50px;
+  padding: 20px;
+
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  transition: opacity 0.3s ease; 
+  opacity: 0; 
+}
+
+.review-card:hover .review-details {
+  opacity: 1; 
+
+}
+
+.review-details h3,
+.review-details p {
+  color: #fff; 
+  margin: 0;
+ 
+}
+
+.review-text {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.review-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  transition: opacity 0.3s ease; 
+  opacity: 1;
+}
+
+.review-card:hover .review-image {
+  opacity: 0; 
+ 
+}
+
+
+.typewriter {
+  overflow: hidden;
+  white-space: nowrap; 
+  margin: 0; 
+  letter-spacing: 0.15em; 
+  animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite; 
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
