@@ -140,9 +140,36 @@ html {
   font-weight: bolder;
 }
 
-.text-pink {
-  color: pink;
+
+.footdesign {
+  background-color: #343a40;
+  color: white;
+  padding: 20px 0;
 }
+.contact-info p, .subscribe-div h4 {
+  margin-bottom: 10px;
+}
+.subscribe-div input {
+  width: 100%;
+}
+.subscribe-div button {
+  width: 100%;
+}
+.footer-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.language-options, .privacy-policy {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+
+ 
 .text-applegreen {
   color: rgb(4, 132, 4);
 }
@@ -211,6 +238,7 @@ html {
   background: url("../images/homebg3.jpg") no-repeat center center/cover;
   color: white;
   padding: 50px;
+  object-fit: contain;
 }
 
 .profilepicture {
@@ -1168,4 +1196,7 @@ button.btn-primary {
 
 .star:hover {
   cursor: default;
+}
+#review-section {
+  background: linear-gradient(gray, pink, gray);
 }

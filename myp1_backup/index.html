@@ -27,6 +27,7 @@
                     <li class="nav-item"><a class="nav-link" href="index.html#work-experience">Experiences/Skills</a></li>
                     <li class="nav-item"><a class="nav-link" href="index.html#portfolio-title">Portfolio</a></li>
                     <li class="nav-item"><a class="nav-link" href="index.html#contact-me">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#review-section">Reviews</a></li>
                 </ul>
             </div>
             <div class="socials d-flex justify-content-center gap-1">
@@ -45,10 +46,16 @@
             <div class="row justify-content-center align-items-center">
                 <div class="col-md-4 mt-5">
                     <img src="images/port46.jpg" alt="Your Picture" class="img-fluid rounded-circle profile-picture mt-5">
+                   
                 </div>
                 <div class="col-md-8">
                     <div class="container-sm d-flex flex-column justify-content-center align-items-center p-3">
                         <h1 class="text-warning fw-bold fs-1 fst-italic ">About Me</h1>
+                        <ul class="list-unstyled d-flex flex-wrap justify-content-center align-items-center mt-3">
+                            <li class="w-50 mb-2">• Front-end Developer</li>
+                            <li class="w-50 mb-2">• Network Engineer</li>
+                            <li class="w-50 mb-2">• Helpdesk Analyst</li>
+                        </ul>
                     </div>
                     <div class="container-sm d-flex flex-column justify-content-center align-items-center p-3">
                         <h4 class="text-white fst-italic fs-1 mb-2">Let's Build a Success Together</h4>
@@ -309,7 +316,7 @@ element.classList.toggle('active');
 
       <section class="container-fluid p-3 bg-white" id="portfolio-title">
         <div class="container-sm d-flex flex-column justify-content-center align-items-center p-3">
-            <h4 class="text-center text-secondary fst-italic fs-3">Portfolio/Employment</h4>
+            <h4 class="text-center text-warning fst-italic fs-3">Portfolio/Employment</h4>
         </div>
         <div class="row me-4">
            
@@ -506,35 +513,146 @@ element.classList.toggle('active');
             </div>
         </div>
     </div>
-    
- 
+
+  
       
+
+      <section id="review-section" class="py-5">
+        <div class="container">
+            <div class="row">
+                <h4 div class="text-center  heading-center fst-italic">We all need people who will give us feedback. That's how we improve.</h4>
+                    <p class="text-secondary text-white text-center bg-secondary fst-italic">Hear what my clients have to Say</p>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card glass-card">
+                        <img src="/myp1_backup/images/ceo_1.png" class="card-img-top" alt="Kevin Schuler">
+                        <div class="card-body">
+                            <h5 class="card-title text-secondary">Kevin Schuler</h5>
+                            <p class="text-dark fst-italic">"Great service! Alexa was very responsive."</p>
+                            <div class="rated-stars">
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card glass-card">
+                        <img src="/myp1_backup/images/ceo_2.png" class="card-img-top" alt="Jane Smith">
+                        <div class="card-body">
+                            <h5 class="card-title text-secondary">Chuck Robbins</h5>
+                            <p class="text-dark fst-italic">"She did meet and exceed my expectations."</p>
+                            <div class="rated-stars">
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9734;</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card glass-card">
+                        <img src="/myp1_backup/images/ceo_3.png" class="card-img-top" alt="David Lee">
+                        <div class="card-body">
+                            <h5 class="card-title text-secondary">Tarek Robbiata</h5>
+                            <p class="text-dark fst-italic">"Highly recommend. Professional and efficient."</p>
+                            <div class="rated-stars">
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+                <div class="container">
+                    <h2 div class="text-center heading-center fst-italic">Customer Reviews</h2>
+                    <div class="row mt-5">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-6">
+                            <form id="ratingForm">
+                                <div class="mb-3">
+                            
+                                    <label for="ratingStars" class="form-label">Your Rating:</label>
+                                    <div id="ratingStars" class="rated-stars">
+                                        <span class="star">&#9733;</span>
+                                        <span class="star">&#9733;</span>
+                                        <span class="star">&#9733;</span>
+                                        <span class="star">&#9733;</span>
+                                        <span class="star">&#9733;</span>
+                                        <button type="submit" class="btn btn-primary">Post Rating</button>
+                                    </div>
+                                </div>
+            
+                                <div class="mb-3">
+                                    <label for="feedback" class="form-label">Feedback:</label>
+                                    <textarea class="form-control" id="feedback" rows="3" placeholder="Enter your feedback"></textarea>
+                        
+                                </div>
+                               
+                            </form>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </section>
+    
+   
 
     
     <footer class="footdesign container-fluid bg-dark text-white py-4">
-        <div class="row justify-content-center text-center">
-          <div class="col-md-6 mb-2">
-            <div class="contact-info text-center fw-bold">
-                <p class="text-applegreen fs-3 fw-bold fst-italic">Let's get in touch & make something awesome together!</p>
-                <p><strong><i class="fa-solid fa-envelope"></i></strong> <a href="mailto:markholmina@gmail.com" class="contact-link fst-italic">emailme@gmail.com</a></p>
-                <p><strong><i class="fa-solid fa-phone"></i></strong> <a href="tel:+1234567890" class="contact-link">+123 456 7890</a></p>
-              </div>
-          </div>
-          <div class="col-md-6 mb-2">
-            <h4 class="text-center fst-italic">Subscribe to my Newsletter</h4>
-            <div class="subscribe-div d-flex flex-column align-items-center">
-              <input type="email" class="form-control w-50 mb-2 subscribe-email" placeholder="Email">
-              <button class="btn btn-danger btn-sm" onclick="window.location.href='#';">Subscribe</button>
+        <div class="row justify-content-center text-center">   
+           <div class="col-md-6 mb-2 d-flex flex-column align-items-center">
+                <div class="contact-info text-center fw-bold">
+                    <p class="text-applegreen fs-3 fw-bold fst-italic">Let's get in touch & make something awesome together!</p>
+                    <p><strong><i class="fa-solid fa-envelope"></i></strong> <a href="mailto:markholmina@gmail.com" class="contact-link fst-italic">emailme@gmail.com</a></p>
+                    <p><strong><i class="fa-solid fa-phone"></i></strong> <a href="tel:+1234567890" class="contact-link">+123 456 7890</a></p>
+                </div>
+                <div class="action-buttons">
+                    <a href="#hire-me-section" class="btn btn-primary hire-me-btn fst-italic">Hire Me</a>
+                    <a href="/path/to/cv.pdf" download class="btn btn-secondary download-cv-btn">Download/CV</a>
+                </div>
             </div>
-          </div>
-          <div class="col-12 ms-2 mt-2">
-            <div class="socials d-flex justify-content-center gap-2">
-              <a href="#" class="text-white"><i class="fa-brands fa-facebook"></i></a>
-              <a href="#" class="text-white"><i class="fa-brands fa-linkedin"></i></a>
-              <a href="#" class="text-white"><i class="fa-brands fa-instagram"></i></a>
-              <a href="#" class="text-white"><i class="fa-brands fa-skype"></i></a>
+            <div class="col-md-6 mb-2 d-flex flex-column align-items-center">
+                <div class="socials d-flex justify-content-center gap-2 mb-2">
+                    <a href="#" class="text-white"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="text-white"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#" class="text-white"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="text-white"><i class="fa-brands fa-skype"></i></a>
+                </div>
+                <h4 class="text-center fst-italic">Subscribe to my Newsletter</h4>
+                <div class="subscribe-div d-flex flex-column align-items-center">
+                    <input type="email" class="form-control w-100 mb-2 subscribe-email" placeholder="Email">
+                    <button class="btn btn-danger btn-sm w-50" onclick="window.location.href='#';">Subscribe</button>
+                </div>
+             
             </div>
-          </div>
+          
+                <div class="footer-bottom">
+                    <p class="text-center fst-italic">&copy; 2024 Alexa Holmina</p>
+                    <div>
+                        <ul class="list-inline language-options mb-0">
+                            <li class="list-inline-item"><a href="?lang=en">English</a></li>
+                            <li class="list-inline-item"><a href="?lang=es">Español</a></li>
+                            <ul class="list-inline privacy-policy mb-0">
+                                <li class="list-inline-item"><a href="privacy.html">Privacy Policy</a></li>
+                            </ul>
+                        </ul>
+                       
+                    </div>
+                </div>
+            </div>
         </div>
       </footer>
 </main>
