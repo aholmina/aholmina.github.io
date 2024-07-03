@@ -104,10 +104,21 @@ html {
 }
 
 .footdesign {
-  background: linear-gradient(pink, gray, pink);
+  background: linear-gradient( pink, gray);
   background-color: #2e2e2e;
   color: #fff;
 }
+
+
+.footer-link {
+  text-decoration: none; 
+  color: inherit; 
+}
+
+.footer-link:hover {
+  text-decoration: none; 
+}
+
 
 .fa-brands {
   padding: 20px;
@@ -131,6 +142,30 @@ html {
   transform: scale(1.1);
 }
 
+.form-newsletter {
+  width: 50vw;
+  display: flex;
+  justify-content: center;
+}
+
+.form-newsletter input {
+  border: 1px solid #acacac;
+  border-radius: 0;
+}
+
+.subs-btn {
+  border-radius: 0 !important;
+}
+
+.copy-right{
+  padding-top: 30px;
+  padding-bottom: 5px;
+  margin: 0px auto;
+  text-align: center;
+  color: #b0aeab;
+}
+
+
 .afooter {
   display: block;
   color: #fff;
@@ -140,47 +175,17 @@ html {
   font-weight: bolder;
 }
 
-
-.footdesign {
-  background-color: #343a40;
-  color: white;
-  padding: 20px 0;
-}
-.contact-info p, .subscribe-div h4 {
-  margin-bottom: 10px;
-}
-.subscribe-div input {
-  width: 100%;
-}
-.subscribe-div button {
-  width: 100%;
-}
-.footer-bottom {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin-top: 20px;
-}
-.language-options, .privacy-policy {
-  display: flex;
-  gap: 15px;
-  justify-content: center;
-}
-
-
- 
-.text-applegreen {
-  color: rgb(4, 132, 4);
-}
-
 .ulfooter {
-  height: 100%;
   list-style-type: none;
-  margin: 0;
   padding: 0;
   overflow: hidden;
 }
+.language-options, .privacy-policy {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
 
 .subscribe-email {
   vertical-align: middle;

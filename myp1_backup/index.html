@@ -32,9 +32,9 @@
             </div>
             <div class="socials d-flex justify-content-center gap-1">
                 <a href="#" class="text-white"><i class="fa-brands fa-facebook"></i></a>
-                <a href="#" class="text-white"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#" class="text-white"><i class="fa-brands fa-twitter"></i></a>
                 <a href="#" class="text-white"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#" class="text-white"><i class="fa-brands fa-skype"></i></a>
+                <a href="#" class="text-white"><i class="fa-brands fa-linkedin"></i></a>
               </div>
         </div>
     </nav>
@@ -582,50 +582,59 @@ element.classList.toggle('active');
             </div>
         </div>
     </section>
-    
-
-    <footer class="footdesign container-fluid bg-dark text-white py-4">
-        <div class="row justify-content-center text-center">   
-           <div class="col-md-6 mb-2 d-flex flex-column align-items-center">
-                <div class="contact-info text-center fw-bold">
-                    <p class="text-applegreen fs-3 fw-bold fst-italic">Let's get in touch & make something awesome together!</p>
-                    <p><strong><i class="fa-solid fa-envelope"></i></strong> <a href="mailto:markholmina@gmail.com" class="contact-link fst-italic">emailme@gmail.com</a></p>
-                    <p><strong><i class="fa-solid fa-phone"></i></strong> <a href="tel:+1234567890" class="contact-link">+123 456 7890</a></p>
+    <footer class="footdesign container-fluid bg-light">
+        <div class="container-lg border-bottom pb-4">
+            <div class="row align-items-center">
+                <div class="col-lg-4 mt-4">
+                    <h3>Subscribe to Newsletter</h3>
+                    <p class="fst-italic">Let's get in touch & make something awesome together!</p>
                 </div>
-                <div class="action-buttons">
-                    <a href="#hire-me-section" class="btn btn-primary hire-me-btn fst-italic">Hire Me</a>
-                    <a href="/path/to/cv.pdf" download class="btn btn-secondary download-cv-btn">Download/CV</a>
-                </div>
-            </div>
-            <div class="col-md-6 mb-2 d-flex flex-column align-items-center">
-                <div class="socials d-flex justify-content-center gap-2 mb-2">
-                    <a href="#" class="text-white"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="#" class="text-white"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="#" class="text-white"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#" class="text-white"><i class="fa-brands fa-skype"></i></a>
-                </div>
-                <h4 class="text-center fst-italic">Subscribe to my Newsletter</h4>
-                <div class="subscribe-div d-flex flex-column align-items-center">
-                    <input type="email" class="form-control w-100 mb-2 subscribe-email" placeholder="Email">
-                    <button class="btn btn-danger btn-sm w-50" onclick="window.location.href='#';">Subscribe</button>
-                </div>
-            </div>
-                <div class="footer-bottom">
-                    <p class="text-center fst-italic">&copy; 2024 Alexa Holmina</p>
-                    <div>
-                        <ul class="list-inline language-options mb-0">
-                            <li class="list-inline-item"><a href="?lang=en">English</a></li>
-                            <li class="list-inline-item"><a href="?lang=es">Español</a></li>
-                            <ul class="list-inline privacy-policy mb-0">
-                                <li class="list-inline-item"><a href="privacy.html">Privacy Policy</a></li>
-                            </ul>
-                        </ul>
-                       
-                    </div>
+                <div class="col-lg-5">
+                    <form class="d-flex">
+                        <input type="text" class="form-control newstext" placeholder="Enter your Email">
+                        <button type="button" class="btn btn-outline-primary btn-news ms-2">Subscribe</button>
+                    </form>
                 </div>
             </div>
         </div>
-      </footer>
+    
+        <div class="container-sm d-flex flex-column flex-lg-row justify-content-end align-items-stretch py-4 border-bottom">
+            <div class="col-lg-4">
+                <h4>CONNECT WITH US</h4>
+                <ul class="list-unstyled ulfooter">
+                    <li><a href="https://twitter.com/" class="nav-link"><i class="fa-brands fa-twitter social-color me-3"></i>Follow us on Twitter</a></li>
+                    <li><a href="https://pinterest.com/" class="nav-link"><i class="fa-brands fa-pinterest social-color me-3"></i>Pin us on Pinterest</a></li>
+                    <li><a href="https://facebook.com/" class="nav-link"><i class="fa-brands fa-facebook social-color me-3"></i>Like us on Facebook</a></li>
+                    <li><a href="https://instagram.com/" class="nav-link"><i class="fa-brands fa-instagram social-color me-3"></i>Follow us on Instagram</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-4">
+                <h4>PORTFOLIO</h4>
+                <ul class="list-unstyled ulfooter align-items-center">
+                    <li><a href="#" class="nav-link">Home</a></li>
+                    <li><a href="#" class="nav-link">About Me</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-4">
+                <h4>CONTACT ME</h4>
+                <ul class="list-unstyled ulfooter">
+                    <a href="#" class="btn btn-danger mt-3">Contact Me</a> 
+                    <a href="/path/to/cv.pdf" download class="btn btn-secondary download-cv-btn mb-1">Download/CV</a> 
+                </ul>
+            </div>
+        </div>
+    
+        <div class="copy-right text-center align-items-center py-4">
+            <p class="text-center text-white fst-italic">©2024 All rights reserved | This template is made by Alexa H</p>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="?lang=en" class="footer-link text-white">English</a></li>
+                <li class="list-inline-item"><a href="?lang=es" class="footer-link text-white">Español</a></li>
+                <li class="list-inline-item"><a href="privacy.html" class="footer-link text-white">Privacy Policy</a></li>
+            </ul>
+            
+        </div>
+    </footer>
+    
 </main>
 </body>
 </html>
