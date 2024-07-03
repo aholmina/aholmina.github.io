@@ -1097,3 +1097,77 @@ button.btn-primary {
     opacity: 0.5;
   }
 }
+
+
+
+/* Container styles */
+#review-section {
+  background-color: #f0f0f0; 
+  padding: 40px 0;
+}
+
+/* Card styles */
+.glass-card {
+  background-color: rgba(0, 0, 0, 0.5); /* Dark background with transparency */
+  border: none;
+  border-radius: 15px;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card:before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(0, 0, 0.5, 0.5));
+  z-index: 1;
+  border-radius: 15px;
+}
+
+.glass-card:hover {
+  transform: translateY(-8px); /* Lift card slightly on hover */
+  box-shadow: 12px 12px 24px rgba(0, 0, 0, 0.4), 
+             -12px -12px 24px rgba(255, 255, 255, 0.1);
+}
+
+.card-body {
+  position: relative;
+  z-index: 2;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  color: #fff; 
+}
+
+.card-text {
+  font-size: 1.1rem;
+  color: gray;
+}
+
+.card-img-top {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  height: 200px; 
+  object-fit: fill; 
+  width: 100%; 
+}
+
+.rated-stars {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.star {
+  font-size: 1.5rem;
+  color: #ff69b4; 
+}
+
+.star:hover {
+  cursor: default;
+}
