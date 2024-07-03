@@ -1053,13 +1053,13 @@ button.btn-primary {
 
 /* Container styles */
 #review-section {
-  background-color: #f0f0f0; /* Light background */
+  background-color: #f0f0f0; 
   padding: 40px 0;
 }
 
 /* Card styles */
 .glass-card {
-  background-color: rgba(0, 0, 0, 0.5); /* Dark background with transparency */
+  background-color: rgba(0, 0, 0, 0.5); 
   border: none;
   border-radius: 15px;
   box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.2), 
@@ -1069,7 +1069,7 @@ button.btn-primary {
 }
 
 .glass-card:hover {
-  transform: translateY(-5px); /* Example: Lift card on hover */
+  transform: translateY(-10px); 
   box-shadow: 12px 12px 24px rgba(0, 0, 0, 0.4), 
              -12px -12px 24px rgba(255, 255, 255, 0.1);
 }
@@ -1081,19 +1081,19 @@ button.btn-primary {
 
 .card-title {
   font-size: 1.5rem;
-  color: #fff; /* White text color */
+  color: #fff; 
 }
 
 .card-text {
   font-size: 1.1rem;
-  color: #ccc; /* Lighter text color */
+  color: #ccc; 
 }
 
 .card-img-top {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   max-height: 200px;
-  object-fit: fill; /* Ensures the image covers the entire area */
+  object-fit: fill; 
 
 }
 
@@ -1134,7 +1134,7 @@ button.btn-primary {
 
 /* Card styles */
 .glass-card {
-  background-color: rgba(0, 0, 0, 0.5); /* Dark background with transparency */
+  background-color: rgba(0, 0, 0, 0.5);
   border: none;
   border-radius: 15px;
   padding: 20px;
@@ -1156,7 +1156,7 @@ button.btn-primary {
 }
 
 .glass-card:hover {
-  transform: translateY(-8px); /* Lift card slightly on hover */
+  transform: translateY(-10px); /* Lift card slightly on hover */
   box-shadow: 12px 12px 24px rgba(0, 0, 0, 0.4), 
              -12px -12px 24px rgba(255, 255, 255, 0.1);
 }
