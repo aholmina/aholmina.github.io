@@ -439,37 +439,77 @@ element.classList.toggle('active');
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRp0xU5/jb5T/d5o5jX4uJ6xMeSxFPZZO15gh0EZ+" crossorigin="anonymous"></script>
     
-
-
-
+    <section id="contact-me" class="bg-secondary py-5 contact-section">
+        <div class="container text-center">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-md-4">
+                    <div id="profilePicture">
+                      
+                        <img src="images/port46.jpg" alt="Your Picture" class="img-fluid contact-image opacity-50">
+                        
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="text-start">
+                        <h2 class="text-info fst-italic">Contact Me</h2>
+                        <form id="contact-form opacity-50" style="display: inline;">
+                            <div class="mb-3 text-white">
+                                <label for="phone" class="form-label">Phone</label>
+                                <input type="tel" class="form-control" id="phone" name="phone" required>
+                            </div>
+                            <div class="mb-3 text-white">
+                                <label for="email" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            <div class="mb-3 text-white">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="button" class="btn btn-secondary mt-3" data-bs-toggle="modal" data-bs-target="#bookCallModal">Book a Call</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     
-    <section id="contact-me" class="bg-secondary py-5 contact-section opacity-30">
-            <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    <h2 class="text-center text-secondary mb-4 fst-italic">Contact Me</h2>
-                    <form id="contact-form " method="post" action="submit_form.php" class="contact-form background-image">
+    <!-- Book a Call Modal -->
+    <div class="modal fade" id="bookCallModal" tabindex="-1" aria-labelledby="bookCallModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fst-italic fs-6" id="bookCallModalLabel">Book a Call</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body bg-secondary">
+                    <form id="book-call-form" method="post" action="submit_book_call_form.php">
                         <div class="mb-3">
-                            <label for="name" class="form-label text-white">Name</label>
-                            <input type="text" class="form-control opacity-50" id="name" name="name" required>
+                            <label for="name-call" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name-call" name="name-call" required>
                         </div>
                         <div class="mb-3">
-                            <label for="phone" class="form-label text-white">Phone</label>
-                            <input type="tel" class="form-control opacity-50" id="phone" name="phone" required>
+                            <label for="phone-call" class="form-label">Phone</label>
+                            <input type="tel" class="form-control" id="phone-call" name="phone-call" required>
                         </div>
                         <div class="mb-3">
-                            <label for="email" class="form-label text-white">Email address</label>
-                            <input type="email" class="form-control opacity-50" id="email" name="email" required>
+                            <label for="email-call" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="email-call" name="email-call" required>
                         </div>
                         <div class="mb-3">
-                            <label for="message" class="form-label text-white">Message</label>
-                            <textarea class="form-control opacity-50" id="message" name="message" rows="5" required></textarea>
+                            <label for="message-call" class="form-label">Message</label>
+                            <textarea class="form-control" id="message-call" name="message-call" rows="5" required></textarea>
                         </div>
                         <button type="submit" class="btn btn-secondary">Submit</button>
                     </form>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+    
+ 
+      
+
     
     <footer class="footdesign container-fluid bg-dark text-white py-4">
         <div class="row justify-content-center text-center">

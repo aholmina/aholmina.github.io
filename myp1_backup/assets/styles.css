@@ -475,6 +475,22 @@ html {
   margin-right: 10px;
 }
 
+
+
+.col-md-6 img.img-fluid {
+  max-width: 100%; /* Ensure the image doesn't exceed the container width */
+  height: auto; /* Maintain aspect ratio */
+  display: block; 
+  border-radius: 0.5rem; /* Optional: Add rounded corners */
+  backface-visibility: hidden;
+  
+}
+/* Optional: Add some padding around the image */
+.col-md-6 {
+  padding: 1rem;
+}
+
+
 .contact-form {
   background-color: rgba(255, 255, 255, 0.9);
   padding: 30px;
@@ -490,6 +506,131 @@ html {
   background-position: center;
   background-repeat: no-repeat;
 }
+
+
+#contact-me {
+  background-color: rgba(108, 117, 125, 0.3); /* Adjust the opacity of the background color */
+  padding: 2rem 0;
+}
+
+.contact-form-wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.contact-form {
+  background-image: url('path-to-your-background-image.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form .form-control {
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  color: #fff;
+}
+
+.contact-form .form-label {
+  color: #fff;
+}
+
+.contact-form button {
+  background-color: #343a40;
+  border: none;
+}
+
+
+
+button.btn-primary {
+  margin-top: 1rem;
+  background-color: #007bff;
+  border: none;
+}
+
+
+
+
+#contact-me {
+  background-color: rgba(108, 117, 125, 0.3); /* Adjust the opacity of the background color */
+  padding: 2rem 0;
+}
+
+.text-start h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.text-start p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+
+
+.contact-form-wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.contact-form, .modal-content {
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form .form-control, .modal-content .form-control {
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  color: #000;
+}
+
+.contact-form .form-label, .modal-content .form-label {
+  color: #000;
+}
+
+.contact-form button, .modal-content button {
+  border: none;
+  margin-top: 1rem;
+}
+.img-fluid {
+  max-width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.image-wrapper {
+  max-width: 100px; /* Adjust the max-width to make the image smaller */
+  margin: 0 auto; /* Center the image */
+}
+.btn-primary {
+  background-color: #007bff;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media (min-width: 370px) and (max-width: 471px) {
   body {
@@ -882,3 +1023,77 @@ html {
   to { width: 100% }
 }
 
+
+
+/* Container styles */
+#review-section {
+  background-color: #f0f0f0; /* Light background */
+  padding: 40px 0;
+}
+
+/* Card styles */
+.glass-card {
+  background-color: rgba(0, 0, 0, 0.5); /* Dark background with transparency */
+  border: none;
+  border-radius: 15px;
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.2), 
+             -8px -8px 16px rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  object-fit: fill;
+}
+
+.glass-card:hover {
+  transform: translateY(-5px); /* Example: Lift card on hover */
+  box-shadow: 12px 12px 24px rgba(0, 0, 0, 0.4), 
+             -12px -12px 24px rgba(255, 255, 255, 0.1);
+}
+
+.card-body {
+  padding: 20px;
+
+}
+
+.card-title {
+  font-size: 1.5rem;
+  color: #fff; /* White text color */
+}
+
+.card-text {
+  font-size: 1.1rem;
+  color: #ccc; /* Lighter text color */
+}
+
+.card-img-top {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  max-height: 200px;
+  object-fit: fill; /* Ensures the image covers the entire area */
+
+}
+
+.rated-stars {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.star {
+  font-size: 1.5rem;
+  color: #ff69b4; /* Pink color for stars */
+}
+
+.star:hover {
+  cursor: pointer;
+}
+.text-center.text-secondary.fst-italic {
+  position: relative;
+  animation: flicker 1s infinite;
+}
+
+@keyframes flicker {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
