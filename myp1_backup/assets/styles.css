@@ -1244,3 +1244,20 @@ button.btn-primary {
   font-size: 0.9rem;
 }
 
+
+
+/* Custom styles */
+
+#services {
+  background: linear-gradient(gray, pink, gray);
+   background: linear-gradient(gray, rgb(237, 121, 140),gray,pink);
+
+}
+#services .card {
+  transition: transform 0.3s ease-in-out;
+  background: linear-gradient(gray,gray,pink);
+}
+
+#services .card:hover {
+  transform: translateY(-5px);
+}
