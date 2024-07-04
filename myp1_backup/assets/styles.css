@@ -9,7 +9,10 @@ html {
 
 .bggrey {
   background-color: #f1f1f1;
+  
 }
+
+
 
 .shadowbox.bggrey {
   background: linear-gradient(pink, gray, pink);
@@ -534,10 +537,8 @@ html {
 }
 
 .contact-section {
-  background-image: url("../images/homebg3.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+
+  background: linear-gradient(gray, pink, gray);
 }
 
 
@@ -552,14 +553,6 @@ html {
   padding: 1rem;
 }
 
-.contact-form {
-  background-image: url('path-to-your-background-image.jpg');
-  background-size: cover;
-  background-position: center;
-  padding: 2rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
 
 .contact-form .form-control {
   background-color: rgba(255, 255, 255, 0.5);
@@ -706,6 +699,9 @@ button.btn-primary {
   .footer-section {
     padding: 20px 0;
   }
+}
+#work-experience {
+  background: linear-gradient(gray, pink, gray);
 }
 
 #workExperienceCarousel .carousel-item {
@@ -1199,3 +1195,52 @@ button.btn-primary {
 #review-section {
   background: linear-gradient(gray, pink, gray);
 }
+
+.blog-card {
+  margin-bottom: 30px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  height: 400px; /* Set a fixed height for the cards */
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: linear-gradient(gray, pink, gray);
+}
+
+.blog-card img {
+  transition: transform 0.3s ease, 0.3s ease;
+  flex-shrink: 0;
+ 
+}
+
+.blog-card:hover {
+  transform: translateY(-10px);
+ 
+}
+
+.blog-card .card-body {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: linear-gradient(gray, pink, gray);
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  max-height: 0;
+  opacity: 0;
+}
+
+.blog-card:hover .card-body {
+  max-height: 300px; /* Adjust based on your content's height */
+  opacity: 1;
+}
+
+.blog-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.blog-date {
+  color: gray;
+  font-size: 0.9rem;
+}
+

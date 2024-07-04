@@ -25,7 +25,7 @@
                     <li class="nav-item"><a class="nav-link active" aria-current="page" href="home.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="index.html#about-me">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="index.html#work-experience">Experiences/Skills</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#portfolio-title">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#blog">Blog</a></li>
                     <li class="nav-item"><a class="nav-link" href="index.html#contact-me">Contact</a></li>
                     <li class="nav-item"><a class="nav-link" href="index.html#review-section">Reviews</a></li>
                 </ul>
@@ -68,7 +68,7 @@
                     <div class="row justify-content-center">
                         <div class="col-lg-4">
                             <h4 class="text-secondary mt-3 mb-2 typewriter">Happy Clients</h4>
-                            <div class="review-card bg-alert alert bg-secondary">
+                            <div class="review-card bg-alert alert bg-opacity">
                                 <div class="review-content">
                                     <div class="review-details">
                                        
@@ -82,7 +82,7 @@
                         </div>
                         <div class="col-lg-4">
                             <h4 class="text-secondary mt-3 mb-2 fst-italic typewriter">Highly Experienced</h4>
-                            <div class="review-card bg-alert alert bg-secondary">
+                            <div class="review-card bg-alert alert bg-opacity">
                              
                                 <div class="review-content">
                                     <div class="review-details">
@@ -97,7 +97,7 @@
                         </div>
                         <div class="col-lg-4">
                             <h4 class="text-secondary mt-3 mb-2 fst-italic typewriter">Top Companies</h4>
-                            <div class="review-card bg-alert alert bg-secondary">
+                            <div class="review-card bg-alert alert bg-opacity">
                                 <div class="review-content">
                                     <div class="review-details">
                                         
@@ -133,7 +133,7 @@
                 <p class="text-white fst-italic ms-2 me-2">Parity Technology Solutions' consultants help enable successful business outcomes through close collaboration and unmatched expertise to help get your property</p>
             </div>
         </div>
-        <div class="carousel-item">
+        <div class="carousel-item active">
             <h2 class="text-white text-center fst-italic mt-5">Work & Experience</h2>
             <h5 class="text-center fw-bold fs-4 ">Work with Multiple Top Companies</h5>
             <div class="carousel-caption mt-3">
@@ -145,7 +145,7 @@
                 <p class="text-white fst-italic ms-2 me-2">RingCentral, Inc. is an American provider of cloud-based communication and collaboration products and services. CEO Vlad Shmunis and CTO Vlad Vendrow founded the company in 1999.</p>
             </div>
         </div>
-        <div class="carousel-item">
+        <div class="carousel-item active">
             <h2 class="text-success text-center fw-bold fst-italic mt-5">Work & Experience</h2>
             <h5 class="text-center text-secondary fw-bold fs-4">Work with Multiple Top Companies</h5>
             <div class="carousel-caption">
@@ -153,7 +153,7 @@
                 <p class="text-white fw-bold"><i>Full time/On-site</i></p>
                 <p class="text-succes fw-bold">October 2010- March 2014</p>
                 <hr>
-                <p class="text-c20 ms-2 rounded-2">Cisco Systems</p>
+                <p class="text-c20 ms-2 rounded-2">Cisco</p>
                 <p class="text-white fst-italic ms-2 me-2">Cisco develops, manufactures, and sells networking hardware, software, and other high-technology services and products.</p>
             </div>
         </div>
@@ -177,11 +177,133 @@ var carousel = new bootstrap.Carousel(myCarousel, {
 });
 });
 </script>
-<hr>
+
+<section class="container-fluid p-3 bg-white" id="work-experience">
+    <div class="container-sm d-flex flex-column justify-content-center align-items-center p-3">
+        <h4 class="text-center mb-4 fw-bold fs-3 fst-italic">Work Employment</h4>
+    </div>
+    <div class="row me-4">
+        <div class="container-sm d-flex flex-column flex-lg-row justify-content-around gap-class align-self-stretch p-3 ">
+            <div class="col-lg-4 about-me-carousel" data-bs-toggle="modal" data-bs-target="#details1">
+                <img class="w-100" src="images/Company1 (1).png" alt="Project">
+            </div>
+            <div class="col-lg-4 about-me-carousel" data-bs-toggle="modal" data-bs-target="#details2">
+                <img class="w-100" src="images/Company1 (2).png" alt="Project">
+            </div>
+            <div class="col-lg-4 about-me-carousel" data-bs-toggle="modal" data-bs-target="#details3">
+                <img class="w-100" src="images/Company1 (3).png" alt="Project">
+            </div>
+        </div>
+        <div class="container-sm d-flex flex-column flex-lg-row justify-content-around gap-class align-self-stretch p-3">
+            <div class="col-lg-4 about-me-carousel" data-bs-toggle="modal" data-bs-target="#details4">
+                <img class="w-100" src="images/Company1 (4).png" alt="Project">
+            </div>
+            <div class="col-lg-4 about-me-carousel" data-bs-toggle="modal" data-bs-target="#details5">
+                <img class="w-100" src="images/Company1 (5).png" alt="Project">
+            </div>
+            <div class="col-lg-4 about-me-carousel" data-bs-toggle="modal" data-bs-target="#details6">
+                <img class="w-100" src="images/Company1 (6).png" alt="Project">
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="modal fade" id="details1" tabindex="-1" aria-labelledby="details1Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-danger">
+                <h5 class="modal-title text-info" id="details1Label">The Results Companies</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body bggrey">
+                <h6>MARCH 2014 - FEBRUARY 2015</h6>
+                <p class="text-secondary fw-bold fst-italic fs-3">SiriusXM</p>
+                <p>Outbound Sales Representative. Cold calling and Lead Generation.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="details2" tabindex="-1" aria-labelledby="details2Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-danger">
+                <h5 class="modal-title text-info" id="details2Label">Synnex-Concentrix</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body bggrey">
+                <h6>OCTOBER 2010 - MARCH 2014</h6>
+                <p class="text-secondary fw-bold fst-italic fs-3">Synnex-Concentrix</p>
+                <p>PRODUCT SUPPORT Specialist. Configure modems,routers,switches and other internet devices.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="details3" tabindex="-1" aria-labelledby="details3Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-danger">
+                <h5 class="modal-title text-info" id="details3Label">AFNI</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body bggrey">
+                <h6>MARCH 2015 - OCTOBER 2015</h6>
+                <p class="text-secondary fw-bold fst-italic fs-3">VERIZON</p>
+                <p>CSR. Assists billing issues and provide recommended products.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="details4" tabindex="-1" aria-labelledby="details4Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-danger">
+                <h5 class="modal-title text-info" id="details4Label">Sutherland</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body bggrey">
+                <h6>MAY 2019 - OCTOBER 2019</h6>
+                <p class="text-secondary fw-bold fst-italic fs-3">GoDaddy</p>
+                <p>TSR assists clients in getting domain name,set up email account ,assist domain name transfer.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="details5" tabindex="-1" aria-labelledby="details5Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-danger">
+                <h5 class="modal-title text-info" id="details5Label">ACQUIRE</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body bggrey">
+                <h6>OCTOBER 2019 - SEPTEMBER 2021</h6>
+                <p class="text-secondary fw-bold fst-italic fs-3">BRITISH TELECOM</p>
+                <p>SUPPORT Specialist for  Enterprise accounts and support specialist</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="details6" tabindex="-1" aria-labelledby="details6Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-danger">
+                <h5 class="modal-title text-info" id="details6Label">ACQUIRE</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body bggrey">
+                <h6>OCTOBER 2019 - SEPTEMBER 2021</h6>
+                <p class="text-secondary fw-bold fst-italic fs-3">VONAGE</p>
+                <p>TIER 2 SUPPORT.</p>
+                <p>Resolve tickets escalated from Tier 1 and update KB documentation.</p>
+
+            </div>
+        </div>
+    </div>
+</div>
 
 
 <section class="container-fluid p-3 shadowbox bggrey" id="work-experience">
-    <h4 class="text-center text-danger fs-1 fst-italic fw-bold">SKILLS</h4>
+    <h4 class="text-center mb-4 fw-bold fs-3 fst-italic">Skills</h4>
     <div class="container">
       <section class="row skills-section">
         <div class="col-md-6 col-lg-4">
@@ -278,7 +400,7 @@ var carousel = new bootstrap.Carousel(myCarousel, {
             <div class="col-md-6 col-lg-4">
                 <div class="skill bg-dark opacity-50 border-bottom border-success">
                     <h3 class="text-info">Helpdesk Support <i class="fa-solid fa-chalkboard-user"></i></h3>
-                    <p>Providing technical support and assistance to end-users.</p>
+                    <p>Providing technical support and to end-users.</p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-4 ">
@@ -308,130 +430,58 @@ element.classList.toggle('active');
 }
 </script>
 <hr>
-
-      <section class="container-fluid p-3 bg-white" id="portfolio-title">
-        <div class="container-sm d-flex flex-column justify-content-center align-items-center p-3">
-            <h4 class="text-center text-warning fst-italic fs-3">Portfolio/Employment</h4>
+<section id="blog" class="container my-5">
+    <div class="row">
+        <div class="col-12 text-center">
+            <h2 class="mb-4 fw-bold fst-italic">Blog</h2>
         </div>
-        <div class="row me-4">
-            <div class="container-sm d-flex flex-column flex-lg-row justify-content-around gap-class align-self-stretch p-3 ">
-                <div class="col-lg-4 about-me-carousel" data-bs-toggle="modal" data-bs-target="#details1">
-                    <img class="w-100" src="images/Company1 (1).png" alt="Project">
-                </div>
-                <div class="col-lg-4 about-me-carousel" data-bs-toggle="modal" data-bs-target="#details2">
-                    <img class="w-100" src="images/Company1 (2).png" alt="Project">
-                </div>
-                <div class="col-lg-4 about-me-carousel" data-bs-toggle="modal" data-bs-target="#details3">
-                    <img class="w-100" src="images/Company1 (3).png" alt="Project">
-                </div>
-            </div>
-            <div class="container-sm d-flex flex-column flex-lg-row justify-content-around gap-class align-self-stretch p-3">
-                <div class="col-lg-4 about-me-carousel" data-bs-toggle="modal" data-bs-target="#details4">
-                    <img class="w-100" src="images/Company1 (4).png" alt="Project">
-                </div>
-                <div class="col-lg-4 about-me-carousel" data-bs-toggle="modal" data-bs-target="#details5">
-                    <img class="w-100" src="images/Company1 (5).png" alt="Project">
-                </div>
-                <div class="col-lg-4 about-me-carousel" data-bs-toggle="modal" data-bs-target="#details6">
-                    <img class="w-100" src="images/Company1 (6).png" alt="Project">
+        
+        <div class="col-md-6 col-lg-4">
+            <div class="card blog-card">
+                <img src="/myp1_backup/images/blog1.png" class="card-img-top" alt="Blog Image 1">
+                <div class="card-body">
+                    <h5 class="blog-title fw-light fst-italic">Work Ethic</h5>
+                    <p class="blog-date text-white">July 1, 2024</p>
+                    <div class="blog-content">
+                        <p> A work ethic is a set of moral principles a person uses in their job. People who possess a strong work ethic embody certain principles that guide their work behavior; according to proponents, a strong work ethic will result in the production of high-quality work which is consistent. The output motivates them to stay on track. </p>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+      
+        <div class="col-md-6 col-lg-4">
+            <div class="card blog-card">
+                <img src="/myp1_backup/images/blog3.png" class="card-img-top" alt="Blog Image 2">
+                <div class="card-body">
+                    <h5 class="blog-title fw-light  fst-italic">Stress Management</h5>
+                    <p class="blog-date text-white">June 25, 2024</p>
+                    <div class="blog-content">
+                        <p>It may seem like there’s nothing you can do about stress—no way to avoid it and no way to de-stress completely when it hits. The bills won’t stop coming, there will never be more hours in the day, and your work and family responsibilities will always be demanding. But the truth is, you have a lot more control over stress than you may think.</p>
+                    </div> 
+                </div>
+            </div>
+        </div>
     
-    <div class="modal fade" id="details1" tabindex="-1" aria-labelledby="details1Label" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header bg-danger">
-                    <h5 class="modal-title text-info" id="details1Label">The Results Companies</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body bggrey">
-                    <h6>MARCH 2014 - FEBRUARY 2015</h6>
-                    <p class="text-secondary fw-bold fst-italic fs-3">SiriusXM</p>
-                    <p>Outbound Sales Representative. Cold calling and Lead Generation.</p>
+        <div class="col-md-6 col-lg-4">
+            <div class="card blog-card">
+                <img src="/myp1_backup/images/blog2.png" class="card-img-top" alt="Blog Image 3">
+                <div class="card-body">
+                    <h5 class="blog-title fw-light fst-italic">Client Relationship</h5>
+                    <p class="blog-date text-white">June 18, 2024</p>
+                    <div class="blog-content">
+                        <p>Managing client relationships aims to create a strong and lasting bond with clients, promoting trust, loyalty, and repeat business. Good client relationships make you feel like a true partner to your client. Client relationship management refers to the work that an organization does to coordinate its interactions with clients and potential clients.</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="modal fade" id="details2" tabindex="-1" aria-labelledby="details2Label" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header bg-danger">
-                    <h5 class="modal-title text-info" id="details2Label">Synnex-Concentrix</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body bggrey">
-                    <h6>OCTOBER 2010 - MARCH 2014</h6>
-                    <p class="text-secondary fw-bold fst-italic fs-3">Synnex-Concentrix</p>
-                    <p>PRODUCT SUPPORT Specialist. Configure modems,routers,switches and other internet devices.</p>
-                </div>
-            </div>
+        <div class="row">
+            <div class="col-12 text-center fst-italic">
+                <a href="#" class="btn btn-secondary see-more">See More Blog</a>
+            </div>   
         </div>
     </div>
-    <div class="modal fade" id="details3" tabindex="-1" aria-labelledby="details3Label" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header bg-danger">
-                    <h5 class="modal-title text-info" id="details3Label">AFNI</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body bggrey">
-                    <h6>MARCH 2015 - OCTOBER 2015</h6>
-                    <p class="text-secondary fw-bold fst-italic fs-3">VERIZON</p>
-                    <p>CSR. Assists billing issues and provide recommended products.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" id="details4" tabindex="-1" aria-labelledby="details4Label" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header bg-danger">
-                    <h5 class="modal-title text-info" id="details4Label">Sutherland</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body bggrey">
-                    <h6>MAY 2019 - OCTOBER 2019</h6>
-                    <p class="text-secondary fw-bold fst-italic fs-3">GoDaddy</p>
-                    <p>TSR assists clients in getting domain name,set up email account ,assist domain name transfer.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" id="details5" tabindex="-1" aria-labelledby="details5Label" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header bg-danger">
-                    <h5 class="modal-title text-info" id="details5Label">ACQUIRE</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body bggrey">
-                    <h6>OCTOBER 2019 - SEPTEMBER 2021</h6>
-                    <p class="text-secondary fw-bold fst-italic fs-3">BRITISH TELECOM</p>
-                    <p>SUPPORT Specialist for  Enterprise accounts and support specialist</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" id="details6" tabindex="-1" aria-labelledby="details6Label" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header bg-danger">
-                    <h5 class="modal-title text-info" id="details6Label">ACQUIRE</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body bggrey">
-                    <h6>OCTOBER 2019 - SEPTEMBER 2021</h6>
-                    <p class="text-secondary fw-bold fst-italic fs-3">VONAGE</p>
-                    <p>TIER 2 SUPPORT.</p>
-                    <p>Resolve tickets escalated from Tier 1 and update KB documentation.</p>
-
-                </div>
-            </div>
-        </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRp0xU5/jb5T/d5o5jX4uJ6xMeSxFPZZO15gh0EZ+" crossorigin="anonymous"></script>
+</section>
+<hr>
     <section id="contact-me" class="bg-secondary py-5 contact-section">
         <div class="container text-center">
             <div class="row justify-content-center align-items-center">
@@ -495,6 +545,7 @@ element.classList.toggle('active');
             </div>
         </div>
     </div>
+    <hr>
       <section id="review-section" class="py-5">
         <div class="container">
             <div class="row">
@@ -567,18 +618,15 @@ element.classList.toggle('active');
                                         <button type="submit" class="btn btn-primary">Post Rating</button>
                                     </div>
                                 </div>
-            
+
                                 <div class="mb-3">
                                     <label for="feedback" class="form-label">Feedback:</label>
                                     <textarea class="form-control" id="feedback" rows="3" placeholder="Enter your feedback"></textarea>
-                        
-                                </div>
-                               
+                                </div>   
                             </form>
                         </div>
                     </div>
-                </div>
-               
+                </div>    
             </div>
         </div>
     </section>
