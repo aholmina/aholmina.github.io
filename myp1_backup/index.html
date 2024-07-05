@@ -17,7 +17,7 @@
 
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark shadowbox bg-dark">
         <div class="container-fluid justify-content-center align-items-center ms-5 me-5">
-            <a class="navbar-brand text-secondary fw-bold fst-italic mt-2 text-warning ms-2" href="home.html">Mark Ryan Holmina</a>
+            <a class="navbar-brand text-alert fw-bold fst-italic mt-2 ms-2 fs-4" href="home.html">Mark Ryan Holmina</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -25,7 +25,19 @@
                 <ul class="navbar-nav me-auto d-flex justify-content-center gap-2 fw-bold">
                     <li class="nav-item"><a class="nav-link active" aria-current="page" href="home.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="index.html#about-me">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#work-experience">Experiences/Skills</a></li>
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="index.html#work-experience" id="navbarDropdown1" role="button"
+                                data-bs-toggle="collapse" data-bs-target="#workDropdown" aria-expanded="false">
+                                Work & Experience
+                            </a>
+                            <ul class="dropdown-menu collapse bg-secondary" id="workDropdown" aria-labelledby="navbarDropdown1">
+                                <li><a class="dropdown-item text-dark fw-bold" href="#work-experience">Overview</a></li>
+                                <li><a class="dropdown-item text-dark fw-bold" href="#projects">Projects</a></li>
+                            </ul>
+                        </li> 
+                    </ul>
+        
                     <li class="nav-item"><a class="nav-link" href="index.html#blog">Blog</a></li>
                     <li class="nav-item"><a class="nav-link" href="index.html#services">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="index.html#contact-me">Contact</a></li>
@@ -41,6 +53,8 @@
         </div>
     </nav>
 
+  
+
 <main>
    <section class="hero-section bg opacity-30" id="about-me">
     <section class="about-me-section position-relative text-center text-white">
@@ -52,7 +66,7 @@
                 </div>
                 <div class="col-md-8">
                     <div class="container-sm d-flex flex-column justify-content-center align-items-center p-3">
-                        <h1 class="text-warning fw-bold fs-1 fst-italic ">About Me</h1>
+                        <h1 class="text-secondary fw-bold fs-1 fst-italic ">About Me</h1>
                         <ul class="list-unstyled d-flex flex-wrap justify-content-center align-items-center mt-3">
                             <li class="w-50 mb-2">• Front-end Developer</li>
                             <li class="w-50 mb-2">• Network Engineer</li>
@@ -69,8 +83,8 @@
                  <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-lg-4">
-                            <h4 class="text-secondary mt-3 mb-2 typewriter">Happy Clients</h4>
-                            <div class="review-card bg-alert alert bg-opacity">
+                            <h4 class="text-secondary mt-3 mb-2 typewriter fst-italic">Happy Clients</h4>
+                            <div class="review-card bg-alert alert bg-opacity border border-2 border-white">
                                 <div class="review-content">
                                     <div class="review-details">
                                        
@@ -84,7 +98,7 @@
                         </div>
                         <div class="col-lg-4">
                             <h4 class="text-secondary mt-3 mb-2 fst-italic typewriter">Highly Experienced</h4>
-                            <div class="review-card bg-alert alert bg-opacity">
+                            <div class="review-card bg-alert alert bg-opacity border border-2 border-white">
                              
                                 <div class="review-content">
                                     <div class="review-details">
@@ -99,7 +113,7 @@
                         </div>
                         <div class="col-lg-4">
                             <h4 class="text-secondary mt-3 mb-2 fst-italic typewriter">Top Companies</h4>
-                            <div class="review-card bg-alert alert bg-opacity">
+                            <div class="review-card bg-alert alert bg-opacity border border-2 border-white">
                                 <div class="review-content">
                                     <div class="review-details">
                                         
@@ -120,69 +134,66 @@
   
 
 
-<div id="workExperienceCarousel" class="carousel slide " data-bs-ride="carousel">
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <section class="container-fluid p-3 shadowbox home-background" id="work-experience"></section>
-            <h2 class="text-success text-center fw-bold fst-italic mt-1">Work & Experience</h2>
-            <h5 class="text-center text-secondary fs-4 mb-5">Work with Multiple Top Companies</h5>
-            <div class="carousel-caption mt-5">
-                <h5 class="text-white">NOC Engineer</h5>
-                <p class="text-white fw-bold"><i>Full time/Remote</i></p>
-                <p class="text-white fw-bold">October 2021- November 2023</p>
-                <hr>
-                <p class="text-c20 ms-2 rounded-2">Parity</p>
-                <p class="text-white fst-italic ms-2 me-2">Parity Technology Solutions' consultants help enable successful business outcomes through close collaboration and unmatched expertise to help get your property</p>
+   <section id="work-experience" class="work-experience-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="work-title">
+                    <h4 class="text-center fw-bold fst-italic mt-5">Work & Experience</h4>
+                    <h5 class="text-center fw-light m-2">Work with Multiple Top Companies</h5>
+                    <p class="intro-text mt-3 align-items-stretch fst-italic">
+                    Gain insights into my professional journey and experience working with renowned companies across various roles. Each position has contributed uniquely to my skill set and expertise, allowing me to deliver exceptional results and drive business success.
+                    </p>
+                </div>
             </div>
         </div>
-        <div class="carousel-item active">
-            <h2 class="text-white text-center fst-italic mt-5">Work & Experience</h2>
-            <h5 class="text-center fw-bold fs-4 ">Work with Multiple Top Companies</h5>
-            <div class="carousel-caption mt-3">
-                <h5 class="text-white">Network Engineer</h5>
-                <p class="text-white fw-bold"><i>Full time/on site</i></p>
-                <p class="text-white fw-bold">November 2022- May 2023</p>
-                <hr>
-                <p class="text-c20 ms-2 rounded-2">Ringcentral</p>
-                <p class="text-white fst-italic ms-2 me-2">RingCentral, Inc. is an American provider of cloud-based communication and collaboration products and services. CEO Vlad Shmunis and CTO Vlad Vendrow founded the company in 1999.</p>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">NOC Engineer</h5>
+                        <p class="card-text"><i>Full time/Remote</i></p>
+                        <p class="card-text">October 2021 - November 2023</p>
+                        <a href="https://www.parity.com" target="_blank" class="card-text-secondary fs-3 fst-italic fw-bold btn-link stretched-link text-decoration-none">Parity TS</a>
+                        <p class="card-text">Parity Technology Solutions' consultants help enable successful business outcomes through close collaboration and unmatched expertise to help get your property ...</p>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="carousel-item active">
-            <h2 class="text-success text-center fw-bold fst-italic mt-5">Work & Experience</h2>
-            <h5 class="text-center text-secondary fw-bold fs-4">Work with Multiple Top Companies</h5>
-            <div class="carousel-caption">
-                <h5 class="text-white">Network Support Specialist</h5>
-                <p class="text-white fw-bold"><i>Full time/On-site</i></p>
-                <p class="text-succes fw-bold">October 2010- March 2014</p>
-                <hr>
-                <p class="text-c20 ms-2 rounded-2">Cisco</p>
-                <p class="text-white fst-italic ms-2 me-2">Cisco develops, manufactures, and sells networking hardware, software, and other high-technology services and products.</p>
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Network Engineer</h5>
+                        <p class="card-text"><i>Full time/on site</i></p>
+                        <p class="card-text">November 2022 - May 2023</p>
+                        <a href="https://www.ringcentral.com" target="_blank" class="card-text-secondary fs-3 fst-italic fw-bold btn-link stretched-link text-decoration-none">Ringcentral</a>
+                        <p class="card-text">RingCentral, Inc. is an American provider of cloud-based communication and collaboration products and services. CEO Vlad Shmunis and CTO Vlad Vendrow founded the company in 1999. Investors included Doug Leone, Sequoia Capital, Khosla Ventures, Scale Venture Partners, and DAG Ventures.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Network Support Specialist</h5>
+                        <p class="card-text"><i>Full time/On-site</i></p>
+                        <p class="card-text">October 2010 - March 2014</p>
+                        <a href="https://www.cisco.com" target="_blank" class="card-text-secondary fs-3 fst-italic fw-bold btn-link stretched-link text-decoration-none">Cisco</a>
+                        <p class="card-text">Cisco Systems, Inc. is an American multinational digital communications technology conglomerate corporation headquartered in San Jose, California. Cisco develops, manufactures, and sells networking hardware, software, telecommunications equipment and other high-technology services and products.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#workExperienceCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#workExperienceCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-    </button>
-</div>
 </section>
-<script>
-document.addEventListener('DOMContentLoaded', (event) => {
-var myCarousel = document.querySelector('#workExperienceCarousel');
-var carousel = new bootstrap.Carousel(myCarousel, {
-    interval: 3000,  // Change slide every 3 seconds
-    ride: 'carousel'
-});
-});
-</script>
+
+
+
 
 <section class="container-fluid p-3 bg-white" id="work-experience">
     <div class="container-sm d-flex flex-column justify-content-center align-items-center p-3">
-        <h4 class="text-center mb-4 fw-bold fs-3 fst-italic">Work Employment</h4>
+        <h4 class="text-center mb-4 fw-bold fs-3 fst-italic mt-5">Work Employment</h4>
+        <p class="intro-text align-items-stretch fst-italic">
+            <span class="indent">Explore my career journey through diverse roles and engagements with industry-leading companies. Each experience has been instrumental in shaping my skills and expertise, enabling me to drive innovation and deliver impactful solutions. Discover how I've contributed to business success and forged valuable relationships along the way.</span>
+        </p>
     </div>
     <div class="row me-4">
         <div class="container-sm d-flex flex-column flex-lg-row justify-content-around gap-class align-self-stretch p-3 ">
@@ -306,45 +317,48 @@ var carousel = new bootstrap.Carousel(myCarousel, {
 
 <section class="container-fluid p-3 shadowbox bggrey" id="work-experience">
     <h4 class="text-center mb-4 fw-bold fs-3 fst-italic">Skills</h4>
+    <p class="intro-text align-items-stretch text-center fst-italic">
+       From technical proficiencies to soft skills, each capability enhances my ability to tackle challenges, collaborate effectively, and achieve impactful outcomes.</span>
+    </p>
     <div class="container">
       <section class="row skills-section">
         <div class="col-md-6 col-lg-4">
-          <div class="skill bg-dark border-bottom-5 border-black thumbnail-container">
+          <div class="skill bg-dark border border-white border-2 thumbnail-container">
             <img src="images/thumbnail2.png" class="thumbnail">
             <h3 class="text-secondary">Microsoft<i class="fa-brands fa-windows"></i></h3>
             <p class="text-secondary fw-bold fst-italic">With email configuration, migration and other Microsoft products.</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-4">
-          <div class="skill bg-dark thumbnail-container">
+          <div class="skill bg-dark border border-white border-2 thumbnail-container">
             <img src="images/thumbnail6.png" class="thumbnail">
             <h3 class="text-secondary">Ticketing <i class="fa-brands fa-salesforce"></i></h3>
             <p class="text-secondary fw-bold fst-italic">Experience in managing support tickets and service requests.</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-4">
-          <div class="skill bg-dark border-bottom-5 border-primary thumbnail-container">
+          <div class="skill bg-dark border border-white border-2 thumbnail-container">
             <img src="images/thumbnail3.png" class="thumbnail">
             <h3 class="text-secondary">HTML5 <i class="fa-brands fa-html5"></i></h3>
             <p class="text-secondary fw-bold fst-italic">Creating structured and semantic web pages using HTML5.</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-4">
-          <div class="skill bg-dark border-bottom-5 border-success thumbnail-container">
+          <div class="skill bg-dark border border-white border-2 thumbnail-container">
             <img src="images/thumbnail1.png" class="thumbnail">
             <h3 class="text-secondary">CSS <i class="fa-brands fa-css3-alt"></i></h3>
             <p class="text-secondary fw-bold fst-italic">Styling the stucture of web pages applications and layout.</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-4">
-          <div class="skill bg-dark border-bottom-5 border-info thumbnail-container">
+          <div class="skill bg-dark border border-white border-2 thumbnail-container">
             <img src="images/thumbnail5.png" class="thumbnail">
             <h3 class="text-secondary">JavaScript <i class="fa-brands fa-js"></i></h3>
             <p class="text-secondary fw-bold fst-italic">Developing interactive and dynamic functionalities.</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-4">
-          <div class="skill bg-dark border-bottom-5 border-warning thumbnail-container">
+          <div class="skill bg-dark border border-white border-2 thumbnail-container">
             <img src="images/thumbnail4.png" class="thumbnail">
             <h3 class="text-secondary">Bootstrap<i class="fa-brands fa-bootstrap"></i></h3>
             <p class="text-secondary fw-bold fst-italic">Utilizing Bootstrap framework for responsive design.</p>
@@ -432,10 +446,65 @@ element.classList.toggle('active');
 }
 </script>
 <hr>
+
+
+
+
+
+<section id="projects" class="projects-section ">
+    <div class="container-sm d-flex flex-column justify-content-center align-items-center p-3">
+        <h4 class="text-center mb-4 fw-bold fs-3 fst-italic mt-3">My Projects</h4>
+        <p class="lead align-items-stretch text-center  fst-italic">Explore some of my recent projects below. Each project includes a brief description and a link to its website.</p>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100 border border-white border-2">
+                    <img class="card-img-top" src="/myp1_backup/images/port43.jpg" alt="Project 1">
+                    <div class="card-body">
+                        <h5 class="card-title">My Portfolio</h5>
+                        <p class="card-text">A portfolio website presents your professionalism and dedication to the craft better and more clearly than any CV. </p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://aholmina.github.io/myp1_backup/" target="_blank" class="btn btn-white stretched-link">Alexa Holmina</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100 border border-white border-2">
+                    <img class="card-img-top" src="/myp1_backup/images/social.jpg" alt="Project 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Online Shop</h5>
+                        <p class="card-text">This is a project for an online consultation and online shop for transgender women.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://aholmina.github.io/zmp1backup/index.html" target="_blank" class="btn btn-white stretched-link">TransChanger Shop</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100 border border-white border-2">
+                    <img class="card-img-top" src="/myp1_backup/images/port8.jpg" alt="Project 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Online Consultation</h5>
+                        <p class="card-text">This is a project for an online consultation for transgender women.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://aholmina.github.io/html_css_responsivep2/index.html" target="_blank" class="btn btn-white stretched-link">TransChanger</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <section id="blog" class="container my-5">
     <div class="row">
         <div class="col-12 text-center">
             <h2 class="mb-4 fw-bold fst-italic">Blog</h2>
+            <p class="intro-text align-items-stretch fst-italic">
+                <span class="indent">Explore insightful articles and updates on topics ranging from industry trends to practical tips and guides. Dive into thought-provoking content that aims to inform, inspire, and empower readers. Discover valuable resources designed to enhance knowledge and foster meaningful discussions within the community.</span>
+            </p>
         </div>
         
         <div class="col-md-6 col-lg-4">
@@ -458,7 +527,7 @@ element.classList.toggle('active');
                     <h5 class="blog-title fw-light  fst-italic">Stress Management</h5>
                     <p class="blog-date text-white">June 25, 2024</p>
                     <div class="blog-content">
-                        <p>It may seem like there’s nothing you can do about stress—no way to avoid it and no way to de-stress completely when it hits. The bills won’t stop coming, there will never be more hours in the day, and your work and family responsibilities will always be demanding. But the truth is, you have a lot more control over stress than you may think.</p>
+                        <p>It may seem like there's nothing you can do about stress—no way to avoid it and no way to de-stress completely when it hits. The bills won’t stop coming, there will never be more hours in the day, and your work and family responsibilities will always be demanding. But the truth is, you have a lot more control over stress than you may think.</p>
                     </div> 
                 </div>
             </div>
@@ -529,34 +598,12 @@ element.classList.toggle('active');
 </section>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <section id="contact-me" class="bg-secondary py-5 contact-section">
         <div class="container text-center">
             <div class="row justify-content-center align-items-center">
                 <div class="col-md-4">
                     <div id="profilePicture">
-                        <img src="images/port46.jpg" alt="Your Picture" class="img-fluid contact-image opacity-50">
+                        <img src="images/port46.jpg" alt="Your Picture" class="img-fluid contact-image opacity-50 border border-white border-2">
                     </div>
                 </div>
                 <div class="col-md-5">

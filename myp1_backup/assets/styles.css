@@ -12,14 +12,12 @@ html {
   
 }
 
-
-
 .shadowbox.bggrey {
   background: linear-gradient(pink, gray, pink);
 }
 
 #container-fluid {
-  background: linear-gradient(pink, gray, pink);
+  background: linear-gradient(gray,pink, gray, pink);
 }
 .profilepicture {
   width: 300px;
@@ -43,13 +41,12 @@ html {
 }
 
 .navcolor {
-  background-color: #2e2e2e;
   color: grey;
 }
 
 .about-me-carousel {
   border-radius: 15px;
-  border-bottom: 5px solid #c20000;
+  border-bottom: 5px solid pink;
   box-shadow: 0 0 3px whitesmoke;
   padding: 20px;
   margin-bottom: 20px;
@@ -78,21 +75,7 @@ html {
   width: 30%;
 }
 
-#myBtn {
-  display: none;
-  position: fixed;
-  bottom: 20px;
-  right: 30px;
-  z-index: 99;
-  font-size: 18px;
-  border: none;
-  outline: none;
-  background-color: #c20000;
-  color: white;
-  cursor: pointer;
-  padding: 15px;
-  border-radius: 4px;
-}
+
 
 #myBtn:hover {
   background-color: pink;
@@ -108,7 +91,7 @@ html {
 
 .footdesign {
   background: linear-gradient( pink, gray);
-  background-color: #2e2e2e;
+
   color: #fff;
 }
 
@@ -209,7 +192,7 @@ html {
   margin: 10px;
   text-align: center;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-bottom: 5px solid #c20000;
+ 
 }
 
 .skill h3 {
@@ -305,7 +288,7 @@ html {
 }
 
 .alert-danger {
-  color: #721c24;
+ 
   background-color: #f8d7da;
   border-color: #f5c6cb;
 }
@@ -402,9 +385,17 @@ html {
 }
 
 .navbar ul li a:hover {
-  background-color: #444;
+ 
   color: whitesmoke;
 }
+
+.purple-gradient-text {
+  background: rgb(8, 86, 8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
 
 
 .btn {
@@ -420,14 +411,7 @@ html {
   margin: 10px;
 }
 
-.btn-primary {
-  background-color: #c20000;
-  color: #fff;
-}
 
-.btn-primary:hover {
-  background-color: #a30000;
-}
 
 .btn-secondary {
   background-color: #6c757d;
@@ -514,14 +498,14 @@ html {
 
 
 .col-md-6 img.img-fluid {
-  max-width: 100%; /* Ensure the image doesn't exceed the container width */
-  height: auto; /* Maintain aspect ratio */
+  max-width: 100%; 
+  height: auto;
   display: block; 
-  border-radius: 0.5rem; /* Optional: Add rounded corners */
+  border-radius: 0.5rem; 
   backface-visibility: hidden;
   
 }
-/* Optional: Add some padding around the image */
+
 .col-md-6 {
   padding: 1rem;
 }
@@ -704,50 +688,71 @@ button.btn-primary {
   background: linear-gradient(gray, pink, gray);
 }
 
-#workExperienceCarousel .carousel-item {
-  height: 500px; 
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  transition: opacity 1s ease-in-out;
-  object-fit: contain;
-}
-
-#workExperienceCarousel .carousel-item:nth-child(1) {
-  background-image: url("../images/carousel-work7.png");
-}
-
-#workExperienceCarousel .carousel-item:nth-child(2) {
-  background-image: url("../images/carousel-work4.png");
-}
-
-#workExperienceCarousel .carousel-item:nth-child(3) {
-  background-image: url("../images/carousel-work6.png");
-}
-
-#workExperienceCarousel .carousel-caption {
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0.5
-  ); 
-  padding: 20px;
+.glass-card {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
   border-radius: 10px;
-  animation: fadeInUp 1.5s;
+  padding: 20px;
+  transition: all 0.3s ease;
 }
 
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-
-  100% {
-    opacity: 1.5;
-    transform: translateY(0);
-  }
+.glass-card:hover {
+  transform: scale(1.05); /* Example: scale up on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+.border-pink {
+  border: 1px solid #e6b3b3; /* Pink border */
+}
+
+.card {
+  background-color: #f3f3f3; /* Gray background */
+}
+
+.card-title {
+  color: #333; /* Black title color */
+}
+
+.company-name {
+  font-weight: bold;
+}
+
+
+.card {
+  background-color: #f3f3f3; /* Gray background */
+  border: 10px solid #e6b3b3; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: scale(1.1); 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Glass shadow effect */
+  z-index: 1; 
+}
+
+.card:not(:hover) {
+  transform: scale(0.9); /* Zoom out effect on other cards */
+}
+
+.card-title {
+  color: #333;
+
+
+}
+
+.company-name {
+  font-weight: bold;
+
+}
+.card-text-secondary   {
+
+  color: #e75480; /* Pink color */
+  font-weight: bold; /* Bold font weight */
+}
+
 
 .profile-title {
   display: flex;
@@ -1260,4 +1265,78 @@ button.btn-primary {
 
 #services .card:hover {
   transform: translateY(-5px);
+}
+
+
+/* Blog Card */
+.blog-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Blog Actions (Like and Comment Buttons) */
+.blog-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.like-btn, .comment-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.like-btn svg, .comment-btn svg {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.like-count, .comment-count {
+  margin-right: 10px;
+}
+
+/* Modal Styling */
+.modal-content {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+  border-bottom: 1px solid #ddd;
+}
+
+.modal-title {
+  font-weight: bold;
+}
+
+.modal-body {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.modal-footer {
+  border-top: 1px solid #ddd;
+}
+
+
+.project-img {
+  height: 150px; /* Adjust as needed for uniform image heights */
+  object-fit: fill;
+}
+
+
+#projects {
+  background: linear-gradient(gray, pink, gray);
+}
+
+.card-footer {
+  background: linear-gradient(gray, pink, gray);
 }
