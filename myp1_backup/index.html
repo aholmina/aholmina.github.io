@@ -15,28 +15,30 @@
   </head>
 <body>
 
+   
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark shadowbox bg-dark">
-        <div class="container-fluid justify-content-center align-items-center ms-5 me-5">
-            <a class="navbar-brand text-alert fw-bold fst-italic mt-2 ms-2 fs-4" href="home.html">Mark Ryan Holmina</a>
+        <div class="container-fluid justify-content-center align-items-center ms-3">
+            <a class="navbar-brand text-alert fw-bold fst-italic mt-2 ms-2 fs-4" href="home.html">Alexa Holmina</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse mt-1 ms-5 align-items-center justify-content-center" id="navbarNav">
+            <div class="collapse navbar-collapse mt-1 ms-1 align-items-center justify-content-center" id="navbarNav">
                 <ul class="navbar-nav me-auto d-flex justify-content-center gap-2 fw-bold">
                     <li class="nav-item"><a class="nav-link active" aria-current="page" href="home.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="index.html#about-me">About</a></li>
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="index.html#work-experience" id="navbarDropdown1" role="button"
-                                data-bs-toggle="collapse" data-bs-target="#workDropdown" aria-expanded="false">
-                                Work & Experience
-                            </a>
-                            <ul class="dropdown-menu collapse bg-secondary" id="workDropdown" aria-labelledby="navbarDropdown1">
-                                <li><a class="dropdown-item text-dark fw-bold" href="#work-experience">Overview</a></li>
-                                <li><a class="dropdown-item text-dark fw-bold" href="#projects">Projects</a></li>
-                            </ul>
-                        </li> 
-                    </ul>
+                      <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="index.html" id="navbarDropdown1" role="button"
+                              data-bs-toggle="collapse" data-bs-target="#workDropdown" aria-expanded="false">
+                              Work & Experience
+                          </a>
+                          <ul class="dropdown-menu collapse bg-secondary" id="workDropdown" aria-labelledby="navbarDropdown1">
+                              <li><a class="dropdown-item text-dark fw-bold" href="index.html#work-experience">Overview</a></li>
+                              <li><a class="dropdown-item text-dark fw-bold" href="index.html#skills">Skills</a></li>
+                              <li><a class="dropdown-item text-dark fw-bold" href="index.html#projects">Projects</a></li>
+                          </ul>
+                      </li> 
+                  </ul>
         
                     <li class="nav-item"><a class="nav-link" href="index.html#blog">Blog</a></li>
                     <li class="nav-item"><a class="nav-link" href="index.html#services">Services</a></li>
@@ -44,16 +46,14 @@
                     <li class="nav-item"><a class="nav-link" href="index.html#review-section">Reviews</a></li>
                 </ul>
             </div>
-            <div class="socials d-flex justify-content-center gap-1">
-                <a href="#" class="text-white"><i class="fa-brands fa-facebook"></i></a>
-                <a href="#" class="text-white"><i class="fa-brands fa-twitter"></i></a>
-                <a href="#" class="text-white"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#" class="text-white"><i class="fa-brands fa-linkedin"></i></a>
+            <div class="socials d-flex justify-content-center gap-1 me-5">
+                <a href="https://www.facebook.com" class="text-white" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.twitter.com" class="text-white" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.instagram.com" class="text-white" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com" class="text-white" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
               </div>
         </div>
     </nav>
-
-  
 
 <main>
    <section class="hero-section bg opacity-30" id="about-me">
@@ -61,16 +61,15 @@
         <div class="container py-5">
             <div class="row justify-content-center align-items-center">
                 <div class="col-md-4 mt-5">
-                    <img src="images/port46.jpg" alt="Your Picture" class="img-fluid rounded-circle profile-picture mt-5">
-                   
+                    <img src="images/port46.jpg" alt="Your Picture" class="img-fluid rounded-circle profile-picture mt-4 h-100">        
                 </div>
                 <div class="col-md-8">
                     <div class="container-sm d-flex flex-column justify-content-center align-items-center p-3">
                         <h1 class="text-secondary fw-bold fs-1 fst-italic ">About Me</h1>
                         <ul class="list-unstyled d-flex flex-wrap justify-content-center align-items-center mt-3">
-                            <li class="w-50 mb-2">• Front-end Developer</li>
-                            <li class="w-50 mb-2">• Network Engineer</li>
-                            <li class="w-50 mb-2">• Helpdesk Analyst</li>
+                            <li class="w-50 mb-2 fst-italic">• Front-end Developer</li>
+                            <li class="w-50 mb-2 fst-italic">• Network Engineer</li>
+                            <li class="w-50 mb-2 fst-italic">• Helpdesk Analyst</li>
                         </ul>
                     </div>
                     <div class="container-sm d-flex flex-column justify-content-center align-items-center p-3">
@@ -130,10 +129,7 @@
             </div>
         </section>
     </section>
-   <hr>
-  
-
-
+  <hr>
    <section id="work-experience" class="work-experience-section">
     <div class="container">
         <div class="row">
@@ -183,44 +179,59 @@
             </div>
         </div>
     </div>
-</section>
 
-
-
-
-<section class="container-fluid p-3 bg-white" id="work-experience">
     <div class="container-sm d-flex flex-column justify-content-center align-items-center p-3">
         <h4 class="text-center mb-4 fw-bold fs-3 fst-italic mt-5">Work Employment</h4>
         <p class="intro-text align-items-stretch fst-italic">
             <span class="indent">Explore my career journey through diverse roles and engagements with industry-leading companies. Each experience has been instrumental in shaping my skills and expertise, enabling me to drive innovation and deliver impactful solutions. Discover how I've contributed to business success and forged valuable relationships along the way.</span>
         </p>
     </div>
-    <div class="row me-4">
-        <div class="container-sm d-flex flex-column flex-lg-row justify-content-around gap-class align-self-stretch p-3 ">
-            <div class="col-lg-4 about-me-carousel" data-bs-toggle="modal" data-bs-target="#details1">
-                <img class="w-100" src="images/Company1 (1).png" alt="Project">
+ 
+    <div class="container">
+        <div id="aboutMeCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="container-sm d-flex flex-column flex-lg-row justify-content-around gap-class align-self-stretch p-3 h-100">
+                        <div class="col-lg-4 about-me-carousel ms-5" data-bs-toggle="modal" data-bs-target="#details1">
+                            <img class="w-100 h-100" src="images/Company1 (1).png" alt="Project">
+                        </div>
+                        <div class="col-lg-4 about-me-carousel me-5" data-bs-toggle="modal" data-bs-target="#details2">
+                            <img class="w-100 h-100" src="images/Company1 (2).png" alt="Project">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="container-sm d-flex flex-column flex-lg-row justify-content-around gap-class align-self-stretch p-3 h-100">
+                        <div class="col-lg-4 about-me-carousel ms-5" data-bs-toggle="modal" data-bs-target="#details3">
+                            <img class="w-100 h-100" src="images/Company1 (3).png" alt="Project">
+                        </div>
+                        <div class="col-lg-4 about-me-carousel me-5" data-bs-toggle="modal" data-bs-target="#details4">
+                            <img class="w-100 h-100" src="images/Company1 (4).png" alt="Project">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="container-sm d-flex flex-column flex-lg-row justify-content-around gap-class align-self-stretch p-3 h-100">
+                        <div class="col-lg-4 about-me-carousel ms-5" data-bs-toggle="modal" data-bs-target="#details5">
+                            <img class="w-100 h-100" src="images/Company1 (5).png" alt="Project">
+                        </div>
+                        <div class="col-lg-4 about-me-carousel me-5" data-bs-toggle="modal" data-bs-target="#details6">
+                            <img class="w-100 h-100" src="images/Company1 (6).png" alt="Project">
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-lg-4 about-me-carousel" data-bs-toggle="modal" data-bs-target="#details2">
-                <img class="w-100" src="images/Company1 (2).png" alt="Project">
-            </div>
-            <div class="col-lg-4 about-me-carousel" data-bs-toggle="modal" data-bs-target="#details3">
-                <img class="w-100" src="images/Company1 (3).png" alt="Project">
-            </div>
-        </div>
-        <div class="container-sm d-flex flex-column flex-lg-row justify-content-around gap-class align-self-stretch p-3">
-            <div class="col-lg-4 about-me-carousel" data-bs-toggle="modal" data-bs-target="#details4">
-                <img class="w-100" src="images/Company1 (4).png" alt="Project">
-            </div>
-            <div class="col-lg-4 about-me-carousel" data-bs-toggle="modal" data-bs-target="#details5">
-                <img class="w-100" src="images/Company1 (5).png" alt="Project">
-            </div>
-            <div class="col-lg-4 about-me-carousel" data-bs-toggle="modal" data-bs-target="#details6">
-                <img class="w-100" src="images/Company1 (6).png" alt="Project">
-            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#aboutMeCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#aboutMeCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
     </div>
-</section>
-
+       
 <div class="modal fade" id="details1" tabindex="-1" aria-labelledby="details1Label" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
@@ -308,14 +319,12 @@
                 <p class="text-secondary fw-bold fst-italic fs-3">VONAGE</p>
                 <p>TIER 2 SUPPORT.</p>
                 <p>Resolve tickets escalated from Tier 1 and update KB documentation.</p>
-
             </div>
         </div>
     </div>
 </div>
 
-
-<section class="container-fluid p-3 " id="work-experience">
+<div id="skills" class="skills-experience">
     <h4 class="text-center mb-4 fw-bold fs-3 fst-italic">Skills</h4>
     <p class="intro-text align-items-stretch text-center fst-italic">
        From technical proficiencies to soft skills, each capability enhances my ability to tackle challenges, collaborate effectively, and achieve impactful outcomes.</span>
@@ -325,42 +334,42 @@
         <div class="col-md-6 col-lg-4">
           <div class="skill bg-secondary border border-white border-2 thumbnail-container">
             <img src="images/thumbnail2.png" class="thumbnail">
-            <h3 class="text-secondary">Microsoft<i class="fa-brands fa-windows"></i></h3>
-            <p class="text-white fw-light fst-italic">With email configuration, migration and other Microsoft products.</p>
+            <h3 class="text-white fst-italic">Microsoft<i class="fa-brands fa-windows"></i></h3>
+            <p class="text-white fw-light fst-italic">Email configuration, migration and other Microsoft products.</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-4">
           <div class="skill bg-secondary border border-white border-2 thumbnail-container">
             <img src="images/thumbnail6.png" class="thumbnail">
-            <h3 class="text-secondary">Ticketing <i class="fa-brands fa-salesforce"></i></h3>
+            <h3 class="text-white fst-italic">Ticketing <i class="fa-brands fa-salesforce"></i></h3>
             <p class="text-white fw-light fst-italic">Experience in managing support tickets and service requests.</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-4">
           <div class="skill bg-secondary border border-white border-2 thumbnail-container">
             <img src="images/thumbnail3.png" class="thumbnail">
-            <h3 class="text-secondary">HTML5 <i class="fa-brands fa-html5"></i></h3>
+            <h3 class="text-white fst-italic">HTML5 <i class="fa-brands fa-html5"></i></h3>
             <p class="text-white fw-light fst-italic">Creating structured and semantic web pages using HTML5.</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-4">
           <div class="skill bg-secondary border border-white border-2 thumbnail-container">
             <img src="images/thumbnail1.png" class="thumbnail">
-            <h3 class="text-secondary">CSS <i class="fa-brands fa-css3-alt"></i></h3>
+            <h3 class="text-white fst-italic">CSS <i class="fa-brands fa-css3-alt"></i></h3>
             <p class="text-white fw-light fst-italic">Styling the stucture of web pages applications and layout.</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-4">
           <div class="skill bg-secondary border border-white border-2 thumbnail-container">
             <img src="images/thumbnail5.png" class="thumbnail">
-            <h3 class="text-secondary">JavaScript <i class="fa-brands fa-js"></i></h3>
+            <h3 class="text-white fst-italic">JavaScript <i class="fa-brands fa-js"></i></h3>
             <p class="text-white fw-light fst-italic">Developing interactive and dynamic functionalities.</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-4">
           <div class="skill bg-secondary border border-white border-2 thumbnail-container">
             <img src="images/thumbnail4.png" class="thumbnail">
-            <h3 class="text-secondary">Bootstrap<i class="fa-brands fa-bootstrap"></i></h3>
+            <h3 class="text-white fst-italic">Bootstrap<i class="fa-brands fa-bootstrap"></i></h3>
             <p class="text-white fw-light fst-italic">Utilizing Bootstrap framework for responsive design.</p>
           </div>
         </div>
@@ -381,20 +390,7 @@
       </div>
     </div>
   </div>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const thumbnails = document.querySelectorAll('.thumbnail');
-      const modal = new bootstrap.Modal(document.getElementById('imageModal'));
-      const modalImage = document.getElementById('modalImage');
-  
-      thumbnails.forEach(thumbnail => {
-        thumbnail.addEventListener('click', function () {
-          modalImage.src = this.src;
-          modal.show();
-        });
-      });
-    });
-  </script>
+ 
   
 
 <div class="modal fade" id="additionalSkillsModal" tabindex="-1" aria-labelledby="additionalSkillsModalLabel" aria-hidden="true">
@@ -434,21 +430,6 @@
 </div>
 </div>
 
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
-<script>
-function toggleSkillDetails(element) {
-const activeElement = document.querySelector('.skill.active');
-if (activeElement && activeElement !== element) {
-    activeElement.classList.remove('active');
-}
-element.classList.toggle('active');
-}
-</script>
-<hr>
-
-
-
 
 
 <section id="projects" class="projects-section ">
@@ -464,7 +445,7 @@ element.classList.toggle('active');
                         <p class="card-text text-dark fst-italic fw-light">A portfolio website presents your professionalism and dedication to the craft better and more clearly than any CV. </p>
                     </div>
                     <div class="card-footer">
-                        <a href="https://aholmina.github.io/myp1_backup/" target="_blank" class="btn btn-white stretched-link">Alexa Holmina</a>
+                        <a href="https://aholmina.github.io/myp1_backup/" target="_blank" class="btn btn-white stretched-link fst-italic">Alexa Holmina</a>
                     </div>
                 </div>
             </div>
@@ -477,7 +458,7 @@ element.classList.toggle('active');
                         <p class="card-text text-dark fst-italic fw-light">This is a project for an online consultation and online shop for transgender women.</p>
                     </div>
                     <div class="card-footer">
-                        <a href="https://aholmina.github.io/zmp1backup/index.html" target="_blank" class="btn btn-white stretched-link">TransChanger Shop</a>
+                        <a href="https://aholmina.github.io/zmp1backup/index.html" target="_blank" class="btn btn-white stretched-link fst-italic">TransChanger Shop</a>
                     </div>
                 </div>
             </div>
@@ -486,20 +467,18 @@ element.classList.toggle('active');
                 <div class="card h-100 border border-white border-2">
                     <img class="card-img-top" src="/myp1_backup/images/port8.jpg" alt="Project 2">
                     <div class="card-body">
-                        <h5 class="card-title text-secondary fst-italic fw-bold">Online Consultation</h5>
+                        <h5 class="card-title text-secondary fst-italic fw-bold fst-italic">Online Consultation</h5>
                         <p class="card-text text-dark fst-italic fw-light">This is a project for an online consultation for transgender women.</p>
                     </div>
                     <div class="card-footer">
-                        <a href="https://aholmina.github.io/html_css_responsivep2/index.html" target="_blank" class="btn btn-white stretched-link">TransChanger</a>
+                        <a href="https://aholmina.github.io/html_css_responsivep2/index.html" target="_blank" class="btn btn-white stretched-link fst-italic">TransChanger</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-
-
-
+<hr>
 <section id="blog" class="container my-5">
     <div class="row">
         <div class="col-12 text-center">
@@ -508,29 +487,26 @@ element.classList.toggle('active');
                 <span class="indent">Explore insightful articles and updates on topics ranging from industry trends to practical tips and guides. Dive into thought-provoking content that aims to inform, inspire, and empower readers. Discover valuable resources designed to enhance knowledge and foster meaningful discussions within the community.</span>
             </p>
         </div>
-
-<div class="container-5">
-  <div class="row">
-    <div class="col-lg-8 mb-4">
-      <div class="card blog-section main-blog-section">
-        <img src="/myp1_backup/images/blogmain2.png" class="card-img-top" alt="Main Blog Image">
-        <div class="card-body">
-          <h5 class="card-title text-dark fst-italic">Work Life Balance</h5>
-          <p class="card-text fst-italic fw-light">Work-life balance is not a fixed ratio of hours, but a feeling of harmony and satisfaction in both work and personal domains</p>
-          <div class="d-flex justify-content-between align-items-center">
-            <button class="btn  p-0 me-2">
-                <i class="fa-regular fa-heart me-2 gap-1"></i>
-                <i class="fa-regular fa-thumbs-up gap-1"></i>
-            </button>
-            <button class="btn btn-secondary">Comment</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-        
+        <div class="container-5">
+            <div class="row">
+              <div class="col-lg-8 mb-4">
+                <div class="card blog-section main-blog-section">
+                  <img src="/myp1_backup/images/blogmain2.png" class="card-img-top" alt="Main Blog Image">
+                  <div class="card-body">
+                    <h5 class="card-title text-dark fst-italic">Work Life Balance</h5>
+                    <p class="card-text fst-italic fw-light">Work-life balance is not a fixed ratio of hours, but a feeling of harmony and satisfaction in both work and personal domains</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <button class="btn  p-0 me-2">
+                          <i class="fa-regular fa-heart me-2 gap-1"></i>
+                          <i class="fa-regular fa-thumbs-up gap-1"></i>
+                      </button>
+                      <button class="btn btn-secondary">Comment</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
         <div class="col-md-6 col-lg-4">
-            <div class="card blog-card">
+            <div class="card blog-card mt-5">
                 <img src="/myp1_backup/images/blog1.png" class="card-img-top" alt="Blog Image 1">
                 <div class="card-body">
                     <h5 class="blog-title fw-light fst-italic">Work Ethic</h5>
@@ -548,9 +524,8 @@ element.classList.toggle('active');
                       </div>
             </div>
         </div>
-      
         <div class="col-md-6 col-lg-4">
-            <div class="card blog-card">
+            <div class="card blog-card ">
                 <img src="/myp1_backup/images/blog3.png" class="card-img-top" alt="Blog Image 2">
                 <div class="card-body">
                     <h5 class="blog-title fw-light  fst-italic">Stress Management</h5>
@@ -568,7 +543,6 @@ element.classList.toggle('active');
                   </div>
             </div>
         </div>
-
         <div class="col-md-6 col-lg-4">
             <div class="card blog-card">
                 <img src="/myp1_backup/images/blog4.png" class="card-img-top" alt="Blog Image 2">
@@ -588,9 +562,6 @@ element.classList.toggle('active');
                   </div>
             </div>
         </div>
-
-
-    
         <div class="col-md-6 col-lg-4">
             <div class="card blog-card">
                 <img src="/myp1_backup/images/blog2.png" class="card-img-top" alt="Blog Image 3">
@@ -612,16 +583,12 @@ element.classList.toggle('active');
         </div>
         <div class="row">
             <div class="col-12 text-center fst-italic">
-                <a href="#" class="btn btn-secondary see-more">See More Blog</a>
+                <a href="#blog" class="btn btn-secondary see-more">See More Blog</a>
             </div>   
         </div>
     </div>
 </section>
 <hr>
-
-
-
-
 <section id="services" class="bg-light py-5">
     <div class="container">
         <div class="row">
@@ -666,40 +633,67 @@ element.classList.toggle('active');
         </div>
     </div>
 </section>
+<hr>
 
-
-    <section id="contact-me" class="bg-secondary py-5 contact-section">
-        <div class="container text-center">
-            <div class="row justify-content-center align-items-center">
-                <div class="col-md-4">
-                    <div id="profilePicture">
-                        <img src="images/port46.jpg" alt="Your Picture" class="img-fluid contact-image opacity-50 border border-white border-2">
-                    </div>
-                </div>
-                <div class="col-md-5">
-                    <div class="text-start">
-                        <h2 class="text-info fst-italic">Contact Me</h2>
-                        <form id="contact-form opacity-50" style="display: inline;">
-                            <div class="mb-3 text-white">
-                                <label for="phone" class="form-label text-dark fst-italic">Phone</label>
-                                <input type="tel" class="form-control" id="phone" name="phone" required>
-                            </div>
-                            <div class="mb-3 text-white">
-                                <label for="email" class="form-label text-dark fst-italic">Email address</label>
-                                <input type="email" class="form-control" id="email" name="email" required>
-                            </div>
-                            <div class="mb-3 text-white">
-                                <label for="message" class="form-label text-dark fst-italic">Message</label>
-                                <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
-                            <button type="button" class="btn btn-secondary mt-3" data-bs-toggle="modal" data-bs-target="#bookCallModal">Book a Call</button>
-                        </form>
+<section id="contact-me" class="bg-secondary py-5 contact-section">
+    <div class="container text-center">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-md-4">
+                <div id="profilePicture" class="position-relative mt-5 ">
+                    <img src="images/port46.jpg" alt="Your Picture" class="img-fluid contact-image  border border-white border-2 m">
+                    <div class="position-absolute top-0 start-0 p-3 d-flex flex-column">
+                        <a href="tel:1234567890" target="_blank" rel="noopener noreferrer" class="text-pink me-4 mt-2" data-bs-toggle="tooltip" data-bs-placement="left" title="123-456-7890">
+                            <i class="fa-solid fa-phone fa-lg contact-icon"></i>
+                        </a>
+                        <a href="mailto:your.email@example.com" target="_blank" rel="noopener noreferrer" class="text-pink me-4" data-bs-toggle="tooltip" data-bs-placement="left" title="your.email@example.com">
+                            <i class="fa-solid fa-envelope fa-lg contact-icon"></i>
+                        </a>
+                        <a href="https://zoom.us/j/your-zoom-meeting-id" target="_blank" rel="noopener noreferrer" class="text-pink me-4" data-bs-toggle="tooltip" data-bs-placement="top" title="Join Zoom Meeting">
+                            <i class="fa-solid fa-video fa-lg contact-icon"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" class="text-pink me-5" data-bs-toggle="tooltip" data-bs-placement="left" title="LinkedIn Profile">
+                            <i class="fa-brands fa-linkedin fa-lg contact-icon"></i>
+                        </a>
+                        <a href="skype:your.skype.username?chat" target="_blank" rel="noopener noreferrer" class="text-pink  me-5" data-bs-toggle="tooltip" data-bs-placement="left" title="Skype: your.skype.username">
+                            <i class="fa-brands fa-skype fa-lg contact-icon"></i>
+                        </a>
                     </div>
                 </div>
             </div>
+            <div class="col-md-5">
+                <div class="text-start">
+                    <h2 class="text-secondary fst-italic mb-4">Contact Me</h2>
+                    <p class="text-white mb-4 fst-italic fw-light mb-4">I'd love to hear from you! Whether you have a question, want to discuss a project, or just want to say hello, feel free to reach out using the form below or via the contact icons in my profile picture.</p>
+                    <form id="contact-form" style="display: inline;">
+                        <div class="mb-3 text-white">
+                            <label for="phone" class="form-label text-dark fst-italic">Phone</label>
+                            <input type="tel" class="form-control" id="phone" name="phone" required>
+                        </div>
+                        <div class="mb-3 text-white">
+                            <label for="email" class="form-label text-dark fst-italic">Email address</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="mb-3 text-white">
+                            <label for="message" class="form-label text-dark fst-italic">Message</label>
+                            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="button" class="btn btn-secondary mt-3" data-bs-toggle="modal" data-bs-target="#bookCallModal">Book a Call</button>
+                    </form>
+                </div>
+            </div>
         </div>
-    </section>
+    </div>
+</section>
+
+<script>
+    // Initialize tooltips
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+</script>
+</section>
     <div class="modal fade" id="bookCallModal" tabindex="-1" aria-labelledby="bookCallModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
@@ -709,6 +703,12 @@ element.classList.toggle('active');
                 </div>
                 <div class="modal-body bg-secondary">
                     <form id="book-call-form" method="post" action="submit_book_call_form.php">
+                        <a href="https://zoom.us/j/your-zoom-meeting-id" target="_blank" rel="noopener noreferrer" class="text-pink mb-3" data-bs-toggle="tooltip" data-bs-placement="left" title="Join Zoom Meeting">
+                            <img src="path-to-zoom-icon.svg" alt="Zoom" class="contact-icon">
+                        </a>
+                        <a href="https://meet.google.com/your-meet-code" target="_blank" rel="noopener noreferrer" class="text-pink" data-bs-toggle="tooltip" data-bs-placement="left" title="Join Google Meet">
+                            <img src="path-to-google-meet-icon.svg" alt="Google Meet" class="contact-icon">
+                        </a>
                         <div class="mb-3">
                             <label for="name-call" class="form-label">Name</label>
                             <input type="text" class="form-control" id="name-call" name="name-call" required>
@@ -731,7 +731,7 @@ element.classList.toggle('active');
             </div>
         </div>
     </div>
-    <hr>
+   <hr>
       <section id="review-section" class="py-5">
         <div class="container">
             <div class="row">
@@ -820,61 +820,57 @@ element.classList.toggle('active');
         <div class="container-lg border-bottom pb-4">
             <div class="row align-items-center">
                 <div class="col-lg-4 mt-4">
-                    <h3>Subscribe to Newsletter</h3>
+                    <h3 class="fst-italic fw-light">Subscribe to my Newsletter</h3>
                     <p class="fst-italic">Let's get in touch & make something awesome together!</p>
                 </div>
                 <div class="col-lg-5">
                     <form class="d-flex">
                         <input type="text" class="form-control newstext" placeholder="Enter your Email">
-                        <button type="button" class="btn btn-outline-primary btn-news ms-2">Subscribe</button>
+                        <button type="button" class="btn btn-outline-danger btn-news ms-2">Subscribe</button>
                     </form>
                 </div>
             </div>
         </div>
-    
+      
         <div class="container-sm d-flex flex-column flex-lg-row justify-content-end align-items-stretch py-4 border-bottom">
             <div class="col-lg-4">
-                <h4>CONNECT WITH US</h4>
+                <h4 class="fst-italic">CONNECT WITH US</h4>
                 <ul class="list-unstyled ulfooter">
-                    <li><a href="https://twitter.com/" class="nav-link"><i class="fa-brands fa-twitter social-color me-3"></i>Follow me on Twitter</a></li>
-                    <li><a href="https://pinterest.com/" class="nav-link"><i class="fa-brands fa-pinterest social-color me-3"></i>Pin me on Pinterest</a></li>
-                    <li><a href="https://facebook.com/" class="nav-link"><i class="fa-brands fa-facebook social-color me-3"></i>Like me on Facebook</a></li>
-                    <li><a href="https://instagram.com/" class="nav-link"><i class="fa-brands fa-instagram social-color me-3"></i>Follow me on Instagram</a></li>
+                    <li><a href="https://twitter.com/" class="nav-link" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-twitter social-color me-3"></i>Follow me on Twitter</a></li>
+                    <li><a href="https://pinterest.com/" class="nav-link" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-pinterest social-color me-3"></i>Pin me on Pinterest</a></li>
+                    <li><a href="https://facebook.com/" class="nav-link" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook social-color me-3"></i>Like me on Facebook</a></li>
+                    <li><a href="https://instagram.com/" class="nav-link" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram social-color me-3"></i>Follow me on Instagram</a></li>
                 </ul>
             </div>
             <div class="col-lg-4">
-                <h4>PORTFOLIO</h4>
+              <h4 class="fst-italic">PORTFOLIO</h4>
                 <ul class="list-unstyled ulfooter align-items-center">
-                    <li><a href="#about-me" class="nav-link">About</a></li>
-                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="index.html#about-me" class="nav-link">About</a></li>
+                    <li><a href="index.html#services" class="nav-link">Services</a></li>
                 </ul>
             </div>
             <div class="col-lg-4">
-                <h4>CONTACT ME</h4>
+                <h4 class="fst-italic">CONTACT ME</h4>
                 <ul class="list-unstyled ulfooter">
-                    <a href="#" class="btn btn-danger mt-3">Contact Me</a> 
-                    <a href="/path/to/cv.pdf" download class="btn btn-secondary download-cv-btn mb-1">Download/CV</a> 
+                    <a href="index.html#contact-me" class="btn btn-secondary mt-3 fst-italic">Contact Me</a> 
+                    <a href="/path/to/cv.pdf" download class="btn btn-secondary download-cv-btn mb-1 fst-italic">Download CV</a> 
                 </ul>
             </div>
         </div>
-    
+      
         <div class="copy-right text-center align-items-center py-4">
             <p class="text-center text-white fst-italic">©2024 All rights reserved | This template is made by Alexa H</p>
             <ul class="list-inline">
                 <li class="list-inline-item"><a href="?lang=en" class="footer-link text-white">English</a></li>
                 <li class="list-inline-item"><a href="?lang=es" class="footer-link text-white">Español</a></li>
                 <li class="list-inline-item"><a href="privacy.html" class="footer-link text-white">Privacy Policy</a></li>
-            </ul>
-            
+            </ul>    
         </div>
-    </footer>
-    
+      </footer>
 </main>
 </body>
 </html>
-
-
 </script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

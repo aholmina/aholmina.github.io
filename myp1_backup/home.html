@@ -1,42 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="images/port43.jpg">
     <title>Mark Ryan "Alexa" Holmina</title>
     <link rel="stylesheet" href="assets/styles.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/fontawesome.min.css" integrity="sha512-UuQ/zJlbMVAw/UU8vVBhnI4op+/tFOpQZVT+FormmIEhRSCnJWyHiBbEVgM4Uztsht41f3FzVWgLuwzUqOObKw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/brands.min.css" integrity="sha512-DJLNx+VLY4aEiEQFjiawXaiceujj5GA7lIY8CHCIGQCBPfsEG0nGz1edb4Jvw1LR7q031zS5PpPqFuPA8ihlRA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-</head>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
 <body>
+
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark shadowbox bg-dark">
-        <div class="container-fluid justify-content-center align-items-center">
-            <a class="navbar-brand fw-bold fst-italic mt-2 ms-2 purple-gradient-text fs-4" href="index.html">Alexa Holmina</a>
+        <div class="container-fluid justify-content-center align-items-center ms-3">
+            <a class="navbar-brand text-alert fw-bold fst-italic mt-2 ms-2 fs-4" href="index.html">Alexa Holmina</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse mt-1 ms-5 align-items-center justify-content-center" id="navbarNav">
-              <ul class="navbar-nav me-auto d-flex justify-content-center gap-2 fw-bold">
+            <div class="collapse navbar-collapse mt-1 ms-1 align-items-center justify-content-center" id="navbarNav">
+                <ul class="navbar-nav me-auto d-flex justify-content-center gap-2 fw-bold">
                     <li class="nav-item"><a class="nav-link active" aria-current="page" href="home.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="index.html#about-me">About</a></li>
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                       <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="index.html#work-experience" id="navbarDropdown1" role="button"
+                          <a class="nav-link dropdown-toggle" href="index.html" id="navbarDropdown1" role="button"
                               data-bs-toggle="collapse" data-bs-target="#workDropdown" aria-expanded="false">
                               Work & Experience
                           </a>
                           <ul class="dropdown-menu collapse bg-secondary" id="workDropdown" aria-labelledby="navbarDropdown1">
-                              <li><a class="dropdown-item text-dark fw-bold" href="#work-experience">Overview</a></li>
-                              <li><a class="dropdown-item text-dark fw-bold" href="#projects">Projects</a></li>
+                              <li><a class="dropdown-item text-dark fw-bold" href="index.html#work-experience">Overview</a></li>
+                              <li><a class="dropdown-item text-dark fw-bold" href="index.html#skills">Skills</a></li>
+                              <li><a class="dropdown-item text-dark fw-bold" href="index.html#projects">Projects</a></li>
                           </ul>
                       </li> 
                   </ul>
-      
+        
                     <li class="nav-item"><a class="nav-link" href="index.html#blog">Blog</a></li>
                     <li class="nav-item"><a class="nav-link" href="index.html#services">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="index.html#contact-me">Contact</a></li>
@@ -44,162 +46,188 @@
                 </ul>
             </div>
             <div class="socials d-flex justify-content-center gap-1 me-5">
-                <a href="#" class="text-white"><i class="fa-brands fa-facebook"></i></a>
-                <a href="#" class="text-white"><i class="fa-brands fa-twitter"></i></a>
-                <a href="#" class="text-white"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#" class="text-white"><i class="fa-brands fa-linkedin"></i></a>
-            </div>
+                <a href="https://www.facebook.com" class="text-white" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.twitter.com" class="text-white" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.instagram.com" class="text-white" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com" class="text-white" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+              </div>
         </div>
     </nav>
 
-    <section class="homebg-section mt-5">
-        <div class="profile-card border border-2 border-white mt-5">
-            <button type="button" class="btn btn-link p-0" onclick="toggleProfileDetails()">
-                <img src="images/port43.jpg" class="profile-picture img-fluid mt-2" alt="Profile Picture">  
-            </button>
-            <span class="letter">A</span><span class="letter">l</span><span class="letter">e</span><span class="letter">x</span><span class="letter">a</span>
-            <span class="letter"> </span>
-            <span class="letter">H</span><span class="letter">o</span><span class="letter">l</span><span class="letter">m</span><span class="letter">i</span><span class="letter">n</span><span class="letter">a</span>
-            <div class="profile-details" id="profileDetails">
-              <div class="container-sm d-flex flex-column justify-content-center align-items-center p-2">
-                  <h3 class="text-center">A Web Developer & NOC Engineer</h3>
-                  <p class="text-center">I am a NOC Engineer and a Network Infrastructure Engineer from Zambales, Philippines.</p>
-                  <div class="row justify-content-center text-center">
-                      <div class="col-md-6 mb-2">
-                          <div class="action-buttons">
-                              <a href="/path/to/cv.pdf" download class="btn btn-danger download-cv-btn">Download/CV</a>
-                              <a href="#hire-me-section" class="btn btn-primary hire-me-btn fst-italic">Hire</a>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-          <div class="container-sm newsletter-border mt-1 mb-4">
-              <div class="container-sm d-flex flex-column align-items-center p-3">
-                <h4 class="text-center fst-italic">Subscribe to my Newsletter</h4>
-                  <div class="form-newsletter"><input type="email" class="form-control w-100 subscribe-email" placeholder="Email"></div>
-                  <button class="btn btn-secondary btn-sm mt-2" onclick="window.location.href='#';">Subscribe</button>
-              </div>
+<main>
+  <section class="homebg-section mt-5">
+    <div class="profile-card border border-2 border-white mt-5">
+        <button type="button" class="btn btn-link p-0" onclick="toggleProfileDetails()">
+          <div id="profilePicture" class="position-relative mt-5 ">
+            <img src="images/port43.jpg" class="profile-picture img-fluid mt-2 me-4" alt="Profile Picture">
+            <div class="position-absolute top-0 start-0 p-3 d-flex flex-column">
+                <a href="tel:1234567890" target="_blank" rel="noopener noreferrer" class="text-pink me-4 mt-2" data-bs-toggle="tooltip" data-bs-placement="left" title="123-456-7890">
+                    <i class="fa-solid fa-phone fa-lg contact-icon"></i>
+                </a>
+                <a href="mailto:your.email@example.com" target="_blank" rel="noopener noreferrer" class="text-pink me-4" data-bs-toggle="tooltip" data-bs-placement="left" title="your.email@example.com">
+                    <i class="fa-solid fa-envelope fa-lg contact-icon"></i>
+                </a>
+                <a href="https://zoom.us/j/your-zoom-meeting-id" target="_blank" rel="noopener noreferrer" class="text-pink me-4" data-bs-toggle="tooltip" data-bs-placement="top" title="Join Zoom Meeting">
+                    <i class="fa-solid fa-video fa-lg contact-icon"></i>
+                </a>
             </div>
         </div>
-       <hr>
-        <section id="review-section bg-light">
-            <div class="container">
-              <h2 class="text-center text-secondary fst-italic mt-3">Featured Reviews</h2>
-              <div class="row">
-                <div class="col-lg-4 col-md-6">
-                  <div class="card glass-card">
-                    <img src="/myp1_backup/images/ceo_1.png" class="card-img-top" alt="Kevin Schuler">
-                    <div class="card-body">
-                      <h5 class="card-title text-secondary">Kevin Schuler</h5>
-                      <p class="text-dark tex-dark fst-italic">"Great service! Alexa was very responsive."</p>
-                      <div class="rated-stars">
-                        <span class="star">&#9733;</span>
-                        <span class="star">&#9733;</span>
-                        <span class="star">&#9733;</span>
-                        <span class="star">&#9733;</span>
-                        <span class="star">&#9733;</span>
-                      </div>
+            
+        </button>
+        <span class="letter">M</span><span class="letter">a</span><span class="letter">r</span><span class="letter">k</span>
+<span class="letter"> </span>
+<span class="letter">R</span><span class="letter">y</span><span class="letter">a</span><span class="letter">n</span>
+<span class="letter"> </span>
+<span class="letter">H</span><span class="letter">o</span><span class="letter">l</span><span class="letter">m</span><span class="letter">i</span><span class="letter">n</span><span class="letter">a</span>
+
+        <div class="profile-details" id="profileDetails">
+          <div class="container-sm d-flex flex-column justify-content-center align-items-center p-2">
+              <h3 class="text-center fst-italic fw-light">A Web Developer & NOC Engineer</h3>
+              <p class="text-center fst-italic">"Success is not the key to happiness. Happiness is the key to success. If you love what you are doing, you will be successful." - Albert Schweitzer</p>
+              <div class="row justify-content-center text-center">
+                  <div class="col-md-6 mb-2">
+                    <div class="action-buttons">
+                      <a href="/path/to/cv.pdf" download class="btn btn-danger download-cv-btn">Download/CV</a>
+                      <a href="#hire-me-section" class="btn btn-primary hire-me-btn fst-italic">Hire</a>
                     </div>
-                  </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                  <div class="card glass-card">
-                    <img src="/myp1_backup/images/ceo_2.png" class="card-img-top" alt="Jane Smith">
-                    <div class="card-body">
-                      <h5 class="card-title text-secondary">Chuck Robbins</h5>
-                      <p class="text-dark text-secondary fst-italic">She did meet and exceed my expectations."</p>
-                      <div class="rated-stars">
-                        <span class="star">&#9733;</span>
-                        <span class="star">&#9733;</span>
-                        <span class="star">&#9733;</span>
-                        <span class="star">&#9733;</span>
-                        <span class="star">&#9734;</span>
-                      </div>
-                    </div>
-                  </div>
+              </div>
+              <div class="container-sm newsletter-border mb-4">
+                <div class="container-sm d-flex flex-column align-items-center p-3">
+                  <h4 class="text-center text-dark fst-italic">Subscribe to my Newsletter</h4>
+                    <div class="form-newsletter"><input type="email" class="form-control w-100 subscribe-email" placeholder="Email"></div>
+                    <button class="btn btn-secondary btn-sm mt-2" onclick="window.location.href='#';">Subscribe</button>
                 </div>
-                
-                <div class="col-lg-4 col-md-6">
-                  <div class="card glass-card">
-                    <img src="/myp1_backup/images/ceo_3.png" class="card-img-top" alt="David Lee">
-                    <div class="card-body">
-                      <h5 class="card-title text-secondary">Tarek Robbiata</h5>
-                      <p class="text-dark  fst-italic">"Highly recommend. Professional and efficient."</p>
-                      <div class="rated-stars">
-                        <span class="star">&#9733;</span>
-                        <span class="star">&#9733;</span>
-                        <span class="star">&#9733;</span>
-                        <span class="star">&#9733;</span>
-                        <span class="star">&#9733;</span>
-                      </div>
-                    </div>
+              </div>
+          </div>
+            </div>
+          </div>
+      </div>
+     
+    <section id="review-section bg-light">
+        <div class="container">
+          <h2 class="text-center text-dark  fst-italic mt-3">Featured Reviews</h2>
+          <div class="row">
+            <div class="col-lg-4 col-md-6">
+              <div class="card glass-card">
+                <img src="/myp1_backup/images/ceo_1.png" class="card-img-top" alt="Kevin Schuler">
+                <div class="card-body">
+                  <h5 class="card-title text-secondary">Kevin Schuler</h5>
+                  <p class="text-dark tex-dark fst-italic">"Great service! Alexa was very responsive."</p>
+                  <div class="rated-stars">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
                   </div>
                 </div>
               </div>
             </div>
-          </section>
-    </section>
-          
-    <footer class="footdesign container-fluid bg-light">
-      <div class="container-lg border-bottom pb-4">
-          <div class="row align-items-center">
-              <div class="col-lg-4 mt-4">
-                  <h3>Subscribe to Newsletter</h3>
-                  <p class="fst-italic">Let's get in touch & make something awesome together!</p>
+            <div class="col-lg-4 col-md-6">
+              <div class="card glass-card">
+                <img src="/myp1_backup/images/ceo_2.png" class="card-img-top" alt="Jane Smith">
+                <div class="card-body">
+                  <h5 class="card-title text-secondary">Chuck Robbins</h5>
+                  <p class="text-dark text-secondary fst-italic">She did meet and exceed my expectations."</p>
+                  <div class="rated-stars">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9734;</span>
+                  </div>
+                </div>
               </div>
-              <div class="col-lg-5">
-                  <form class="d-flex">
-                      <input type="text" class="form-control newstext" placeholder="Enter your Email">
-                      <button type="button" class="btn btn-outline-primary btn-news ms-2">Subscribe</button>
-                  </form>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+              <div class="card glass-card">
+                <img src="/myp1_backup/images/ceo_3.png" class="card-img-top" alt="David Lee">
+                <div class="card-body">
+                  <h5 class="card-title text-secondary">Tarek Robbiata</h5>
+                  <p class="text-dark  fst-italic">"Highly recommend. Professional and efficient."</p>
+                  <div class="rated-stars">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                  </div>
+                </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+</section>
+
+<footer class="footdesign container-fluid bg-light">
+  <div class="container-lg border-bottom pb-4">
+      <div class="row align-items-center">
+          <div class="col-lg-4 mt-4">
+              <h3 class="fst-italic fw-light">Subscribe to my Newsletter</h3>
+              <p class="fst-italic">Let's get in touch & make something awesome together!</p>
+          </div>
+          <div class="col-lg-5">
+              <form class="d-flex">
+                  <input type="text" class="form-control newstext" placeholder="Enter your Email">
+                  <button type="button" class="btn btn-outline-danger btn-news ms-2">Subscribe</button>
+              </form>
           </div>
       </div>
-  
-      <div class="container-sm d-flex flex-column flex-lg-row justify-content-end align-items-stretch py-4 border-bottom">
-          <div class="col-lg-4">
-              <h4>CONNECT WITH US</h4>
-              <ul class="list-unstyled ulfooter">
-                  <li><a href="https://twitter.com/" class="nav-link"><i class="fa-brands fa-twitter social-color me-3"></i>Follow me on Twitter</a></li>
-                  <li><a href="https://pinterest.com/" class="nav-link"><i class="fa-brands fa-pinterest social-color me-3"></i>Pin me on Pinterest</a></li>
-                  <li><a href="https://facebook.com/" class="nav-link"><i class="fa-brands fa-facebook social-color me-3"></i>Like me on Facebook</a></li>
-                  <li><a href="https://instagram.com/" class="nav-link"><i class="fa-brands fa-instagram social-color me-3"></i>Follow me on Instagram</a></li>
-              </ul>
-          </div>
-          <div class="col-lg-4">
-              <h4>PORTFOLIO</h4>
-              <ul class="list-unstyled ulfooter align-items-center">
-                  <li><a href="#about-me" class="nav-link">About</a></li>
-                  <li><a href="#services" class="nav-link">Services</a></li>
-              </ul>
-          </div>
-          <div class="col-lg-4">
-              <h4>CONTACT ME</h4>
-              <ul class="list-unstyled ulfooter">
-                  <a href="#" class="btn btn-danger mt-3">Contact Me</a> 
-                  <a href="/path/to/cv.pdf" download class="btn btn-secondary download-cv-btn mb-1">Download/CV</a> 
-              </ul>
-          </div>
-      </div>
-  
-      <div class="copy-right text-center align-items-center py-4">
-          <p class="text-center text-white fst-italic">©2024 All rights reserved | This template is made by Alexa H</p>
-          <ul class="list-inline">
-              <li class="list-inline-item"><a href="?lang=en" class="footer-link text-white">English</a></li>
-              <li class="list-inline-item"><a href="?lang=es" class="footer-link text-white">Español</a></li>
-              <li class="list-inline-item"><a href="privacy.html" class="footer-link text-white">Privacy Policy</a></li>
+  </div>
+
+  <div class="container-sm d-flex flex-column flex-lg-row justify-content-end align-items-stretch py-4 border-bottom">
+      <div class="col-lg-4">
+          <h4 class="fst-italic">CONNECT WITH US</h4>
+          <ul class="list-unstyled ulfooter">
+              <li><a href="https://twitter.com/" class="nav-link" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-twitter social-color me-3"></i>Follow me on Twitter</a></li>
+              <li><a href="https://pinterest.com/" class="nav-link" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-pinterest social-color me-3"></i>Pin me on Pinterest</a></li>
+              <li><a href="https://facebook.com/" class="nav-link" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook social-color me-3"></i>Like me on Facebook</a></li>
+              <li><a href="https://instagram.com/" class="nav-link" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram social-color me-3"></i>Follow me on Instagram</a></li>
           </ul>
-          
       </div>
-  </footer>
-  
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
-    <script>
-        function toggleProfileDetails() {
-            const details = document.getElementById('profileDetails');
-            details.classList.toggle('visible');
-        }
-    </script>
+      <div class="col-lg-4">
+        <h4 class="fst-italic">PORTFOLIO</h4>
+          <ul class="list-unstyled ulfooter align-items-center">
+              <li><a href="index.html#about-me" class="nav-link">About</a></li>
+              <li><a href="index.html#services" class="nav-link">Services</a></li>
+          </ul>
+      </div>
+      <div class="col-lg-4">
+          <h4 class="fst-italic">CONTACT ME</h4>
+          <ul class="list-unstyled ulfooter">
+              <a href="index.html#contact-me" class="btn btn-secondary mt-3 fst-italic">Contact Me</a> 
+              <a href="/path/to/cv.pdf" download class="btn btn-secondary download-cv-btn mb-1 fst-italic">Download CV</a> 
+          </ul>
+      </div>
+  </div>
+
+  <div class="copy-right text-center align-items-center py-4">
+      <p class="text-center text-white fst-italic">©2024 All rights reserved | This template is made by Alexa H</p>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="?lang=en" class="footer-link text-white">English</a></li>
+          <li class="list-inline-item"><a href="?lang=es" class="footer-link text-white">Español</a></li>
+          <li class="list-inline-item"><a href="privacy.html" class="footer-link text-white">Privacy Policy</a></li>
+      </ul>
+      
+  </div>
+</footer>
+    
+</main>
 </body>
 </html>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script>
+    function toggleProfileDetails() {
+        const details = document.getElementById('profileDetails');
+        details.classList.toggle('visible');
+    }
+</script>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

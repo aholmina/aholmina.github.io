@@ -26,20 +26,6 @@ html {
   object-fit: fill;
 }
 
-.btn-danger {
-  background-color: #c20000 !important;
-  vertical-align: middle;
-}
-
-.btn-primary {
-  background-color: #c20000 !important;
-  border: 1px solid #c20000 !important;
-}
-
-.btn-danger:hover {
-  background-color: #ec3b3b !important;
-}
-
 .navcolor {
   color: grey;
 }
@@ -63,19 +49,9 @@ html {
   gap: 15px;
 }
 
-.text-c20 {
-  background-color: #c20000;
-  width: 100px;
-  height: 25px;
-  color: #fff;
-  text-align: center;
-}
-
 .portfoliowidth {
   width: 30%;
 }
-
-
 
 #myBtn:hover {
   background-color: pink;
@@ -104,7 +80,6 @@ html {
 .footer-link:hover {
   text-decoration: none; 
 }
-
 
 .fa-brands {
   padding: 20px;
@@ -150,7 +125,6 @@ html {
   text-align: center;
   color: #b0aeab;
 }
-
 
 .afooter {
   display: block;
@@ -225,19 +199,17 @@ html {
   font-size: xx-large;
 }
 
-.hero1-section {
-  background: url("../images/homebg3.jpg") no-repeat center center/cover;
-  color: white;
-  padding: 50px;
-  object-fit: contain;
-}
-
 .profilepicture {
   width: 500px;
   height: 500px;
   border-radius: 50%;
   object-fit: fill;
 }
+
+.letter {
+  font-style: italic;
+}
+
 
 /* Newsletter Section */
 .newsletter-border {
@@ -282,16 +254,6 @@ html {
   background-color: #5a6268;
 }
 
-.alert {
-  margin: 0;
-  padding: 5px 10px;
-}
-
-.alert-danger {
- 
-  background-color: #f8d7da;
-  border-color: #f5c6cb;
-}
 
 .contact-info p a {
   text-decoration: none;
@@ -308,49 +270,6 @@ html {
   position: relative;
 }
 
-.carousel-item {
-  height: 300px;
-  min-height: 300px;
-  background: no-repeat center center scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-.carousel-caption {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.skill {
-  cursor: pointer;
-  overflow: hidden;
-}
-
-.skill .skill-details {
-  transform: translateX(100%);
-  opacity: 0;
-  transition: transform 0.5s ease, opacity 0.5s ease;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  padding: 20px;
-  box-sizing: border-box;
-  background: linear-gradient(pink, gray, pink);
-}
-
-.skill.active .skill-details {
-  transform: translateX(0);
-  opacity: 1;
-}
-
-.skill-content {
-  position: relative;
-  z-index: 1;
-}
 
 /* Navbar Styles */
 .navbar {
@@ -378,25 +297,27 @@ html {
 
 .navbar ul li a {
   display: block;
-  color: whitesmoke;
   padding: 14px 20px;
   text-decoration: none;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .navbar ul li a:hover {
- 
   color: whitesmoke;
 }
 
-.purple-gradient-text {
-  background: rgb(8, 86, 8);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+
+.dropdown-menu {
+  display: none;
+  background: linear-gradient(pink, gray, pink);
+ 
 }
 
+/* Show dropdown when the parent dropdown is active */
+.dropdown.show .dropdown-menu {
+  display: block;
 
-
+}
 
 .btn {
   display: inline-block;
@@ -449,12 +370,9 @@ html {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: box-shadow 0.3s ease;
+  background: linear-gradient(pink, gray, pink);
 }
 
-.profile-card {
-  background: linear-gradient(pink, gray, pink);
-  
-}
 
 .profile-card:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -495,8 +413,6 @@ html {
   margin-right: 10px;
 }
 
-
-
 .col-md-6 img.img-fluid {
   max-width: 100%; 
   height: auto;
@@ -522,7 +438,7 @@ html {
 
 .contact-section {
 
-  background: linear-gradient(gray, pink, gray);
+  background: linear-gradient( pink, gray,pink);
 }
 
 
@@ -552,15 +468,25 @@ html {
   border: none;
 }
 
-
-
+.text-pink {
+  color: #FF69B4 !important; /* Hot pink color */
+}
+.text-pink:hover {
+  color: #FF1493 !important; /* Deep pink color on hover */
+}
+.contact-icon {
+  font-size: 1.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 button.btn-primary {
   margin-top: 1rem;
   background-color: #007bff;
   border: none;
 }
-
-
 
 
 #contact-me {
@@ -615,7 +541,6 @@ button.btn-primary {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-
 .image-wrapper {
   max-width: 100px; 
   margin: 0 auto; 
@@ -627,13 +552,6 @@ button.btn-primary {
 .btn-secondary {
   background-color: #6c757d;
 }
-
-
-
-
-
-
-
 
 @media (min-width: 370px) and (max-width: 471px) {
   body {
@@ -932,8 +850,6 @@ button.btn-primary {
 }
 
 
-
-
 @keyframes slideIn {
   from {
       opacity: 0;
@@ -963,7 +879,6 @@ button.btn-primary {
 .modal-content {
   animation: modalFadeIn 0.3s ease-in-out;
 }
-
 
 
 .review-card {
@@ -1247,9 +1162,6 @@ button.btn-primary {
   font-size: 0.9rem;
 }
 
-
-
-/* Custom styles */
 
 #services {
   background: linear-gradient(gray, pink, gray);
