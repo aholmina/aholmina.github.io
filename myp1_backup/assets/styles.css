@@ -1090,11 +1090,15 @@ button.btn-primary {
 }
 
 .card-img-top {
+  margin-top: 20px;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   height: 200px; 
-  object-fit: fill; 
-  width: 100%; 
+  object-fit: contain; 
+  border-radius: 20px;
+  height: fit-content;
+  width: max-content;
+   
 }
 
 .rated-stars {
