@@ -15,18 +15,7 @@ html {
   scroll-behavior: smooth;
 }
 
-.bggrey {
-  background-color: #f1f1f1;
-  
-}
 
-.shadowbox.bggrey {
-  background: linear-gradient(pink, gray, pink);
-}
-
-#container-fluid {
-  background: linear-gradient(gray,pink, gray, pink);
-}
 .profilepicture {
   width: 300px;
   height: 300px;
@@ -231,11 +220,6 @@ body {
   z-index: 1;
 }
 
-.profile-picture {
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease;
-}
-
 .profile-picture:hover {
   transform: scale(1.05);
 }
@@ -264,7 +248,7 @@ body {
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+
 }
 
 .card-img-bottom {
@@ -376,54 +360,51 @@ body {
 }
 
 
-/* Navbar Styles */
+/* Add this to your existing CSS file */
+
 .navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: auto; 
-  background-color: whitesmoke;
-  z-index: 1000;
-  justify-content: right;
-  background: linear-gradient(pink, gray, pink);
+  transition: all 0.3s ease;
 }
 
-.navbar ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
+.navbar-brand {
+  font-size: 2.0rem;
 }
 
-.navbar ul li {
-  margin: 0;
-  padding: 0;
+.nav-link {
+  position: relative;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease;
 }
 
-.navbar ul li a {
-  display: block;
-  padding: 14px 20px;
-  text-decoration: none;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.navbar ul li a:hover {
-  color: whitesmoke;
-}
 
 
 .dropdown-menu {
-  display: none;
-  background: linear-gradient(pink, gray, pink);
- 
+  border: none;
+  
 }
 
-/* Show dropdown when the parent dropdown is active */
-.dropdown.show .dropdown-menu {
-  display: block;
-
+.dropdown-item:hover {
+  background-color: var(--bs-light);
 }
 
+.social-icons a {
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: var(--bs-primary) !important;
+}
+
+@media (max-width: 991.98px) {
+  .navbar-nav {
+    padding-top: 1rem;
+  }
+  
+  .social-icons {
+    padding-bottom: 1rem;
+  }
+}
 .btn {
   display: inline-block;
   padding: 10px 20px;
