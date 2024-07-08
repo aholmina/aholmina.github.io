@@ -194,7 +194,7 @@ html {
 
 
 .skills-experience{
-  background: linear-gradient( pink, gray);
+  background-color: pink;
 
 
 }
@@ -222,7 +222,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(45deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 100%);
+  background-color: pink;
   z-index: 0;
 }
 
@@ -288,7 +288,7 @@ body {
 
 
 .hero-section {
-  background: linear-gradient(gray, rgb(237, 121, 140),gray,pink);
+  background-color: pink;
   color: white;
   padding: 50px 0;
   object-fit: fill;
@@ -537,10 +537,6 @@ button.btn-primary {
   border: none;
 }
 
-.contact-section {
-  background: linear-gradient(gray, rgb(237, 121, 140),gray,pink);
-
-}
 
 .contact-image {
   object-fit: cover;
@@ -558,7 +554,7 @@ button.btn-primary {
   color: grey;
 }
 #contact-me {
-  background-color: rgba(108, 117, 125, 0.3);
+  background:  pink;
   padding: 2rem 0;
 }
 
@@ -734,7 +730,7 @@ button.btn-primary {
 
 
 #work-experience {
-  background: linear-gradient(gray, rgb(237, 121, 140),gray,pink);
+ background-color: pink;
 }
 
 .glass-card {
@@ -1255,7 +1251,7 @@ button.btn-primary {
 
 
 #blog {
-  background: linear-gradient(pink, gray, pink);
+  background: linear-gradient(pink, gray);
  
 }
 .blog-card {
