@@ -5,8 +5,6 @@
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
 }
-
-
 body,
 html {
   margin: 0;
@@ -14,15 +12,12 @@ html {
   font-family: 'Open Sans', Arial, Helvetica, sans-serif;
   scroll-behavior: smooth;
 }
-
-
 .profilepicture {
   width: 300px;
   height: 300px;
   border-radius: 50%;
   object-fit: fill;
 }
-
 .navcolor {
   color: grey;
 }
@@ -61,14 +56,11 @@ html {
     justify-content: space-between;
   }
 }
-
 .footdesign {
   background: linear-gradient( pink, gray);
 
   color: #fff;
 }
-
-
 .footer-link {
   text-decoration: none; 
   color: inherit; 
@@ -143,7 +135,6 @@ html {
   justify-content: center;
 }
 
-
 .subscribe-email {
   vertical-align: middle;
 }
@@ -166,7 +157,6 @@ html {
   text-align: center;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   
- 
 }
 
 .skill h3 {
@@ -180,7 +170,6 @@ html {
   font-size: 1rem;
   line-height: 1.5;
 }
-
 
 .skills-experience{
   background-color: pink;
@@ -220,27 +209,6 @@ body {
   z-index: 1;
 }
 
-.profile-picture:hover {
-  transform: scale(1.05);
-}
-
-.profile-backdrop {
-  position: absolute;
-  top: 10%;
-  left: 10%;
-  right: 10%;
-  bottom: 10%;
-  background-color: var(--bs-secondary);
-  filter: blur(40px);
-  opacity: 0.5;
-  z-index: -1;
-}
-
-.badge {
-  font-weight: 500;
-  letter-spacing: 0.5px;
-}
-
 .card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
@@ -268,9 +236,6 @@ body {
   --bs-gutter-y: 1rem;
 }
 
-
-
-
 .hero-section {
   background-color: pink;
   color: white;
@@ -283,6 +248,46 @@ body {
   color: white;
   padding: 50px 0;
   object-fit: fill;
+}
+
+.animated-heading {
+ 
+  font-weight: bold;
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(
+    to right, purple, skyblue, pink, gray
+  
+  );
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: gradientMove 5s linear infinite, flip 10s ease-in-out infinite;
+}
+
+@keyframes gradientMove {
+  to {
+    background-position: 200% center;
+  }
+}
+
+@keyframes flip {
+  0%, 80% {
+    transform: rotateX(0deg);
+  }
+  90% {
+    transform: rotateX(180deg);
+  }
+  100% {
+    transform: rotateX(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .animated-heading {
+    font-size: 1.8rem;
+  }
 }
 .letter {
   font-size: xx-large;
@@ -299,8 +304,6 @@ body {
   font-style: italic;
 }
 
-
-/* Newsletter Section */
 .newsletter-border {
   padding: 20px;
   background-color: #666(
@@ -308,7 +311,7 @@ body {
     255,
     255,
     0.8
-  ); /* Semi-transparent background color */
+  ); 
   margin-top: 20px;
 }
 
@@ -333,7 +336,6 @@ body {
   border-radius: 5px;
   transition: background-color 0.2s;
 }
-
 .btn-secondary {
   background-color: #6c757d;
   color: #fff;
@@ -342,8 +344,6 @@ body {
 .btn-secondary:hover {
   background-color: #5a6268;
 }
-
-
 .contact-info p a {
   text-decoration: none;
   color: inherit;
@@ -360,31 +360,35 @@ body {
 }
 
 
-/* Add this to your existing CSS file */
-
 .navbar {
   transition: all 0.3s ease;
+}
+
+.gradient-text-alexa {
+  background: linear-gradient(to right, pink, skyblue);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.gradient-text-holmina {
+  background: linear-gradient(to right,  pink, skyblue);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
 .navbar-brand {
   font-size: 2.0rem;
 }
 
+
 .nav-link {
   position: relative;
   padding: 0.5rem 1rem;
   transition: color 0.3s ease;
-}
-
-
-
-.dropdown-menu {
-  border: none;
-  
-}
-
-.dropdown-item:hover {
-  background-color: var(--bs-light);
 }
 
 .social-icons a {
@@ -459,7 +463,6 @@ body {
   background: linear-gradient(pink, gray, pink);
 }
 
-
 .profile-card:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
@@ -517,7 +520,6 @@ button.btn-primary {
   background-color: grey;
   border: none;
 }
-
 
 .contact-image {
   object-fit: cover;
@@ -708,8 +710,6 @@ button.btn-primary {
     margin-bottom: 20px;
   }
 }
-
-
 #work-experience {
  background-color: pink;
 }
@@ -743,7 +743,6 @@ button.btn-primary {
 .company-name {
   font-weight: bold;
 }
-
 
 .card {
   background-color: #f3f3f3; 
@@ -878,15 +877,6 @@ button.btn-primary {
   transform: scale(1.05);
 }
 
-.modal-body {
-  padding: 0;
-}
-
-.modal-body img {
-  width: 100%;
-  height: 300px;
-}
-
 .hover-card {
   position: relative;
   overflow: hidden;
@@ -953,11 +943,9 @@ button.btn-primary {
   }
 }
 
-
 #portfolio-title {
     background: linear-gradient(gray, pink, gray);
 }
-
 
 @keyframes slideIn {
   from {
@@ -989,7 +977,6 @@ button.btn-primary {
   animation: modalFadeIn 0.3s ease-in-out;
 }
 
-
 .review-card {
   position: relative;
   background-color: #252525; 
@@ -1012,7 +999,6 @@ button.btn-primary {
   height: 100%; 
   background: linear-gradient(gray, pink, gray);
 }
-
 .review-details {
   position: absolute;
   margin-top: 50px;
@@ -1056,8 +1042,6 @@ button.btn-primary {
   opacity: 0; 
  
 }
-
-
 .typewriter {
   overflow: hidden;
   white-space: nowrap; 
@@ -1070,10 +1054,6 @@ button.btn-primary {
   from { width: 0 }
   to { width: 100% }
 }
-
-
-
-/* Container styles */
 #review-section {
   background-color: #f0f0f0; 
   padding: 40px 0;
@@ -1126,7 +1106,7 @@ button.btn-primary {
 
 .star {
   font-size: 1.5rem;
-  color: #ff69b4; /* Pink color for stars */
+  color: #ff69b4; 
 }
 
 .star:hover {
@@ -1145,16 +1125,10 @@ button.btn-primary {
     opacity: 0.5;
   }
 }
-
-
-
-/* Container styles */
 #review-section {
   background-color: #f0f0f0; 
   padding: 40px 0;
 }
-
-/* Card styles */
 .glass-card {
   background-color: rgba(0, 0, 0, 0.5);
   border: none;
@@ -1209,7 +1183,6 @@ button.btn-primary {
   width: max-content;
    
 }
-
 .rated-stars {
   text-align: center;
   margin-top: 10px;
@@ -1226,10 +1199,6 @@ button.btn-primary {
 #review-section {
   background: linear-gradient(gray, pink, gray);
 }
-
-
-
-
 
 #blog {
   background: linear-gradient(pink, gray);
@@ -1283,11 +1252,8 @@ button.btn-primary {
   font-size: 0.9rem;
 }
 
-
 #services {
   background: linear-gradient(gray, pink, gray);
-
-
 }
 #services .card {
   transition: transform 0.3s ease-in-out;
@@ -1297,12 +1263,10 @@ button.btn-primary {
 #services .card:hover {
   transform: translateY(-5px);
 }
-
 .service-card {
   border-radius: 15px;
   transition: all 0.3s ease;
 }
-
 
 .service-btn {
   border-radius: 25px;
@@ -1362,17 +1326,13 @@ button.btn-primary {
   max-height: 400px;
   overflow-y: auto;
 }
-
 .modal-footer {
   border-top: 1px solid #ddd;
 }
-
-
 .project-img {
   height: 150px; 
   object-fit: fill;
 }
-
 
 #projects {
   background: linear-gradient(gray, pink, gray);
@@ -1391,7 +1351,6 @@ button.btn-primary {
 .main-blog-section img {
   object-fit: fit;
 }
-
 .thumbnail-section {
   width: 100%;
   height: 33.33%; 
@@ -1403,11 +1362,9 @@ button.btn-primary {
   height: 100%;
   object-fit: cover;
 }
-
 .dropdown-menu {
   width: 100%;
 }
-
 .d-flex.flex-column.align-items-start.h-100 {
   height: 100%;
 }
@@ -1417,7 +1374,6 @@ button.btn-primary {
   bottom: 10px;
   left: 10px;
 }
-
 .thumbnail-section .dropdown-menu {
   position: absolute;
   top: 100%;
@@ -1431,12 +1387,8 @@ button.btn-primary {
   display: block;
 }
 
-
 @media (max-width: 768px) {
-  /* Styles for tablets and below */
 }
-
 @media (max-width: 576px) {
-  /* Styles for mobile devices */
 }
 
