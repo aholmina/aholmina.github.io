@@ -245,18 +245,19 @@ body {
 
 .homebg-section {
   background: url("../images/homebg1.jpg") no-repeat center center/cover;
-  color: white;
+  background-color: white;
   padding: 50px 0;
   object-fit: fill;
 }
 
 .animated-heading {
- 
+  
   font-weight: bold;
   text-align: center;
   padding: 20px;
   background: linear-gradient(
-    to right, purple, skyblue, pink, gray
+    to right, purple, rgb(219, 75, 166), pink, gray
+
   
   );
   background-size: 200% auto;
