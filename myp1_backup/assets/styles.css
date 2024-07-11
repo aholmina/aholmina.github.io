@@ -139,14 +139,6 @@ html {
   vertical-align: middle;
 }
 
-.skills-section {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 30px;
- 
- 
-}
 
 .skill {
   background-color: gray;
@@ -227,7 +219,6 @@ body {
   transform: scale(1.1);
 }
 
-/* Bootstrap 5.3.3 specific adjustments */
 .row {
   --bs-gutter-x: 1.5rem;
 }
@@ -567,7 +558,7 @@ button.btn-primary {
 }
 
 .contact-form .form-control, .modal-content .form-control {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: pink;
   border: none;
   color: #000;
 }
@@ -712,8 +703,17 @@ button.btn-primary {
   }
 }
 #work-experience {
- background-color: pink;
+  background-color: pink;
 }
+.work-experience {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  
+}
+
 
 .glass-card {
   position: relative;
@@ -970,13 +970,7 @@ button.btn-primary {
   }
 }
 
-.about-me-carousel {
-  animation: slideIn 0.5s ease-in-out;
-}
 
-.modal-content {
-  animation: modalFadeIn 0.3s ease-in-out;
-}
 
 .review-card {
   position: relative;
@@ -1256,23 +1250,6 @@ button.btn-primary {
 #services {
   background: linear-gradient(gray, pink, gray);
 }
-#services .card {
-  transition: transform 0.3s ease-in-out;
-  background: linear-gradient(gray,gray,pink);
-}
-
-#services .card:hover {
-  transform: translateY(-5px);
-}
-.service-card {
-  border-radius: 15px;
-  transition: all 0.3s ease;
-}
-
-.service-btn {
-  border-radius: 25px;
-  padding: 10px 20px;
-}
 
 /* Blog Card */
 .blog-card {
@@ -1393,3 +1370,280 @@ button.btn-primary {
 @media (max-width: 576px) {
 }
 
+
+
+.professional-highlights .card {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.professional-highlights .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.professional-highlights .icon-wrapper {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-bottom: 1rem;
+}
+
+.professional-highlights h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.professional-highlights p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.professional-highlights .card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.professional-highlights .card-text {
+  flex-grow: 1;
+}
+
+.professional-highlights .image-wrapper {
+  height: 200px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.professional-highlights img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.skill-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  height: 250px;
+  transition: all 0.3s ease;
+}
+
+.skill-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, #ff00aa, #00aaff);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.skill-card:hover::before {
+  opacity: 0.7;
+}
+
+.skill-content {
+  position: relative;
+  padding: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.skill-card:hover .skill-content {
+  transform: translateX(-10px);
+}
+
+.skill-icon {
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+}
+
+.skill-card:hover .skill-icon {
+  transform: scale(1.1);
+}
+
+.skill-card h3 {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+}
+
+.skill-card p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.skill-card:hover h3,
+.skill-card:hover p {
+  color: #fff;
+}
+
+.skill-card:hover {
+  box-shadow: 0 0 20px rgba(0, 170, 255, 0.5);
+  transform: translateY(-5px);
+}
+
+.project-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  aspect-ratio: 16 / 9; /* This sets a consistent aspect ratio */
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: fill; /* This ensures the image covers the area without distortion */
+  
+ 
+}
+
+.project-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: linear-gradient(to top, #FFC0CB, #87CEEB, #808080);
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  
+}
+
+.project-card:hover .project-overlay {
+  height: 100%;
+}
+
+.project-title {
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease 0.1s;
+}
+
+.project-description {
+  color: white;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease 0.2s;
+}
+
+.project-card:hover .project-title,
+.project-card:hover .project-description {
+  opacity: 1;
+}
+
+.project-overlay .btn {
+  opacity: 0;
+  transition: opacity 0.3s ease 0.3s;
+}
+
+.project-card:hover .btn {
+  opacity: 1;
+}
+
+
+.services-section {
+  background-color: #f8f9fa;
+}
+
+.isometric-card {
+  perspective: 1000px;
+  height: 300px;
+  margin-bottom: 30px;
+}
+
+.isometric-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  transform: rotateX(15deg) rotateY(-15deg);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.isometric-card:hover .isometric-card-inner {
+  transform: rotateX(0deg) rotateY(0deg);
+}
+
+.isometric-card-front, .isometric-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.isometric-card-front {
+  background: linear-gradient(135deg, #87CEEB, #FFC0CB);
+  color: white;
+}
+
+.isometric-card-back {
+  background: linear-gradient(135deg, #FFC0CB, #87CEEB);
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.isometric-card:hover .isometric-card-inner {
+  transform: rotateY(180deg);
+}
+
+.isometric-card h4 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.isometric-card p {
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.isometric-card .btn {
+  background-color: white;
+  color: #87CEEB;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.isometric-card .btn:hover {
+  background-color: gray;
+  color: white;
+}
