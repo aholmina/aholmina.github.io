@@ -591,15 +591,6 @@ button.btn-primary {
   text-shadow: 1px 1px 1px var(--neumorphic-shadow-light);
 }
 
-.neumorphic-carousel {
-  background: var(--neumorphic-bg);
-  border-radius: 20px;
-  box-shadow: 
-    8px 8px 15px var(--neumorphic-shadow-dark),
-    -8px -8px 15px var(--neumorphic-shadow-light);
-  padding: 30px;
-}
-
 .neumorphic-card {
   background: var(--neumorphic-bg);
   border-radius: 15px;
@@ -611,56 +602,6 @@ button.btn-primary {
   overflow: hidden;
 }
 
-.neumorphic-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 
-    8px 8px 15px var(--neumorphic-shadow-dark),
-    -8px -8px 15px var(--neumorphic-shadow-light);
-}
-
-.neumorphic-card img {
-  transition: transform 0.3s ease;
-}
-
-.neumorphic-card:hover img {
-  transform: scale(1.05);
-}
-
-.neumorphic-control {
-  width: 50px;
-  height: 50px;
-  background: var(--neumorphic-bg);
-  border-radius: 50%;
-  box-shadow: 
-    3px 3px 6px var(--neumorphic-shadow-dark),
-    -3px -3px 6px var(--neumorphic-shadow-light);
-  transition: all 0.2s ease;
-}
-
-.neumorphic-control:hover {
-  box-shadow: 
-    inset 2px 2px 5px var(--neumorphic-shadow-dark),
-    inset -2px -2px 5px var(--neumorphic-shadow-light);
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  filter: invert(1) grayscale(100);
-}
-
-.carousel-item {
-  transition: transform 0.6s ease-in-out;
-}
-
-.carousel-item-next:not(.carousel-item-start),
-.active.carousel-item-end {
-  transform: translateX(100%);
-}
-
-.carousel-item-prev:not(.carousel-item-end),
-.active.carousel-item-start {
-  transform: translateX(-100%);
-}
 
 @media (max-width: 991px) {
   .neumorphic-card {
@@ -1639,4 +1580,73 @@ button.btn-primary {
     width: 200px;
     height: 200px;
   }
+}
+
+.work-experience {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 30px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.work-experience::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(135, 206, 235, 0.5), rgba(255, 192, 203, 0.5));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.work-experience:hover {
+  transform: translateY(-5px);
+}
+
+.work-experience:hover::before {
+  opacity: 1;
+}
+
+.work-experience:hover {
+  box-shadow: 
+    0 10px 20px rgba(135, 206, 235, 0.3),
+    0 6px 6px rgba(255, 192, 203, 0.3);
+}
+
+.job-title {
+  color: #333;
+  font-weight: bold;
+}
+
+.company-name {
+  color: #666;
+  font-style: italic;
+}
+
+.date {
+  color: #888;
+}
+
+.job-description ul {
+  padding-left: 20px;
+}
+
+.job-description li {
+  margin-bottom: 5px;
+}
+
+/* Ensure the content remains readable on hover */
+.work-experience:hover .job-title,
+.work-experience:hover .company-name,
+.work-experience:hover .date,
+.work-experience:hover .job-description li {
+  position: relative;
+  z-index: 1;
 }
