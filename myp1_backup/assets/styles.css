@@ -1642,7 +1642,6 @@ button.btn-primary {
   margin-bottom: 5px;
 }
 
-/* Ensure the content remains readable on hover */
 .work-experience:hover .job-title,
 .work-experience:hover .company-name,
 .work-experience:hover .date,
@@ -1650,3 +1649,5 @@ button.btn-primary {
   position: relative;
   z-index: 1;
 }
+
+
