@@ -1612,3 +1612,31 @@ button.btn-primary {
   background-color: gray;
   color: white;
 }
+
+
+.swiper-container {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
+
+@media (max-width: 768px) {
+  .swiper-slide {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 576px) {
+  .swiper-slide {
+    width: 200px;
+    height: 200px;
+  }
+}
