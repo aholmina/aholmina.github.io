@@ -140,34 +140,6 @@ html {
 }
 
 
-.skill {
-  background-color: gray;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 20px;
-  margin: 10px;
-  text-align: center;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  
-}
-
-.skill h3 {
-  color: #333;
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
-
-.skill p {
-  color: #666;
-  font-size: 1rem;
-  line-height: 1.5;
-}
-
-.skills-experience{
-  background-color: pink;
-
-
-}
 /* Hero Section */
 
 :root {
@@ -380,7 +352,6 @@ body {
 }
 
 
-
 .btn-secondary {
   background-color: #6c757d;
   color: #fff;
@@ -509,7 +480,6 @@ button.btn-primary {
   color: #666;
 }
 
-
 .contact-form-wrapper {
   max-width: 600px;
   margin: 0 auto;
@@ -580,34 +550,11 @@ button.btn-primary {
   --neumorphic-shadow-dark: #a3b1c6;
 }
 
-.neumorphic-section {
-  background-color: var(--neumorphic-bg);
-  padding: 50px 0;
-
-}
-
 .neumorphic-text {
   color: #333;
   text-shadow: 1px 1px 1px var(--neumorphic-shadow-light);
 }
 
-.neumorphic-card {
-  background: var(--neumorphic-bg);
-  border-radius: 15px;
-  box-shadow: 
-    5px 5px 10px var(--neumorphic-shadow-dark),
-    -5px -5px 10px var(--neumorphic-shadow-light);
-  transition: all 0.3s ease;
-  cursor: pointer;
-  overflow: hidden;
-}
-
-
-@media (max-width: 991px) {
-  .neumorphic-card {
-    margin-bottom: 20px;
-  }
-}
 #work-experience {
   background-color: pink;
 }
@@ -619,7 +566,6 @@ button.btn-primary {
   margin-bottom: 20px;
   
 }
-
 
 .glass-card {
   position: relative;
@@ -683,7 +629,6 @@ button.btn-primary {
   color: #e75480; 
   font-weight: bold; 
 }
-
 
 .profile-title {
   display: flex;
@@ -876,8 +821,6 @@ button.btn-primary {
   }
 }
 
-
-
 .review-card {
   position: relative;
   background-color: #252525; 
@@ -943,13 +886,7 @@ button.btn-primary {
   opacity: 0; 
  
 }
-.typewriter {
-  overflow: hidden;
-  white-space: nowrap; 
-  margin: 0; 
-  letter-spacing: 0.15em; 
-  animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite; 
-}
+
 
 @keyframes typing {
   from { width: 0 }
@@ -1109,7 +1046,7 @@ button.btn-primary {
   margin-bottom: 30px;
   overflow: hidden;
   transition: transform 0.3s ease;
-  height: 400px; /* Set a fixed height for the cards */
+  height: 400px; 
   display: flex;
   flex-direction: column;
   position: relative;
@@ -1157,14 +1094,14 @@ button.btn-primary {
   background: linear-gradient(gray, pink, gray);
 }
 
-/* Blog Card */
+
 .blog-card {
   border: 1px solid #ddd;
   border-radius: 8px;
   overflow: hidden;
 }
 
-/* Blog Actions (Like and Comment Buttons) */
+
 .blog-actions {
   display: flex;
   justify-content: space-between;
@@ -1190,29 +1127,6 @@ button.btn-primary {
   margin-right: 10px;
 }
 
-/* Modal Styling */
-.modal-content {
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.modal-header {
-  border-bottom: 1px solid #ddd;
-}
-
-.modal-title {
-  font-weight: bold;
-}
-
-.modal-body {
-  max-height: 400px;
-  overflow-y: auto;
-}
-.modal-footer {
-  border-top: 1px solid #ddd;
-}
 .project-img {
   height: 150px; 
   object-fit: fill;
@@ -1641,7 +1555,6 @@ button.btn-primary {
 .job-description li {
   margin-bottom: 5px;
 }
-
 .work-experience:hover .job-title,
 .work-experience:hover .company-name,
 .work-experience:hover .date,
@@ -1651,3 +1564,36 @@ button.btn-primary {
 }
 
 
+.isometric-effect {
+  background: white;
+  border-radius: 15px;
+  border: 3px solid transparent;
+  background-clip: padding-box;
+  position: relative;
+  transform: perspective(1000px) rotateX(5deg) rotateY(-5deg);
+  transition: all 0.3s ease;
+  box-shadow: 
+      10px 10px 20px rgba(135, 206, 235, 0.3),
+      -10px -10px 20px rgba(255, 192, 203, 0.3);
+}
+.isometric-effect::before {
+  content: '';
+  position: absolute;
+  top: -3px; right: -3px; bottom: -3px; left: -3px;
+  background: linear-gradient(45deg, skyblue, pink);
+  border-radius: 15px;
+  z-index: -1;
+}
+.isometric-effect:hover {
+  transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
+  box-shadow: 
+      15px 15px 30px rgba(135, 206, 235, 0.4),
+      -15px -15px 30px rgba(255, 192, 203, 0.4);
+}
+.work-experience {
+  margin-bottom: 30px;
+  padding: 20px;
+}
+.work-experience img {
+  border-radius: 5px;
+}
