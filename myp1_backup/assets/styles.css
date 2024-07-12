@@ -12,6 +12,63 @@ html {
   font-family: 'Open Sans', Arial, Helvetica, sans-serif;
   scroll-behavior: smooth;
 }
+
+
+
+.navbar {
+  transition: all 0.3s ease;
+}
+
+.gradient-text-alexa {
+  background: linear-gradient(to right, pink, skyblue);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.gradient-text-holmina {
+  background: linear-gradient(to right,  pink, skyblue);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.navbar-brand {
+  font-size: 2.0rem;
+}
+
+.nav-link {
+  position: relative;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a {
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: var(--bs-primary) !important;
+}
+
+@media (max-width: 991.98px) {
+  .navbar-nav {
+    padding-top: 1rem;
+  }
+  
+  .social-icons {
+    padding-bottom: 1rem;
+  }
+}
+
+
+
+
+
+
 .profilepicture {
   width: 300px;
   height: 300px;
@@ -288,56 +345,6 @@ body {
   position: relative;
 }
 
-
-.navbar {
-  transition: all 0.3s ease;
-}
-
-.gradient-text-alexa {
-  background: linear-gradient(to right, pink, skyblue);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-}
-
-.gradient-text-holmina {
-  background: linear-gradient(to right,  pink, skyblue);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-}
-
-.navbar-brand {
-  font-size: 2.0rem;
-}
-
-
-.nav-link {
-  position: relative;
-  padding: 0.5rem 1rem;
-  transition: color 0.3s ease;
-}
-
-.social-icons a {
-  font-size: 1.2rem;
-  transition: color 0.3s ease;
-}
-
-.social-icons a:hover {
-  color: var(--bs-primary) !important;
-}
-
-@media (max-width: 991.98px) {
-  .navbar-nav {
-    padding-top: 1rem;
-  }
-  
-  .social-icons {
-    padding-bottom: 1rem;
-  }
-}
 .btn {
   display: inline-block;
   padding: 10px 20px;
@@ -350,7 +357,6 @@ body {
   text-decoration: none;
   margin: 10px;
 }
-
 
 .btn-secondary {
   background-color: #6c757d;
@@ -711,24 +717,6 @@ button.btn-primary {
   }
 }
 
-.thumbnail-container {
-  position: relative;
-}
-
-.thumbnail {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.3s ease;
-  cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-}
-
-.thumbnail:hover {
-  transform: scale(1.05);
-}
-
 .hover-card {
   position: relative;
   overflow: hidden;
@@ -858,19 +846,16 @@ button.btn-primary {
   opacity: 1; 
 
 }
-
 .review-details h3,
 .review-details p {
   color: #fff; 
   margin: 0;
  
 }
-
 .review-text {
   font-size: 16px;
   line-height: 1.6;
 }
-
 .review-image {
   position: absolute;
   top: 0;
@@ -881,23 +866,15 @@ button.btn-primary {
   transition: opacity 0.3s ease; 
   opacity: 1;
 }
-
 .review-card:hover .review-image {
   opacity: 0; 
  
-}
-
-
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
 }
 #review-section {
   background-color: #f0f0f0; 
   padding: 40px 0;
 }
 
-/* Card styles */
 .glass-card {
   background-color: rgba(0, 0, 0, 0.5); 
   border: none;
@@ -1042,6 +1019,22 @@ button.btn-primary {
   background: linear-gradient(pink, gray);
  
 }
+
+.main-blog-section {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-blog-section img {
+  object-fit: fit;
+}
+.thumbnail-section {
+  width: 100%;
+  height: 33.33%; 
+  position: relative;
+}
+
 .blog-card {
   margin-bottom: 30px;
   overflow: hidden;
@@ -1093,15 +1086,11 @@ button.btn-primary {
 #services {
   background: linear-gradient(gray, pink, gray);
 }
-
-
 .blog-card {
   border: 1px solid #ddd;
   border-radius: 8px;
   overflow: hidden;
 }
-
-
 .blog-actions {
   display: flex;
   justify-content: space-between;
@@ -1140,21 +1129,6 @@ button.btn-primary {
   background: linear-gradient(gray, pink, gray);
 }
 
-.main-blog-section {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.main-blog-section img {
-  object-fit: fit;
-}
-.thumbnail-section {
-  width: 100%;
-  height: 33.33%; 
-  position: relative;
-}
-
 .img-thumbnail {
   width: 100%;
   height: 100%;
@@ -1189,8 +1163,6 @@ button.btn-primary {
 }
 @media (max-width: 576px) {
 }
-
-
 
 .professional-highlights .card {
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
@@ -1316,6 +1288,46 @@ button.btn-primary {
 .skill-card:hover {
   box-shadow: 0 0 20px rgba(0, 170, 255, 0.5);
   transform: translateY(-5px);
+}
+
+
+:root {
+  --primary-color: #ff9a9e;
+  --secondary-color: #a18cd1;
+  --accent-color: #fad0c4;
+}
+
+.main-project {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.main-project-image {
+  width: 100%;
+  height: 400px;
+  object-fit: fill;
+}
+
+.main-project-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  color: white;
+}
+
+.main-project-title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.main-project-description {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
 }
 
 .project-card {
@@ -1563,7 +1575,6 @@ button.btn-primary {
   z-index: 1;
 }
 
-
 .isometric-effect {
   background: white;
   border-radius: 15px;
@@ -1597,3 +1608,4 @@ button.btn-primary {
 .work-experience img {
   border-radius: 5px;
 }
+
