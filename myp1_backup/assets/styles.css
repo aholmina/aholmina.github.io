@@ -187,7 +187,7 @@ html {
   justify-content: center;
 }
 
-.subscribe-email {
+.emailme-email {
   vertical-align: middle;
 }
 
@@ -204,6 +204,7 @@ body {
 .hero-section {
   position: relative;
   overflow: hidden;
+  background: url("../images/homebgimg1.jpg") no-repeat center center/cover;
 }
 
 .hero-section::before {
@@ -215,6 +216,7 @@ body {
   bottom: 0;
   background-color: pink;
   z-index: 0;
+  background: url("../images/homebgimg1.jpg") no-repeat center center/cover;
 }
 
 .hero-section > .container {
@@ -249,14 +251,14 @@ body {
 }
 
 .hero-section {
-  background-color: pink;
+  background: url("../images/homebgimg1.jpg") no-repeat center center/cover;
   color: white;
   padding: 50px 0;
   object-fit: fill;
 }
 
 .homebg-section {
-  background: url("../images/homebg1.jpg") no-repeat center center/cover;
+  background: url("../images/homebgimg1.jpg") no-repeat center center/cover;
   background-color: white;
   padding: 50px 0;
   object-fit: fill;
@@ -282,7 +284,7 @@ body {
   font-style: italic;
 }
 
-.newsletter-border {
+.emailme-border {
   padding: 20px;
   background-color: #666(
     255,
@@ -293,13 +295,13 @@ body {
   margin-top: 20px;
 }
 
-.form-newsletter {
+.form-emailme {
   width: 100%;
   max-width: 300px;
   margin: 10px 0;
 }
 
-.subscribe-email {
+.emailme-email {
   padding: 10px;
   font-size: 16px;
 }
