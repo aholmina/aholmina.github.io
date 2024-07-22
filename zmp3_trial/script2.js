@@ -50,18 +50,18 @@ class DogGallery {
     getBreedPrice(breedName) {
         // This is a mock function. In a real-world scenario, you'd fetch this data from an API or database.
         const prices = {
-            'labrador': '$800 - $1,200',
-            'poodle': '$1,000 - $1,500',
-            'bulldog': '$1,500 - $4,000',
-            'german-shepherd': '$1,000 - $2,000',
-            'golden-retriever': '$1,000 - $3,500',
-            'beagle': '$500 - $2,000',
-            'rottweiler': '$1,000 - $2,500',
-            'boxer': '$700 - $2,000',
-            'dachshund': '$500 - $1,500',
-            'siberian-husky': '$800 - $1,500'
+            'labrador': 1200,
+            'poodle': 1500,
+            'bulldog': 2000,
+            'german-shepherd': 1800,
+            'golden-retriever': 1300,
+            'beagle': 1000,
+            'rottweiler': 1600,
+            'boxer': 1400,
+            'dachshund': 1100,
+            'siberian-husky': 1700
         };
-        return Promise.resolve(prices[breedName] || 'Price varies');
+        return Promise.resolve(prices[breedName] || 1000); // Default price if breed not found
     }
 
     extractBreedFromUrl(url) {
@@ -86,7 +86,7 @@ class DogGallery {
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">${breedName}</h5>
-                        <p class="card-text">Price Range: ${price}</p>
+                        <p class="card-text">Price: $${price}</p>
                         <p class="card-text">Fetched at: ${new Date().toLocaleTimeString()}</p>
                     </div>
                 </div>

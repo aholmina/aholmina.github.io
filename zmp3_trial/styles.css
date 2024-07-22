@@ -23,13 +23,25 @@ body {
     z-index: 0;
 }
 .card {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(23, 21, 22, 0.941);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 15px;
     overflow: hidden;
     transform: perspective(1000px) rotateX(10deg) rotateY(-10deg);
     transition: all 0.3s ease;
+}
+.card-title {
+    color:rgb(252, 17, 146);
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.75rem;
+
+}
+.card-text {
+    color: hsl(0, 0%, 100%);
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    
 }
 .card:hover {
     transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
@@ -37,7 +49,7 @@ body {
 }
 .card-img-top {
     object-fit: fill;
-    height: 300px;
+    height: 200px;
 }
 .btn-primary, .btn-secondary {
     background: rgba(255, 255, 255, 0.1);
@@ -47,5 +59,5 @@ body {
 }
 .btn-primary:hover, .btn-secondary:hover {
     background: rgba(255, 255, 255, 0.2);
-    box-shadow: 0 0 15px rgba(0, 191, 255, 0.5);
+    box-shadow: 0 0 15px #6200ff80;
 }
