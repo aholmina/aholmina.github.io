@@ -17,11 +17,17 @@ class DogGallery {
     fetchDog() {
         this.showLoader();
 
-        axios.get('https://dog.ceo/api/breeds/image/random')
-            .then(response => {
-                const imageUrl = response.data.message;
+        fetch('https://dog.ceo/api/breeds/image/random')
+            .then(response => response.json())
+            .then(data => {
+                const imageUrl = data.message;
                 const breedName = this.extractBreedFromUrl(imageUrl);
-                this.displayDog(imageUrl, this.formatBreedName(breedName));
+                return Promise.all([
+                    this.getImageDimensions(imageUrl),
+                    this.getBreedPrice(breedName)
+                ]).then(([dimensions, price]) => {
+                    this.displayDog(imageUrl, this.formatBreedName(breedName), dimensions, price);
+                });
             })
             .catch(error => {
                 console.error('Error fetching dog:', error);
@@ -30,6 +36,32 @@ class DogGallery {
             .finally(() => {
                 this.removeLoader();
             });
+    }
+
+    getImageDimensions(url) {
+        return new Promise((resolve, reject) => {
+            const img = new Image();
+            img.onload = () => resolve({ width: img.width, height: img.height });
+            img.onerror = reject;
+            img.src = url;
+        });
+    }
+
+    getBreedPrice(breedName) {
+        // This is a mock function. In a real-world scenario, you'd fetch this data from an API or database.
+        const prices = {
+            'labrador': '$800 - $1,200',
+            'poodle': '$1,000 - $1,500',
+            'bulldog': '$1,500 - $4,000',
+            'german-shepherd': '$1,000 - $2,000',
+            'golden-retriever': '$1,000 - $3,500',
+            'beagle': '$500 - $2,000',
+            'rottweiler': '$1,000 - $2,500',
+            'boxer': '$700 - $2,000',
+            'dachshund': '$500 - $1,500',
+            'siberian-husky': '$800 - $1,500'
+        };
+        return Promise.resolve(prices[breedName] || 'Price varies');
     }
 
     extractBreedFromUrl(url) {
@@ -41,7 +73,11 @@ class DogGallery {
         return breedName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
     }
 
-    displayDog(imageUrl, breedName) {
+    displayDog(imageUrl, breedName, dimensions, price) {
+        const aspectRatio = dimensions.width / dimensions.height;
+        const cardWidth = 300; // Assuming the card width is 300px
+        const cardHeight = cardWidth / aspectRatio;
+
         const dogDiv = `
             <div class="col-md-4 mb-4">
                 <div class="card">
@@ -50,6 +86,7 @@ class DogGallery {
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">${breedName}</h5>
+                        <p class="card-text">Price Range: ${price}</p>
                         <p class="card-text">Fetched at: ${new Date().toLocaleTimeString()}</p>
                     </div>
                 </div>

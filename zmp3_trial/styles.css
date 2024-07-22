@@ -18,7 +18,7 @@ body {
     transform: translate(-50%, -50%);
     width: 150vw;
     height: 150vh;
-    background: radial-gradient(circle, rgba(0,191,255,0.3) 0%, rgba(255,105,180,0.3) 100%);
+    background: radial-gradient(circle, rgba(9, 9, 9, 0.95) 0%, rgba(182, 182, 228, 0.858) 100%);
     filter: blur(100px);
     z-index: 0;
 }
@@ -33,7 +33,7 @@ body {
 }
 .card:hover {
     transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
-    box-shadow: 0 0 20px rgba(0, 191, 255, 0.5);
+    box-shadow: 0 0 20px #ff00c880;
 }
 .card-img-top {
     object-fit: fill;
