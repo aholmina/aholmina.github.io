@@ -1,17 +1,28 @@
 body {
-    background-color: #000;
-    color: #fff;
+    background-color: #000000db; /* Dark background */
+    color: #fff; /* White text */
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow-x: hidden;
-}
-.container {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
+  }
+  
+  .container {
     position: relative;
-    z-index: 1;
-}
-.glow {
+    z-index: 1;  /* Ensure container is above the glow effect */
+  }
+  
+  /* Heading Styles */
+  h1 { 
+    color: rgb(252, 17, 146); /* Pink */
+    font-size: 2.5rem; /* Larger size */
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Glow Effect */
+  .glow {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -21,43 +32,73 @@ body {
     background: radial-gradient(circle, rgba(9, 9, 9, 0.95) 0%, rgba(182, 182, 228, 0.858) 100%);
     filter: blur(100px);
     z-index: 0;
-}
-.card {
+    transition: all 0.3s ease; /* Smoother transition */
+  }
+  
+  /* Gallery Row Styling */
+  .row {
+    display: flex; /* Basic flexbox for responsiveness */
+    flex-wrap: wrap;
+  }
+  
+  /* Dog Card Styling */
+  .card {
     background: rgba(23, 21, 22, 0.941);
     backdrop-filter: blur(10px);
     border-radius: 15px;
     overflow: hidden;
-    transform: perspective(1000px) rotateX(10deg) rotateY(-10deg);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Subtle shadow for depth */
+    padding: 1.5rem; /* Increased padding for spacing */
+    margin-bottom: 1rem;  /* Space between cards */
     transition: all 0.3s ease;
-}
-.card-title {
-    color:rgb(252, 17, 146);
+  }
+  
+  .card:hover {
+    transform: perspective(1000px) rotateX(5deg) rotateY(-5deg) translateY(-5px);
+    box-shadow: 0 0 20px #ff00c880;
+  }
+  
+  .card-img-top {
+    object-fit: cover; /* Cover the whole container while maintaining aspect ratio */
+    width: 100%; /* Take full width of parent */
+    height: 200px; 
+    margin-bottom: 1rem;
+  }
+  
+  .card-title {
+    color: rgb(252, 17, 146);
     font-size: 1.25rem;
     font-weight: bold;
     margin-bottom: 0.75rem;
-
-}
-.card-text {
-    color: hsl(0, 0%, 100%);
+  }
+  
+  .card-text {
+    color: hsl(0, 0%, 90%); /* Improved contrast */
     font-size: 1rem;
     margin-bottom: 0.5rem;
-    
-}
-.card:hover {
-    transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
-    box-shadow: 0 0 20px #ff00c880;
-}
-.card-img-top {
-    object-fit: fill;
-    height: 200px;
-}
-.btn-primary, .btn-secondary {
+  }
+  
+  /* Button Styles */
+  .btn {
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(5px);
     transition: all 0.3s ease;
-}
-.btn-primary:hover, .btn-secondary:hover {
+  }
+  
+  .btn:hover {
     background: rgba(255, 255, 255, 0.2);
-    box-shadow: 0 0 15px #6200ff80;
-}
+    box-shadow: 0 0 15px #e414c180;
+    color: white; /* Change text color on hover */
+  }
+  
+  
+  /* Pagination */
+  .mt-4 {
+    margin-top: 1.5rem;
+  }
+  
+  #pageIndicator {
+    color: #fff;
+  }
+  
