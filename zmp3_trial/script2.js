@@ -29,43 +29,42 @@ class DogGallery {
         this.favoritesButton.addEventListener('click', () => this.toggleFavorites());
     }
 
-    fetchDog() {
+    async fetchDog() {
         this.showLoader();
 
-        fetch('https://dog.ceo/api/breeds/image/random')
-            .then(response => {
-                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-                return response.json();
-            })
-            .then(data => {
-                const imageUrl = data.message;
-                const breedName = this.extractBreedFromUrl(imageUrl);
-                return Promise.all([
-                    this.getImageDimensions(imageUrl),
-                    this.getBreedInfo(breedName)
-                ]).then(([dimensions, breedInfo]) => {
-                    const dogData = {
-                        imageUrl,
-                        breedName: this.formatBreedName(breedName),
-                        dimensions,
-                        breedInfo,
-                        fetchedAt: new Date().toLocaleTimeString()
-                    };
-                    this.dogs.unshift(dogData);
-                    this.updateBreedFilter(dogData.breedName);
-                    this.displayPage();
-                });
-            })
-            .catch(error => {
-                console.error('Error fetching dog:', error);
-                this.showError('Failed to fetch dog image. Please try again.');
-            })
-            .finally(() => {
-                this.removeLoader();
-            });
+        try {
+            const response = await fetch('https://dog.ceo/api/breeds/image/random');
+            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+            const data = await response.json();
+            
+            const imageUrl = data.message;
+            const breedName = this.extractBreedFromUrl(imageUrl);
+            
+            const [dimensions, breedInfo] = await Promise.all([
+                this.getImageDimensions(imageUrl),
+                this.getBreedInfo(breedName)
+            ]);
+
+            const dogData = {
+                imageUrl,
+                breedName: this.formatBreedName(breedName),
+                dimensions,
+                breedInfo,
+                fetchedAt: new Date().toLocaleTimeString()
+            };
+            
+            this.dogs.unshift(dogData);
+            this.updateBreedFilter(dogData.breedName);
+            this.displayPage();
+        } catch (error) {
+            console.error('Error fetching dog:', error);
+            this.showError('Failed to fetch dog image. Please try again.');
+        } finally {
+            this.removeLoader();
+        }
     }
 
-    getImageDimensions(url) {
+    async getImageDimensions(url) {
         return new Promise((resolve) => {
             const img = new Image();
             img.onload = () => resolve({ width: img.width, height: img.height });
@@ -74,7 +73,7 @@ class DogGallery {
         });
     }
 
-    getBreedInfo(breedName) {
+    async getBreedInfo(breedName) {
         const breedInfo = {
             'labrador': { lifeSpan: '10-12 years' },
             'poodle': { lifeSpan: '12-15 years' },
@@ -87,7 +86,7 @@ class DogGallery {
             'dachshund': { lifeSpan: '12-16 years' },
             'siberian-husky': { lifeSpan: '12-14 years' }
         };
-        return Promise.resolve(breedInfo[breedName] || { lifeSpan: '10-13 years' });
+        return breedInfo[breedName] || { lifeSpan: '10-13 years' };
     }
 
     extractBreedFromUrl(url) {

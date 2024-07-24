@@ -59,7 +59,7 @@ body {
   }
   
   .card-img-top {
-    object-fit: cover; /* Cover the whole container while maintaining aspect ratio */
+    object-fit: contain; /* Cover the whole container while maintaining aspect ratio */
     width: 100%; /* Take full width of parent */
     height: 200px; 
     margin-bottom: 1rem;
