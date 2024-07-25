@@ -1,14 +1,14 @@
-const apiKey = '37aa41d428ba409f88344c523895f32d';
-const apiUrl = 'https://newsapi.org/v2/top-headlines?country=us';
+const gnewsApiKey = '4988606c6d8bc0074715b7701b85f8dc'; 
+const gnewsApiUrl = 'https://gnews.io/api/v4/search?lang=en&country=us&max=10';
 let bookmarks = JSON.parse(localStorage.getItem('newsBookmarks')) || [];
 
 async function fetchNews(query = '') {
     showLoading(true);
     try {
-        const url = query 
-            ? `https://newsapi.org/v2/everything?q=${encodeURIComponent(query)}&apiKey=${apiKey}` 
-            : `${apiUrl}&apiKey=${apiKey}`;
-        
+        const url = query
+            ? `${gnewsApiUrl}&q=${encodeURIComponent(query)}&apikey=${gnewsApiKey}`
+            : `${gnewsApiUrl}&apikey=${gnewsApiKey}`;
+
         const response = await fetch(url);
 
         if (!response.ok) {
@@ -39,17 +39,20 @@ function displayNews(newsItems) {
     }
 
     newsItems.forEach(item => {
+
+        const imageUrl = item.image || 'https://via.placeholder.com/300x200?text=No+Image';
+
         const newsCard = document.createElement('div');
         newsCard.className = 'col-md-4 mb-4';
         const isBookmarked = bookmarks.some(bookmark => bookmark.url === item.url);
         newsCard.innerHTML = `
             <div class="card h-100 shadow-sm">
-                <img src="${item.urlToImage || 'https://via.placeholder.com/300x200?text=No+Image'}" class="card-img-top skeleton" alt="${item.title}">
+                <img src="${imageUrl}" class="card-img-top" alt="${item.title}"> 
                 <div class="card-body">
                     <h5 class="card-title">${item.title}</h5>
                     <p class="card-text">${item.description || 'No description available.'}</p>
                     <a href="${item.url}" class="btn btn-primary" target="_blank">Read More</a>
-                    <button class="btn btn-outline-primary bookmark-btn" data-url="${item.url}" data-title="${item.title}" data-image="${item.urlToImage || ''}">
+                    <button class="btn btn-outline-primary bookmark-btn" data-url="${item.url}" data-title="${item.title}" data-image="${imageUrl}">
                         <i class="fas ${isBookmarked ? 'fa-solid fa-bookmark' : 'fa-regular fa-bookmark'}"></i>
                     </button>
                 </div>
@@ -64,13 +67,8 @@ function displayNews(newsItems) {
     document.querySelectorAll('.bookmark-btn').forEach(btn => {
         btn.addEventListener('click', toggleBookmark);
     });
-
-    document.querySelectorAll('.card-img-top').forEach(img => {
-        img.onload = () => {
-            img.classList.remove('skeleton');
-        };
-    });
 }
+
 
 function toggleBookmark(event) {
     const btn = event.currentTarget;
@@ -83,7 +81,7 @@ function toggleBookmark(event) {
     if (index === -1) {
         bookmarks.push({ url, title, image });
         icon.classList.replace('fa-regular', 'fa-solid');
-        showToast('Bookmark added!', 'success');
+        showToast('Bookmark added!', 'secondary');
     } else {
         bookmarks.splice(index, 1);
         icon.classList.replace('fa-solid', 'fa-regular');
@@ -172,16 +170,16 @@ function showToast(message, type = 'info') {
     toast.addEventListener('hidden.bs.toast', () => toast.remove());
 }
 
-// Update the current time every second
+
 function updateCurrentTime() {
     const currentTimeElem = document.getElementById('time');
     const now = new Date();
     currentTimeElem.textContent = now.toLocaleTimeString();
 }
 setInterval(updateCurrentTime, 1000);
-updateCurrentTime(); // Initial call to set the time immediately
+updateCurrentTime(); 
 
-// Toggle dark mode
+
 function toggleDarkMode() {
     document.body.classList.toggle('bg-dark');
     document.body.classList.toggle('text-light');
@@ -189,7 +187,7 @@ function toggleDarkMode() {
     darkModeBtn.textContent = document.body.classList.contains('bg-dark') ? 'Light Mode' : 'Dark Mode';
 }
 
-// Event Listeners
+
 document.getElementById('searchForm').addEventListener('submit', function(e) {
     e.preventDefault();
     const query = document.getElementById('searchInput').value;
@@ -200,7 +198,7 @@ document.getElementById('toggleBookmarks').addEventListener('click', toggleBookm
 document.getElementById('closeBookmarks').addEventListener('click', closeBookmarksSidebar);
 document.getElementById('toggleDarkMode').addEventListener('click', toggleDarkMode);
 
-// Close sidebar when clicking outside
+
 document.addEventListener('click', function(event) {
     const sidebar = document.getElementById('bookmarksSidebar');
     const toggleBtn = document.getElementById('toggleBookmarks');
