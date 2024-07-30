@@ -43,7 +43,7 @@ const createTodo = (e) => {
     .then((res) => res.json())
     .then((data) => addTodoToDOM(data));
   
-  e.target.firstElementChild.value = ''; // Clear input field
+  e.target.firstElementChild.value = ''; // Clear input field 
 };
 
 const toggleTodo = (todoElement) => {

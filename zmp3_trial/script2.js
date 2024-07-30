@@ -35,7 +35,7 @@ class DogGallery {
         try {
             const response = await fetch('https://dog.ceo/api/breeds/image/random');
             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-            const data = await response.json();
+            const data = await response.json(); 
             
             const imageUrl = data.message;
             const breedName = this.extractBreedFromUrl(imageUrl);

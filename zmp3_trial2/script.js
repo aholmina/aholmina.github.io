@@ -1,5 +1,5 @@
 const apiKey = '37aa41d428ba409f88344c523895f32d';
-const apiUrl = 'https://newsapi.org/v2/top-headlines?country=us';
+const apiUrl = 'https://newsapi.org/v2/everything?q=keyword&apiKey=37aa41d428ba409f88344c523895f32d';
 let bookmarks = JSON.parse(localStorage.getItem('newsBookmarks')) || [];
 
 async function fetchNews(query = '') {

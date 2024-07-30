@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini API Data Fetcher</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Flight Search</h1>
+        <form id="flightSearchForm">
+            <div class="row g-3">
+                <div class="col-md-3">
+                    <input type="text" class="form-control" id="originInput" placeholder="Origin" required>
+                </div>
+                <div class="col-md-3">
+                    <input type="text" class="form-control" id="destinationInput" placeholder="Destination" required>
+                </div>
+                <div class="col-md-2">
+                    <input type="date" class="form-control" id="departureDateInput" required>
+                </div>
+                <div class="col-md-2">
+                    <input type="date" class="form-control" id="returnDateInput" required>
+                </div>
+                <div class="col-md-2">
+                    <button type="submit" class="btn btn-primary w-100" id="searchButton">Search</button>
+                </div>
+            </div>
+        </form>
+        <div id="loadingSpinner" class="text-center mt-4 d-none">
+            <div class="spinner-border" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+        <div id="flightList" class="mt-4"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
