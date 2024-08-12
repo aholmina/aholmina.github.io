@@ -1,9 +1,9 @@
-const gnewsApiKey = '4988606c6d8bc0074715b7701b85f8dc';
+const gnewsApiKey = 'API_KEY';
 const gnewsApiUrl = 'https://gnews.io/api/v4/search?lang=en&country=us&max=10';
-const weatherApiKey = '91c55f5aa1c412f7068fa589ae99b46a';
+const weatherApiKey = 'API_KEY';
 const weatherApiUrl = 'https://api.openweathermap.org/data/2.5/weather';
-const geminiApiUrl = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=AIzaSyCUsPd1SlVjJ03Tu8K5HQBEIRYAfgTEnsc';
-const youtubeApiKey = 'AIzaSyDjILBZ96SsOURt-undwkPWTSNsD2jnwkc';
+const geminiApiUrl = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=API_KEY';
+const youtubeApiKey = 'API_KEY';
 const youtubeApiUrl = 'https://www.googleapis.com/youtube/v3/search';
 let searchHistory = JSON.parse(localStorage.getItem('searchHistory')) || [];
 let currentPage = 1;

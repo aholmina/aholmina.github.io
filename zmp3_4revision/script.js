@@ -1,18 +1,17 @@
 // API Keys and URLs
-const gnewsApiKey = '4988606c6d8bc0074715b7701b85f8dc';
-const gnewsApiUrl = 'https://gnews.io/api/v4/search?lang=en&country=us&max=6';
-const weatherApiKey = '91c55f5aa1c412f7068fa589ae99b46a';
-const weatherApiUrl = 'https://api.openweathermap.org/data/2.5/weather';
-const geminiApiUrl = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=AIzaSyCUsPd1SlVjJ03Tu8K5HQBEIRYAfgTEnsc';
-const youtubeApiKey = 'AIzaSyDjILBZ96SsOURt-undwkPWTSNsD2jnwkc';
+const gnewsApiKey = 'API_KEY';
+const gnewsApiUrl = 'https://gnews.io/api/v4/top-headlines?category=general&apikey=API_KEY';
+const weatherApiKey = 'API_KEY';
+const geminiApiUrl = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=API_KEY';
+const youtubeApiKey = 'API_KEY';
 const youtubeApiUrl = 'https://www.googleapis.com/youtube/v3/search';
 
 // Global Variables
 let searchHistory = JSON.parse(localStorage.getItem('searchHistory')) || [];
-let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
 let currentPage = 1;
 let isLoading = false;
 let isDarkMode = false;
+let bookmarks = JSON.parse(localStorage.getItem('bookmarks')) || [];
 
 // Helper Functions
 function updateCurrentTime() {
@@ -82,11 +81,17 @@ async function fetchNews(query = '', page = 1) {
     showLoading(true);
     try {
         const url = `${gnewsApiUrl}&q=${encodeURIComponent(query)}&apikey=${gnewsApiKey}`;
-        const response = await fetch(url);
+        const response = await fetch(url, {
+            method: 'GET',
+            headers: {
+                'Accept': 'application/json',
+                'User-Agent': 'NewsApp/1.0'
+            }
+        });
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
         const data = await response.json();
         if (data.articles && Array.isArray(data.articles)) {
-            displayNews(data.articles.slice(0, 6), true); // Display only the first 6 articles
+            displayNews(data.articles.slice(0, 9), true);
         } else {
             throw new Error('Unexpected API response format');
         }
@@ -101,7 +106,7 @@ async function fetchNews(query = '', page = 1) {
 
 function displayNews(newsItems) {
     const newsContainer = document.getElementById('newsContainer');
-    newsContainer.innerHTML = ''; // Always clear existing content
+    newsContainer.innerHTML = '';
 
     if (newsItems.length === 0) {
         newsContainer.innerHTML = '<p class="text-center">No news found.</p>';
@@ -115,7 +120,6 @@ function displayNews(newsItems) {
     });
     newsContainer.appendChild(fragment);
 
-    // Implement lazy loading for images
     const lazyImages = document.querySelectorAll('img.lazy');
     const lazyImageObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
@@ -134,7 +138,7 @@ function createNewsCard(item) {
     const newsCard = document.createElement('div');
     newsCard.className = 'col-md-6 col-lg-4 mb-4';
     const imageUrl = item.image || 'https://via.placeholder.com/300x300?text=No+Image';
-    const isFavorite = favorites.some(fav => fav.url === item.url);
+    const isFavorite = bookmarks.some(bookmark => bookmark.url === item.url);
     
     newsCard.innerHTML = `
         <div class="card h-100 w-100 shadow-sm">
@@ -144,8 +148,8 @@ function createNewsCard(item) {
                 <p class="card-text">${item.description || 'No description available.'}</p>
                 <div class="d-flex justify-content-between align-items-center">
                     <a href="${item.url}" class="btn btn-primary btn-sm" target="_blank">Read More</a>
-                    <button class="btn btn-outline-secondary btn-sm favorite-btn" data-url="${item.url}">
-                        <i class="fas ${isFavorite ? 'fa-star' : 'fa-star-o'}"></i>
+                    <button class="btn btn-outline-secondary btn-sm bookmark-btn" data-url="${item.url}">
+                        <i class="fas ${isFavorite ? 'fa-bookmark' : 'fa-bookmark-o'}"></i>
                     </button>
                 </div>
             </div>
@@ -154,81 +158,208 @@ function createNewsCard(item) {
             </div>
         </div>
     `;
-    const favoriteBtn = newsCard.querySelector('.favorite-btn');
-    favoriteBtn.addEventListener('click', () => toggleFavorite(item));
+    const bookmarkBtn = newsCard.querySelector('.bookmark-btn');
+    bookmarkBtn.addEventListener('click', () => toggleBookmark(item));
 
     return newsCard;
 }
 
 
-
-
-
 // Weather Functions
-async function fetchWeather(city = 'Olongapo', country = 'ph') {
+async function fetchWeather(city = 'Las Piñas') {
     try {
-        const currentWeatherUrl = `${weatherApiUrl}?q=${encodeURIComponent(city)},${country}&APPID=${weatherApiKey}&units=metric`;
-        const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${encodeURIComponent(city)},${country}&APPID=${weatherApiKey}&units=metric`;
+        console.log(`Fetching weather for ${city}`);
+        
+        let lat, lon;
+        
+        if (city.toLowerCase() === 'las piñas') {
+            lat = 14.4500;
+            lon = 120.9833;
+        } else {
+            const geocodeUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${encodeURIComponent(city)},PH&limit=1&appid=${weatherApiKey}`;
+            console.log(`Geocoding URL: ${geocodeUrl}`);
+            
+            const geocodeResponse = await fetch(geocodeUrl, {
+                method: 'GET',
+                headers: {
+                    'Accept': 'application/json',
+                    'User-Agent': 'WeatherApp/1.0'
+                }
+            });
+            if (!geocodeResponse.ok) {
+                throw new Error(`Geocoding HTTP error! status: ${geocodeResponse.status}`);
+            }
+            const geocodeData = await geocodeResponse.json();
+            console.log('Geocode data:', geocodeData);
+            
+            if (geocodeData.length === 0) {
+                throw new Error('City not found in the Philippines');
+            }
 
-        const [currentWeatherResponse, forecastResponse] = await Promise.all([
-            fetch(currentWeatherUrl),
-            fetch(forecastUrl)
-        ]);
-
-        if (!currentWeatherResponse.ok || !forecastResponse.ok) {
-            throw new Error(`HTTP error! status: ${currentWeatherResponse.status || forecastResponse.status}`);
+            ({ lat, lon } = geocodeData[0]);
         }
+        
+        console.log(`Coordinates: lat ${lat}, lon ${lon}`);
 
-        const currentWeatherData = await currentWeatherResponse.json();
-        const forecastData = await forecastResponse.json();
+        const weatherUrl = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&appid=${weatherApiKey}&units=metric`;
+        console.log(`Weather URL: ${weatherUrl}`);
+        
+        const weatherResponse = await fetch(weatherUrl, {
+            method: 'GET',
+            headers: {
+                'Accept': 'application/json',
+                'User-Agent': 'WeatherApp/1.0'
+            }
+        });
+        if (!weatherResponse.ok) {
+            throw new Error(`Weather HTTP error! status: ${weatherResponse.status}`);
+        }
+        const weatherData = await weatherResponse.json();
+        console.log('Weather data:', weatherData);
 
-        displayCurrentWeather(currentWeatherData);
-        displayForecast(forecastData);
+        displayCurrentWeather(weatherData.current, weatherData.daily, city);
+        displayMinuteForecast(weatherData.minutely);
+        displayHourlyForecast(weatherData.hourly);
+        displayDailyForecast(weatherData.daily);
+        displayWeatherAlerts(weatherData.alerts);
     } catch (error) {
         console.error('Error fetching weather:', error);
         displayError(`Error fetching weather: ${error.message}. Please check the console for more details.`);
     }
 }
 
-function displayCurrentWeather(weatherData) {
+function generateWeatherSummary(currentData, tomorrowData, city) {
+    const today = new Date();
+    const tomorrow = new Date(today);
+    tomorrow.setDate(tomorrow.getDate() + 1);
+
+    const todaySummary = `Today's weather in ${city} (${today.toLocaleDateString()}): ${currentData.weather[0].description}. 
+        Temperature around ${Math.round(currentData.temp)}°C. 
+        Humidity: ${currentData.humidity}%. 
+        Wind speed: ${currentData.wind_speed} m/s.`;
+
+    const tomorrowSummary = `Tomorrow's forecast for ${city} (${tomorrow.toLocaleDateString()}): ${tomorrowData.weather[0].description}. 
+        Temperature between ${Math.round(tomorrowData.temp.min)}°C and ${Math.round(tomorrowData.temp.max)}°C. 
+        Humidity: ${tomorrowData.humidity}%. 
+        Wind speed: ${tomorrowData.wind_speed} m/s.`;
+
+    return `${todaySummary}\n\n${tomorrowSummary}`;
+}
+
+function displayCurrentWeather(currentData, dailyData, city) {
     const weatherWidget = document.getElementById('weatherWidget');
-    const temperature = Math.round(weatherData.main.temp);
-    const description = weatherData.weather[0].description;
-    const icon = weatherData.weather[0].icon;
-    const date = new Date(weatherData.dt * 1000).toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+    const temperature = Math.round(currentData.temp);
+    const description = currentData.weather[0].description;
+    const icon = currentData.weather[0].icon;
+    const date = new Date(currentData.dt * 1000).toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+
+    const weatherSummary = generateWeatherSummary(currentData, dailyData[1], city);
 
     weatherWidget.innerHTML = `
         <div class="card mb-3">
             <div class="card-body">
-                <h5 class="card-title">Current Weather in ${weatherData.name}</h5>
-                <div class="d-flex align-items-center">
-                    <img src="http://openweathermap.org/img/w/${icon}.png" alt="${description}" class="me-2">
-                    <div>
-                        <h6 class="mb-0">${temperature}°C, ${description}</h6>
-                        <p class="mb-0">Humidity: ${weatherData.main.humidity}%</p>
-                        <p class="mb-0">Wind: ${weatherData.wind.speed} m/s</p>
-                        <small>${date}</small>
+                <h3 class="card-title mb-4">${city}</h3>
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="display-4 font-weight-bold">${temperature}°C</div>
+                    <div class="text-center">
+                        <img src="http://openweathermap.org/img/w/${icon}.png" alt="${description}" class="weather-icon mb-2" style="width: 64px; height: 64px;">
+                        <div class="h5">${description}</div>
                     </div>
                 </div>
+                <div class="mt-4">
+                    <div class="row">
+                        <div class="col-6">
+                            <p><i class="fas fa-tint"></i> Humidity: ${currentData.humidity}%</p>
+                        </div>
+                        <div class="col-6">
+                            <p><i class="fas fa-wind"></i> Wind: ${currentData.wind_speed} m/s</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <h5>Weather Summary</h5>
+                    <p>${weatherSummary}</p>
+                </div>
+                <small class="text-muted">${date}</small>
             </div>
         </div>
     `;
 }
 
-function displayForecast(forecastData) {
-    const forecastContainer = document.getElementById('forecastContainer');
-    forecastContainer.innerHTML = '<h5 class="mb-3">5-Day Forecast</h5>';
+function displayMinuteForecast(minutelyData) {
+    const forecastContainer = document.getElementById('minuteForecastContainer');
+    forecastContainer.innerHTML = '<h5 class="mb-3">Minute Forecast (Next Hour)</h5>';
+    
+    if (!minutelyData || minutelyData.length === 0) {
+        forecastContainer.innerHTML += '<p>Minute forecast data not available for this location.</p>';
+        return;
+    }
 
-    const dailyForecasts = groupForecastsByDay(forecastData.list);
+    const minutelyChart = document.createElement('canvas');
+    forecastContainer.appendChild(minutelyChart);
 
-    dailyForecasts.forEach(forecast => {
-        const date = new Date(forecast.dt * 1000);
+    new Chart(minutelyChart, {
+        type: 'line',
+        data: {
+            labels: minutelyData.slice(0, 60).map((data, index) => `${index}m`),
+            datasets: [{
+                label: 'Precipitation (mm)',
+                data: minutelyData.slice(0, 60).map(data => data.precipitation),
+                borderColor: 'rgba(75, 192, 192, 1)',
+                tension: 0.1
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+}
+
+function displayHourlyForecast(hourlyData) {
+    const forecastContainer = document.getElementById('hourlyForecastContainer');
+    forecastContainer.innerHTML = '<h5 class="mb-3">Hourly Forecast (Next 48 Hours)</h5>';
+
+    const hourlyChart = document.createElement('canvas');
+    forecastContainer.appendChild(hourlyChart);
+
+    new Chart(hourlyChart, {
+        type: 'line',
+        data: {
+            labels: hourlyData.slice(0, 48).map(data => new Date(data.dt * 1000).toLocaleTimeString('en-US', { hour: 'numeric' })),
+            datasets: [{
+                label: 'Temperature (°C)',
+                data: hourlyData.slice(0, 48).map(data => data.temp),
+                borderColor: 'rgba(255, 99, 132, 1)',
+                tension: 0.1
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                y: {
+                    beginAtZero: false
+                }
+            }
+        }
+    });
+}
+
+function displayDailyForecast(dailyData) {
+    const forecastContainer = document.getElementById('dailyForecastContainer');
+    forecastContainer.innerHTML = '<h5 class="mb-3">Daily Forecast (Next 8 Days)</h5>';
+
+    dailyData.forEach(day => {
+        const date = new Date(day.dt * 1000);
         const dayName = date.toLocaleDateString('en-US', { weekday: 'short' });
-        const icon = forecast.weather[0].icon;
-        const description = forecast.weather[0].description;
-        const tempMin = Math.round(forecast.temp.min);
-        const tempMax = Math.round(forecast.temp.max);
-        const precipitation = Math.round(forecast.pop * 100);
+        const icon = day.weather[0].icon;
+        const description = day.weather[0].description;
+        const tempMin = Math.round(day.temp.min);
+        const tempMax = Math.round(day.temp.max);
 
         const forecastCard = document.createElement('div');
         forecastCard.className = 'card mb-2';
@@ -240,7 +371,6 @@ function displayForecast(forecastData) {
                     <div>
                         <p class="mb-0">${tempMin}°C - ${tempMax}°C</p>
                         <p class="mb-0">${description}</p>
-                        <p class="mb-0">Precipitation: ${precipitation}%</p>
                     </div>
                 </div>
             </div>
@@ -249,34 +379,30 @@ function displayForecast(forecastData) {
     });
 }
 
-function groupForecastsByDay(forecastList) {
-    const dailyForecasts = [];
-    const groupedForecasts = {};
+function displayWeatherAlerts(alerts) {
+    const alertContainer = document.getElementById('weatherAlertContainer');
+    alertContainer.innerHTML = '<h5 class="mb-3">Weather Alerts</h5>';
 
-    forecastList.forEach(forecast => {
-        const date = new Date(forecast.dt * 1000).toDateString();
-        if (!groupedForecasts[date]) {
-            groupedForecasts[date] = [];
-        }
-        groupedForecasts[date].push(forecast);
-    });
-
-    for (const date in groupedForecasts) {
-        const dayForecasts = groupedForecasts[date];
-        const averageForecast = {
-            dt: dayForecasts[0].dt,
-            temp: {
-                min: Math.min(...dayForecasts.map(f => f.main.temp_min)),
-                max: Math.max(...dayForecasts.map(f => f.main.temp_max))
-            },
-            weather: [dayForecasts[Math.floor(dayForecasts.length / 2)].weather[0]],
-            pop: Math.max(...dayForecasts.map(f => f.pop))
-        };
-        dailyForecasts.push(averageForecast);
+    if (!alerts || alerts.length === 0) {
+        alertContainer.innerHTML += '<p>No current weather alerts.</p>';
+        return;
     }
 
-    return dailyForecasts.slice(1, 6); // Return the next 5 days, excluding today
+    alerts.forEach(alert => {
+        const alertCard = document.createElement('div');
+        alertCard.className = 'card mb-2 bg-warning';
+        alertCard.innerHTML = `
+            <div class="card-body">
+                <h6 class="card-title">${alert.event}</h6>
+                <p class="mb-0">${alert.description}</p>
+                <small>From: ${new Date(alert.start * 1000).toLocaleString()} To: ${new Date(alert.end * 1000).toLocaleString()}</small>
+            </div>
+        `;
+        alertContainer.appendChild(alertCard);
+    });
 }
+
+
 
 // Gemini Functions
 async function fetchGeminiResponse(query) {
@@ -284,7 +410,11 @@ async function fetchGeminiResponse(query) {
     try {
         const response = await fetch(geminiApiUrl, {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json',
+                'User-Agent': 'GeminiApp/1.0'
+            },
             body: JSON.stringify({
                 contents: [{ parts: [{ text: query }] }]
             })
@@ -305,7 +435,6 @@ function displayGeminiResponse(data) {
     const geminiContainer = document.getElementById('geminiContainer');
     const responseText = data.candidates[0].content.parts[0].text;
   
-    // Split the response into sentences
     const sentences = responseText.split(/[.!?]+\s+/);
   
     geminiContainer.innerHTML = `
@@ -320,18 +449,44 @@ function displayGeminiResponse(data) {
     `;
 }
 
-
 // YouTube Functions
-async function fetchYouTubeVideos(query, maxResults = 3) {
+async function fetchYouTubeVideos(query, maxResults = 4) {
     try {
         showLoading(true);
-        const url = `${youtubeApiUrl}?part=snippet&q=${encodeURIComponent(query)}&key=${youtubeApiKey}&type=video&maxResults=${maxResults}`;
-        const response = await fetch(url);
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
+        const searchUrl = `${youtubeApiUrl}?part=snippet&q=${encodeURIComponent(query)}&key=${youtubeApiKey}&type=video&maxResults=${maxResults}`;
+        const searchResponse = await fetch(searchUrl, {
+            method: 'GET',
+            headers: {
+                'Accept': 'application/json',
+                'User-Agent': 'YouTubeApp/1.0'
+            }
+        });
+        if (!searchResponse.ok) {
+            throw new Error(`HTTP error! status: ${searchResponse.status}`);
         }
-        const data = await response.json();
-        displayYouTubeVideos(data.items);
+        const searchData = await searchResponse.json();
+        
+        const videoDetails = await Promise.all(searchData.items.map(async (video) => {
+            const videoId = video.id.videoId;
+            const detailsUrl = `https://www.googleapis.com/youtube/v3/videos?part=statistics,snippet&id=${videoId}&key=${youtubeApiKey}`;
+            const commentsUrl = `https://www.googleapis.com/youtube/v3/commentThreads?part=snippet,replies&videoId=${videoId}&key=${youtubeApiKey}&maxResults=10`;
+            
+            const [detailsResponse, commentsResponse] = await Promise.all([
+                fetch(detailsUrl),
+                fetch(commentsUrl)
+            ]);
+            
+            const detailsData = await detailsResponse.json();
+            const commentsData = await commentsResponse.json();
+            
+            return {
+                ...video,
+                statistics: detailsData.items[0].statistics,
+                comments: commentsData.items
+            };
+        }));
+        
+        displayYouTubeVideos(videoDetails);
     } catch (error) {
         console.error('Error fetching YouTube videos:', error);
         showToast('Failed to fetch YouTube videos. Please try again later.', 'error');
@@ -347,81 +502,275 @@ function displayYouTubeVideos(videos) {
         return;
     }
 
-    youtubeContainer.innerHTML = `
-        <div class="row">
-            ${videos.map(video => {
-                const isFavorite = favorites.some(fav => fav.id === video.id.videoId);
-                return `
-                    <div class="col-md-4 mb-4">
-                        <div class="card h-100">
-                            <img src="${video.snippet.thumbnails.medium.url}" class="card-img-top" alt="${video.snippet.title}" style="height: 200px; object-fit: cover;">
-                            <div class="card-body">
-                                <h5 class="card-title">${video.snippet.title}</h5>
-                                <p class="card-text">${video.snippet.description}</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <a href="https://www.youtube.com/watch?v=${video.id.videoId}" class="btn btn-primary btn-sm" target="_blank">Watch Video</a>
-                                    <button class="btn btn-outline-secondary btn-sm favorite-btn" data-id="${video.id.videoId}">
-                                        <i class="fas ${isFavorite ? 'fa-star' : 'fa-star-o'}"></i>
-                                    </button>
-                                </div>
-                            </div>
+    youtubeContainer.innerHTML = videos.map(video => {
+        const isFavorite = bookmarks.some(bookmark => bookmark.id === video.id.videoId);
+        return `
+            <div class="card mb-4">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/${video.id.videoId}" allowfullscreen></iframe>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">${video.snippet.title}</h5>
+                    <p class="card-text">${video.snippet.description}</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <span class="me-3"><i class="fas fa-eye"></i> ${video.statistics.viewCount}</span>
+                            <span class="me-3"><i class="fas fa-thumbs-up"></i> ${video.statistics.likeCount}</span>
+                            <span><i class="fas fa-comment"></i> ${video.statistics.commentCount}</span>
                         </div>
+                        <button class="btn btn-outline-secondary btn-sm bookmark-btn" data-id="${video.id.videoId}">
+                            <i class="fas ${isFavorite ? 'fa-bookmark' : 'fa-bookmark-o'}"></i>
+                        </button>
                     </div>
-                `;
-            }).join('')}
-        </div>
-    `;
+                </div>
+                <div class="card-footer">
+                    <h6>Comments</h6>
+                    <form class="add-comment-form mb-3">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Add a comment..." required>
+                            <button class="btn btn-primary" type="submit">Post</button>
+                        </div>
+                    </form>
+                    <div class="comments-container">
+                        ${displayComments(video.comments)}
+                    </div>
+                </div>
+            </div>
+        `;
+    }).join('');
 
-    youtubeContainer.querySelectorAll('.favorite-btn').forEach(btn => {
+    youtubeContainer.querySelectorAll('.bookmark-btn').forEach(btn => {
         btn.addEventListener('click', () => {
             const videoId = btn.dataset.id;
             const video = videos.find(v => v.id.videoId === videoId);
-            toggleFavorite(video);
-            btn.querySelector('i').classList.toggle('fa-star');
-            btn.querySelector('i').classList.toggle('fa-star-o');
+            toggleBookmark(video, 'youtube');
+        });
+    });
+
+    youtubeContainer.querySelectorAll('.add-comment-form').forEach(form => {
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const input = form.querySelector('input');
+            const commentsContainer = form.nextElementSibling;
+            addComment(commentsContainer, input.value);
+            input.value = '';
         });
     });
 }
 
+function displayComments(comments) {
+    if (!comments || comments.length === 0) {
+        return '<p>No comments available.</p>';
+    }
 
-// Search History Functions
-function updateSearchHistory(query) {
-    searchHistory = searchHistory.filter(item => item !== query);
-    searchHistory.unshift(query);
-    if (searchHistory.length > 5) searchHistory.pop();
-    localStorage.setItem('searchHistory', JSON.stringify(searchHistory));
-    updateSearchHistoryWidget();
+    return comments.map(comment => {
+        const topLevelComment = comment.snippet.topLevelComment.snippet;
+        const replies = comment.replies ? comment.replies.comments : [];
+
+        return `
+            <div class="comment mb-3">
+                <div class="d-flex justify-content-between">
+                    <strong>${topLevelComment.authorDisplayName}</strong>
+                    <div>
+                        <button class="btn btn-sm btn-outline-primary like-btn" data-likes="${topLevelComment.likeCount}">
+                            <i class="fas fa-thumbs-up"></i> <span class="likes-count">${topLevelComment.likeCount}</span>
+                        </button>
+                    </div>
+                </div>
+                <p>${topLevelComment.textDisplay}</p>
+                <button class="btn btn-sm btn-outline-secondary reply-btn">Reply</button>
+                <div class="replies mt-2">
+                    ${displayReplies(replies)}
+                </div>
+                <form class="add-reply-form mt-2" style="display: none;">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Add a reply..." required>
+                        <button class="btn btn-primary" type="submit">Post</button>
+                    </div>
+                </form>
+            </div>
+        `;
+    }).join('');
 }
 
-function updateSearchHistoryWidget() {
-    const historyContainer = document.getElementById('searchHistoryWidget');
-    historyContainer.innerHTML = '';
-    searchHistory.forEach(query => {
-        const btn = document.createElement('button');
-        btn.className = 'btn btn-outline-secondary btn-sm me-2 mb-2';
-        btn.textContent = query;
-        btn.addEventListener('click', () => {
-            document.getElementById('searchInput').value = query;
-            fetchNews(query);
-        });
-        historyContainer.appendChild(btn);
+function displayReplies(replies) {
+    return replies.map(reply => `
+        <div class="reply mb-2">
+            <div class="d-flex justify-content-between">
+                <strong>${reply.snippet.authorDisplayName}</strong>
+                <div>
+                    <button class="btn btn-sm btn-outline-primary like-btn" data-likes="${reply.snippet.likeCount}">
+                        <i class="fas fa-thumbs-up"></i> <span class="likes-count">${reply.snippet.likeCount}</span>
+                    </button>
+                </div>
+            </div>
+            <p>${reply.snippet.textDisplay}</p>
+        </div>
+    `).join('');
+}
+
+function addComment(container, text) {
+    const newComment = document.createElement('div');
+    newComment.className = 'comment mb-3';
+    newComment.innerHTML = `
+        <div class="d-flex justify-content-between">
+            <strong>You</strong>
+            <div>
+                <button class="btn btn-sm btn-outline-primary like-btn" data-likes="0">
+                    <i class="fas fa-thumbs-up"></i> <span class="likes-count">0</span>
+                </button>
+            </div>
+        </div>
+        <p>${text}</p>
+        <button class="btn btn-sm btn-outline-secondary reply-btn">Reply</button>
+        <div class="replies mt-2"></div>
+        <form class="add-reply-form mt-2" style="display: none;">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Add a reply..." required>
+                <button class="btn btn-primary" type="submit">Post</button>
+            </div>
+        </form>
+    `;   
+    container.prepend(newComment);
+    addEventListeners(newComment);
+}
+
+function addEventListeners(element) {
+    const likeBtn = element.querySelector('.like-btn');
+    const replyBtn = element.querySelector('.reply-btn');
+    const replyForm = element.querySelector('.add-reply-form');
+
+    likeBtn.addEventListener('click', () => {
+        const likesCount = likeBtn.querySelector('.likes-count');
+        let likes = parseInt(likeBtn.dataset.likes);
+        likes++;
+        likeBtn.dataset.likes = likes;
+        likesCount.textContent = likes;
+    });
+
+    replyBtn.addEventListener('click', () => {
+        replyForm.style.display = replyForm.style.display === 'none' ? 'block' : 'none';
+    });
+
+    replyForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const input = replyForm.querySelector('input');
+        const repliesContainer = element.querySelector('.replies');
+        addReply(repliesContainer, input.value);
+        input.value = '';
+        replyForm.style.display = 'none';
     });
 }
 
-function clearSearchHistory() {
-    searchHistory = [];
-    localStorage.removeItem('searchHistory');
-    updateSearchHistoryWidget();
+function addReply(container, text) {
+    const newReply = document.createElement('div');
+    newReply.className = 'reply mb-2 me-2';
+    newReply.innerHTML = `
+        <div class="d-flex justify-content-between">
+            <strong>You</strong>
+            <div>
+                <button class="btn btn-sm btn-outline-primary like-btn" data-likes="0">
+                    <i class="fas fa-thumbs-up"></i> <span class="likes-count">0</span>
+                </button>
+            </div>
+        </div>
+        <p>${text}</p>
+    `;
+    container.appendChild(newReply);
+    addEventListeners(newReply);
 }
 
+// Bookmark Functions
+function toggleBookmark(item, type = 'news') {
+    const index = bookmarks.findIndex(bookmark => 
+        (type === 'news' && bookmark.url === item.url) || 
+        (type === 'youtube' && bookmark.id === item.id.videoId)
+    );
 
+    if (index > -1) {
+        bookmarks.splice(index, 1);
+        showToast('Bookmark removed', 'info');
+    } else {
+        const newBookmark = type === 'news' 
+            ? { type, url: item.url, title: item.title, image: item.image }
+            : { type, id: item.id.videoId, title: item.snippet.title, image: item.snippet.thumbnails.medium.url };
+        bookmarks.push(newBookmark);
+        showToast('Bookmark added', 'success');
+    }
+
+    localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
+    updateBookmarkGallery();
+    updateBookmarkButtons();
+}
+
+function updateBookmarkGallery() {
+    const gallery = document.getElementById('bookmarkGallery');
+    gallery.innerHTML = bookmarks.map((bookmark, index) => `
+        <div class="col-6 col-md-4 mb-3">
+            <div class="card h-100">
+                <img src="${bookmark.image}" class="card-img-top" alt="${bookmark.title}" style="height: 100px; object-fit: cover;">
+                <div class="card-body p-2">
+                    <h6 class="card-title" style="font-size: 0.9rem;">${bookmark.title}</h6>
+                    <button class="btn btn-sm btn-outline-danger remove-bookmark" data-index="${index}">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    `).join('');
+
+    gallery.querySelectorAll('.remove-bookmark').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const index = parseInt(e.currentTarget.dataset.index);
+            bookmarks.splice(index, 1);
+            localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
+            updateBookmarkGallery();
+            updateBookmarkButtons();
+            showToast('Bookmark removed', 'info');
+        });
+    });
+}
+
+function updateBookmarkButtons() {
+    document.querySelectorAll('.bookmark-btn').forEach(btn => {
+        const url = btn.dataset.url;
+        const id = btn.dataset.id;
+        const isFavorite = bookmarks.some(bookmark => 
+            (bookmark.type === 'news' && bookmark.url === url) || 
+            (bookmark.type === 'youtube' && bookmark.id === id)
+        );
+        btn.innerHTML = `<i class="fas ${isFavorite ? 'fa-bookmark' : 'fa-bookmark-o'}"></i>`;
+    });
+}
+
+function shareBookmarks(platform) {
+    const bookmarkUrls = bookmarks.map(b => b.type === 'news' ? b.url : `https://www.youtube.com/watch?v=${b.id}`).join('\n');
+    const shareText = `Check out my bookmarks:\n${bookmarkUrls}`;
+    
+    let shareUrl;
+    switch (platform) {
+        case 'linkedin':
+            shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.href)}&title=${encodeURIComponent(shareText)}`;
+            break;
+        case 'facebook':
+            shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}&quote=${encodeURIComponent(shareText)}`;
+            break;
+        case 'twitter':
+            shareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}`;
+            break;
+        default:
+            console.log(`Sharing on ${platform} is not implemented yet.`);
+            return;
+    }
+
+    window.open(shareUrl, '_blank');
+}
 
 // Event Listeners
 document.getElementById('searchForm').addEventListener('submit', function(e) {
     e.preventDefault();
     const query = document.getElementById('searchInput').value;
     fetchNews(query);
-    updateSearchHistory(query);
 });
 
 document.getElementById('weatherForm').addEventListener('submit', function(e) {
@@ -459,6 +808,7 @@ window.addEventListener('scroll', function() {
 
 document.getElementById('backToTopBtn').addEventListener('click', scrollToTop);
 
+// Initialize
 document.addEventListener('DOMContentLoaded', function() {
     updateCurrentTime();
     setInterval(updateCurrentTime, 1000);
@@ -466,120 +816,20 @@ document.addEventListener('DOMContentLoaded', function() {
     fetchNews();
     fetchWeather();
     fetchYouTubeVideos('news');  // Fetch some default videos
-    updateSearchHistoryWidget();
-    updateFavoritesGallery();
-    
+    updateBookmarkGallery();
+   
     if (localStorage.getItem('darkMode') === 'true') {
         toggleDarkMode();
     }
-});
 
-// Widget Pane Toggle
-document.addEventListener('DOMContentLoaded', function() {
-    const widgetToggle = document.querySelector('.widget-toggle');
-    const widgetPane = document.querySelector('.widget-pane');
-  
-    widgetToggle.addEventListener('click', function() {
-        widgetPane.classList.toggle('show');
+    // Add event listener for YouTube container
+    document.getElementById('youtubeContainer').addEventListener('click', (e) => {
+        if (e.target.classList.contains('like-btn')) {
+            const likesCount = e.target.querySelector('.likes-count');
+            let likes = parseInt(e.target.dataset.likes);
+            likes++;
+            e.target.dataset.likes = likes;
+            likesCount.textContent = likes;
+        }
     });
-});
-
-
-
-
-
-
-
-
-function toggleFavorite(item) {
-    const index = favorites.findIndex(fav => fav.id === item.id);
-    if (index === -1) {
-        favorites.push(item);
-        showToast('Added to favorites', 'success');
-    } else {
-        favorites.splice(index, 1);
-        showToast('Removed from favorites', 'info');
-    }
-    localStorage.setItem('favorites', JSON.stringify(favorites));
-    updateFavoritesDisplay();
-    updateFavoritesGallery(); // Update the favorites in the widget pane
-}
-
-function updateFavoritesDisplay() {
-    const favoritesContainer = document.getElementById('favoritesContainer');
-    favoritesContainer.innerHTML = '';
-
-    if (favorites.length === 0) {
-        favoritesContainer.innerHTML = '<p class="text-center">No favorites yet.</p>';
-        return;
-    }
-
-    favorites.forEach(item => {
-        const favoriteCard = createFavoriteCard(item);
-        favoritesContainer.appendChild(favoriteCard);
-    });
-}
-
-function createFavoriteCard(item) {
-    const favoriteCard = document.createElement('div');
-    favoriteCard.className = 'col-md-4 mb-4';
-    const imageUrl = item.image || item.snippet?.thumbnails?.medium?.url || 'https://via.placeholder.com/300x200?text=No+Image';
-
-    favoriteCard.innerHTML = `
-        <div class="card h-100">
-            <img src="${imageUrl}" class="card-img-top" alt="${item.title}" style="height: 200px; object-fit: cover;">
-            <div class="card-body">
-                <h5 class="card-title">${item.title}</h5>
-                <p class="card-text">${item.description || item.snippet?.description || 'No description available.'}</p>
-                <a href="${item.url || `https://www.youtube.com/watch?v=${item.id.videoId}`}" class="btn btn-primary btn-sm" target="_blank">
-                    ${item.url ? 'Read More' : 'Watch Video'}
-                </a>
-                <button class="btn btn-danger btn-sm float-end remove-favorite" data-id="${item.id}">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-        </div>
-    `;
-
-    const removeBtn = favoriteCard.querySelector('.remove-favorite');
-    removeBtn.addEventListener('click', () => toggleFavorite(item));
-
-    return favoriteCard;
-}
-
-function updateFavoritesGallery() {
-    const favoritesGallery = document.getElementById('favoritesGallery');
-    favoritesGallery.innerHTML = '';
-
-    favorites.forEach(item => {
-        const favoriteItem = document.createElement('div');
-        favoriteItem.className = 'col-6 col-md-4 mb-3';
-        const imageUrl = item.image || item.snippet?.thumbnails?.medium?.url || 'https://via.placeholder.com/300x200?text=No+Image';
-
-        favoriteItem.innerHTML = `
-            <div class="card h-100">
-                <img src="${imageUrl}" class="card-img-top" alt="${item.title}" style="height: 100px; object-fit: cover;">
-                <div class="card-body p-2">
-                    <h6 class="card-title small">${item.title}</h6>
-                    <button class="btn btn-danger btn-sm remove-favorite" data-id="${item.id}">
-                        <i class="fas fa-times"></i>
-                    </button>
-                </div>
-            </div>
-        `;
-
-        const removeBtn = favoriteItem.querySelector('.remove-favorite');
-        removeBtn.addEventListener('click', () => toggleFavorite(item));
-
-        favoritesGallery.appendChild(favoriteItem);
-    });
-}
-
-document.addEventListener('DOMContentLoaded', function() {
-    // ... existing code ...
-
-    updateFavoritesDisplay();
-    updateFavoritesGallery();
-
-    // ... rest of your existing code ...
 });

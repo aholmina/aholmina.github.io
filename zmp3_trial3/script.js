@@ -1,4 +1,4 @@
-const gnewsApiKey = '4988606c6d8bc0074715b7701b85f8dc'; 
+const gnewsApiKey = 'API_KEY'; 
 const gnewsApiUrl = 'https://gnews.io/api/v4/search?lang=en&country=us&max=10';
 let bookmarks = JSON.parse(localStorage.getItem('newsBookmarks')) || [];
 
